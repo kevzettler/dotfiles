@@ -1,5 +1,13 @@
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
-(require 'cl-lib)
+
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+ (package-refresh-contents)
+  (package-install 'use-package))
 
 ;; make sure the display is clean to start with
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -8,20 +16,13 @@
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message "damned")
 
-
+;; Secret keys
 (setf epa-pinentry-mode 'loopback)
 (custom-set-variables '(epg-gpg-program  "/usr/local/opt/gnupg\@2.1/bin/gpg2"))
 
 
 (load (expand-file-name "secrets.el" user-emacs-directory))
 
-;;;
-;;; Customize
-;;;
-;; I want to keep the customize stuff out of this config file.  I
-;; don't use customize for much so I don't generally want to see it.
-(setq custom-file (locate-user-emacs-file "init-custom.el"))
-(load custom-file)
 
 ;;;
 ;;; Load Path
@@ -32,9 +33,8 @@
   (load (locate-user-emacs-file file)))
 
 ;;;
-;;; Packages
+;;; External inits
 ;;;
-(load-init-file "init-package")
 (load-init-file "init-javascript")
 (load-init-file "init-org")
 
@@ -44,12 +44,10 @@
 
 ;; Don't change size of org-mode headlines (but keep other size-changes)
 (setq solarized-scale-org-headlines nil)
+
 ;; Don't change the font for some headings and titles
 (setq solarized-use-variable-pitch nil)
 
-
-;; auto-complete
-;;(ac-config-default)
 
 (setq-default cursor-type 'bar)
 
@@ -61,7 +59,17 @@
 ;;; Turn the delay on auto-reloading from 5 seconds down to 1 second.
 (setq auto-revert-interval 1)
 
-; IDO mode
+;; IDO mode
+(use-package ido
+  :config
+  (ido-mode 'both)
+  (setq
+   ido-mode 1
+   ido-everywhere 1
+   ido-max-directory-size 100000
+   ;; Use the current window when visiting files and buffers with ido
+   ido-default-file-method 'selected-window
+   ido-default-buffer-method 'selected-window))
 (ido-mode 1)
 (ido-everywhere 1)
 
@@ -89,8 +97,6 @@
 
 ;; Use y or n instead of yes or not
 (fset 'yes-or-no-p 'y-or-n-p)
-
-(setq inhibit-startup-message t)
 
 ; lines
 (setq scroll-step 1)
@@ -296,3 +302,10 @@
     (merlin-iedit-occurrences)))
 
 (define-key merlin-mode-map (kbd "C-c C-e") 'evil-custom-merlin-iedit)
+
+
+;;;
+;;; Customize
+;;;
+(setq custom-file (locate-user-emacs-file "init-custom.el"))
+(load custom-file)
