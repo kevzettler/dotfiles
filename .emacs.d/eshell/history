@@ -1,0 +1,59 @@
+pwd
+(pwd)
+ls
+(cool)
+npm
+echo $ENV
+env
+exit
+cd /ssh:root@104.236.185.123
+cd /ssh:root@104.236.185.123:~
+cd /ssh:root@107.170.230.187:~
+docker
+cd /ssh:root@107.170.230.187:~
+docker
+cd /ssh:root@107.170.230.187:~
+mkdir -p $HOME/.znc
+echo $HOME
+cd /root
+cd /
+ls
+cd /ssh:root@107.170.230.187:~
+ls
+touch .znc
+rm .znc
+mkdir .znc
+ls
+ls
+ls -lash
+docker run -d -p 6667 -v /root/.znc:/znc-data jimeh/znc
+docker ps
+docker logs pendantic_colden
+docker ps -a
+docker logs 7ff78e8e6520
+clear
+
+clear
+
+exit
+cd /ssh:root@107.170.230.187:~
+ls ../
+ls ./
+ls ./.znc
+cd ./.znc/configs/
+ls
+cd ~/.emacs.d
+ls
+cd lisp/
+ls
+ls -lash
+cd ..
+ls elpa/
+cd elpa/
+cd ~/.emacs.d
+cd ..
+ls
+Camera Uploads
+cd ./Camera\ Uploads/
+ls
+pwd

@@ -1,0 +1,26 @@
+((("position" .
+   [1 0 0 0 0 0 0 0])
+  ("camera" .
+   [1 0 0 0 0 0])
+  ("disc" .
+   [1 0 0 0])
+  ("contain" .
+   [1 0 0 0 0 0 0])
+  ("journal-entry" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("save-buffers-kill-emacs" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("/org/gmail-inbox.org.txt" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("setq" .
+   [3 0 0 0])
+  ("org-startup-folded" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-set-startup-visibility" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("org" .
+   [1 0 0])))

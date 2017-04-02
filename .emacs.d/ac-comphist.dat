@@ -1,0 +1,120 @@
+((("js2-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("anchor" .
+   [1 0 0 0 0 0])
+  ("parent" .
+   [1 0 0 0 0 0])
+  ("headPosition" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("position" .
+   [1 0 0 0 0 0 0 0])
+  ("targetDummy" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("my/flyspell-hack" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("-1" .
+   [1 0])
+  ("flyspell-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("turn-on-flyspell" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  (":sasl-username" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":nick" .
+   [1 0 0 0 0])
+  (":tls" .
+   [2 0 0 0])
+  ("circe-network-options" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("circe-network" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  (":config" .
+   [1 0 0 0 0 0 0])
+  ("circe" .
+   [1 0 0 0 0])
+  ("use-package" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("execute-extended-command" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("attachment" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("message" .
+   [1 0 0 0 0 0 0])
+  ("id" .
+   [2 0])
+  ("recipient" .
+   [1 0 0 0 0 0 0 0 0])
+  ("messageData" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("var" .
+   [1 0 0])
+  ("recipientId" .
+   [1 0 0 0 0 1 0 0 0 0 0])
+  ("sendMP3Message" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("function" .
+   [1 0 0 0 0 0 0 0])
+  ("senderID" .
+   [1 0 0 0 0 0 0 0])
+  ("return" .
+   [1 0 0 0 0 0])
+  ("if" .
+   [2 0])
+  ("org" .
+   [1 0 0])
+  ("nil" .
+   [1 0 0])
+  ("org-set-startup-visibility" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("org-startup-folded" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [4 0 0 1])
+  ("org-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("/org/gmail-inbox.org.txt" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("save-buffers-kill-emacs" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("journal-entry" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("contain" .
+   [1 0 0 0 0 0 0])
+  ("disc" .
+   [1 0 0 0])
+  ("ido-everywhere" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  (":host" .
+   [1 0 0 0 0])
+  (":port" .
+   [1 0 0 0 0])
+  (":pass" .
+   [1 0 0 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("erase-buffer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":init" .
+   [1 0 0 0 0])
+  ("matrix" .
+   [3 0 0 0 0 0])
+  ("posX" .
+   [1 0 0 0])
+  ("posY" .
+   [1 0 0 0])
+  ("posZ" .
+   [1 0 0 0])
+  ("offset" .
+   [6 0 0 0 0 0])
+  ("model" .
+   [1 0 0 0 0])
+  ("regl" .
+   [1 0 0 0])
+  ("mat4" .
+   [1 0 0 0])
+  ("identity" .
+   [1 0 0 0 0 0 0 0])
+  ("support-base-dir" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])))

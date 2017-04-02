@@ -1,0 +1,514 @@
+/Users/kev/.bashrc
+/Users/kev/#.bashrc#
+/Users/kev/Dropbox (Personal)/org/personal.org
+/Users/kev/Dropbox (Personal)/org/#personal.org#
+/Users/kev/Dropbox (Personal)/org/gcal.org
+/Users/kev/Dropbox (Personal)/org/#gcal.org#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/VoxelMesh.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/#VoxelMesh.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/Title.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#Title.js#
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/VoxelMesh.js
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/#VoxelMesh.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/QubicleMesh.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/#QubicleMesh.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/ReglApp.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#ReglApp.js#
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/QubicleMesh.js
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/#QubicleMesh.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/ReglRect.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#ReglRect.js#
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/index.js
+/Users/kev/code/robotbones/attempts/stackgl/regl-budo/#index.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/triangle.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#triangle.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/Menu.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#Menu.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/Game.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#Game.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/App.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#App.js#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-31.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-31.org#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/routes.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/#routes.js#
+/Users/kev/code/robotbones/.gitignore
+/Users/kev/code/robotbones/#.gitignore#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/index.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/#index.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/package.json
+/Users/kev/code/robotbones/attempts/stackgl/reactify/#package.json#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/index.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/#index.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/Root.dev.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#Root.dev.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/public/index.html
+/Users/kev/code/robotbones/attempts/stackgl/reactify/public/#index.html#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/configureStore.dev.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/#configureStore.dev.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/Root.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/#Root.js#
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/App.js
+/Users/kev/code/robotbones/attempts/stackgl/reactify/src/#App.js#
+/Users/kev/Dropbox (Personal)/org/2017_resolutions.org
+/Users/kev/Dropbox (Personal)/org/#2017_resolutions.org#
+/Users/kev/Dropbox (Personal)/org/mobile-inbox.org
+/Users/kev/Dropbox (Personal)/org/#mobile-inbox.org#
+/Users/kev/Dropbox (Personal)/org/plebland.org
+/Users/kev/Dropbox (Personal)/org/#plebland.org#
+/Users/kev/Dropbox (Personal)/org/proposal.org
+/Users/kev/Dropbox (Personal)/org/#proposal.org#
+/Users/kev/Dropbox (Personal)/org/read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org
+/Users/kev/Dropbox (Personal)/org/#read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org#
+/Users/kev/Dropbox (Personal)/org/read.org
+/Users/kev/Dropbox (Personal)/org/#read.org#
+/Users/kev/Dropbox (Personal)/org/recipies.org
+/Users/kev/Dropbox (Personal)/org/#recipies.org#
+/Users/kev/Dropbox (Personal)/org/remeber.org
+/Users/kev/Dropbox (Personal)/org/#remeber.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-07-31.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-07-31.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-07.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-07.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-08-31.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-08-31.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-05.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-05.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-07.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-07.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-09-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-09-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-05.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-05.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-07.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-07.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-10-31.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-10-31.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-05.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-05.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-07.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-07.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-11-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-11-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-05.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-05.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-07.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-07.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-12-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-12-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2016-9-3.org
+/Users/kev/Dropbox (Personal)/org/journal/#2016-9-3.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-05.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-05.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-22.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-22.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-30.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-01-31.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-01-31.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-11.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-11.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-12.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-12.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-19.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-19.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-25.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-25.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-27.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-27.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-02-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-02-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-01.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-01.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-02.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-02.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-03.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-03.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-04.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-04.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-06.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-06.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-08.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-08.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-09.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-09.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-10.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-10.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-13.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-13.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-14.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-14.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-15.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-15.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-16.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-16.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-17.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-17.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-18.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-18.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-20.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-20.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-21.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-21.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-23.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-23.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-24.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-24.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-26.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-26.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-28.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-28.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-29.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-29.org#
+/Users/kev/Dropbox (Personal)/org/journal/2017-03-30.org
+/Users/kev/Dropbox (Personal)/org/journal/#2017-03-30.org#
+/Users/kev/Dropbox (Personal)/org/archive/gcal.org_archive
+/Users/kev/Dropbox (Personal)/org/archive/#gcal.org_archive#
+/Users/kev/.emacs.d/org-gcal/org.png
+/Users/kev/.emacs.d/org-gcal/#org.png#
+/Users/kev/.emacs.d/org-gcal/org.png
+/Users/kev/.emacs.d/org-gcal/#org.png#
+/Users/kev/.emacs.d/org-gcal/org.png
+/Users/kev/.emacs.d/org-gcal/#org.png#
+/Users/kev/.emacs.d/org-gcal/org.png
+/Users/kev/.emacs.d/org-gcal/#org.png#

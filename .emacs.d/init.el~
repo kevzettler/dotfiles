@@ -1,0 +1,251 @@
+(package-initialize)
+(require 'cl-lib)
+
+;; start as focused window
+(x-focus-frame nil)
+
+
+;; make sure the display is clean to start with
+(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(setq inhibit-splash-screen t
+      inhibit-startup-echo-area-message "damned")
+
+;;;
+;;; Customize
+;;;
+;; I want to keep the customize stuff out of this config file.  I
+;; don't use customize for much so I don't generally want to see it.
+(setq custom-file (locate-user-emacs-file "init-custom.el"))
+(load custom-file)
+
+;;;
+;;; Load Path
+;;;
+(add-to-list 'load-path (locate-user-emacs-file "lisp"))
+
+(defun load-init-file (file)
+  (load (locate-user-emacs-file file)))
+
+;;;
+;;; Package
+;;;
+(load-init-file "init-package")
+(load-init-file "init-javascript")
+(load-init-file "init-org")
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
+(load-theme `solarized-light t)
+
+;; auto-complete
+(ac-config-default)
+
+; IDO mode
+(ido-mode 1)
+(ido-everywhere 1)
+
+;; taken from http://functionalrants.wordpress.com/2008/09/06/how-to-set-up-emacs-slime-sbcl-under-gnulinux/
+;; Text and the such
+;; Use colors to highlight commands, etc.
+(global-font-lock-mode t)
+
+;; Disable the welcome message
+(setq inhibit-startup-message t)
+
+;; Format the title-bar to always include the buffer name
+(setq frame-title-format "emacs - %b")
+
+;; Always end a file with a newline
+(setq require-final-newline t)
+
+;; Stop emacs from arbitrarily adding lines to the end of a file when the
+;; cursor is moved past the end of it:
+(setq next-line-add-newlines nil)
+
+;; Flash instead of that annoying bell
+(setq visible-bell t)
+
+
+;; Use y or n instead of yes or not
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(setq inhibit-startup-message t)
+
+; lines
+(setq scroll-step 1)
+(line-number-mode 1)
+(column-number-mode 1)
+ 
+; backup
+(setq make-backup-files t)
+(setq version-control t)
+(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
+; ----------------------------------------
+
+;scrolling
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+;; WEB MODE
+(setq auto-mode-alist
+      (append '(("\.tpl$"  . web-mode))
+                auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\.erb$"  . web-mode))
+              auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\.tt$"  . web-mode))
+              auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\.scss$"  . sass-mode))
+              auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\.yaml$"  . yaml-mode))
+                auto-mode-alist))
+
+;; Markdown 
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook 'visual-line-mode)
+
+; paren hilite
+; http://www.emacsblog.org/2007/08/07/quick-tip-show-paren-mode/
+(show-paren-mode t)
+; (setq show-paren-style 'expression)
+
+; http://infolab.stanford.edu/~manku/dotemacs.html
+(transient-mark-mode t) ; highlight marked region
+
+(setq-default delete-old-versions 't)
+
+(setq-default indent-tabs-mode nil)
+
+;; warp around search
+(add-hook 'isearch-mode-end-hook 'custom-goto-match-beginning)
+(defun custom-goto-match-beginning ()
+  "Use with isearch hook to end search at first char of match."
+  (when isearch-forward (goto-char isearch-other-end)))
+; ----------------------------------------
+ 
+(setq resize-minibuffer-mode t)
+ 
+(defun pbcopy-region (start end)
+  "Copies text into the system clipboard on OS X"
+  (interactive "r")
+  (shell-command-on-region start end "pbcopy"))
+
+;; What's my email?
+(set-variable 'user-mail-address "kevzettler@gmail.com")
+(global-linum-mode 1)
+(setq-default truncate-lines "f")
+
+
+;; Helpful key bindings
+(global-set-key (kbd "C-x ;") 'goto-line)
+(global-set-key (kbd "M-<right>") 'forward-word)
+(global-set-key (kbd "M-<left>") 'backward-word)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "s-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "s-/") 'comment-dwim)
+(global-set-key (kbd "s-[") 'hs-hide-block)
+(global-set-key (kbd "s-]") 'hs-show-block)
+
+;; NO alt meta
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\m"   'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+(global-set-key (kbd "C-;") 'goto-line)
+
+;; Expand to the region
+(use-package expand-region
+  :bind ("C-'" . er/expand-region))
+
+
+;; Shell key bindings
+(progn(require 'comint)
+      (define-key comint-mode-map (kbd "<up>") 'comint-previous-input)
+      (define-key comint-mode-map (kbd "<down>") 'comint-next-input)
+      (define-key comint-mode-map (kbd "s-k") 'erase-buffer))
+
+
+(add-hook 'eshell-mode-hook '(lambda ()
+                               (local-set-key (kbd "s-k") 'erase-buffer)))
+
+(put 'erase-buffer 'disabled nil)
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+
+(defun do-nvm-use (version)
+  (interactive "sVersion: ")
+  (nvm-use version)
+  (exec-path-from-shell-copy-env "PATH"))
+
+;; (defun run-node (cwd)
+;;   (interactive "DDirectory: ")
+;;   (unless (executable-find "node")
+;;     (call-interactively 'do-nvm-use))
+;;   (let ((default-directory cwd))
+;;         (pop-to-buffer (make-comint (format "node-repl-%s" cwd) "node" nil "--interactive"))))
+
+;;; Fix junk characters in shell-mode
+(add-hook 'shell-mode-hook 
+          'ansi-color-for-comint-mode-on)
+(setenv "NODE_NO_READLINE" "1")
+(add-to-list
+         'comint-preoutput-filter-functions
+         (lambda (output)
+           (replace-regexp-in-string "\033\\[[0-9]+[GK]" "" output)))
+
+(setq org-agenda-files (list "~/Dropbox (Personal)/org"
+                             "~/Dropbox (Personal)/org/journal"
+                             "~/Dropbox (Personal)/org/gcal.org"
+                             "~/Dropbox (Personal)/org/gmail-inbox.org.txt"))
+
+
+
+;; GCAL INTEGRATION
+(setq package-check-signature nil)
+
+
+(use-package org-gcal
+  :ensure t
+  :config
+  (setq org-gcal-client-id "1041440649655-i0ml59it7qqotutg97s28rsoh4phab6m.apps.googleusercontent.com"
+	org-gcal-client-secret "KNeqGIw-DEJlD6PuJvMbmzCf"
+	org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/Dropbox (Personal)/org/gcal.org"))))
+
+(add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
+
+
+(use-package circe
+  :config
+  (setq circe-network-options
+        '(("Freenode"
+           :host "107.170.230.187"
+           :port "32768"
+           :tls t
+           ))))
+  
+
+
+(defun insert-date (prefix)
+    "Insert the current date. With prefix-argument, use ISO format. With
+   two prefix arguments, write out the day and month name."
+    (interactive "P")
+    (let ((format (cond
+                   ((not prefix) "%Y-%m-%d")
+                   ((equal prefix '(4)) "%d.%m.%Y")
+                   ((equal prefix '(16)) "%A, %d. %B %Y")))
+          (system-time-locale "de_DE"))
+      (insert (format-time-string format))))
+
