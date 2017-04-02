@@ -1,9 +1,6 @@
 (package-initialize)
 (require 'cl-lib)
 
-;; start as focused window
-;;(x-focus-frame nil)
-
 ;; make sure the display is clean to start with
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
