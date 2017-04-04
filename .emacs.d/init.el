@@ -7,7 +7,10 @@
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
  (package-refresh-contents)
-  (package-install 'use-package))
+ (package-install 'use-package))
+
+;; Save adding :ensure t on every use package
+(setq use-package-always-ensure t)
 
 ;; make sure the display is clean to start with
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -37,6 +40,9 @@
 (load-init-file "init-javascript")
 (load-init-file "init-org")
 
+;;
+;; Theme
+;;
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
 (load-theme `solarized-light t)
 ;;(load-theme `solarized-dark t)
@@ -116,18 +122,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-;; WEB MODE
-(setq auto-mode-alist
-      (append '(("\.tpl$"  . web-mode))
-                auto-mode-alist))
 
-(setq auto-mode-alist
-      (append '(("\.erb$"  . web-mode))
-              auto-mode-alist))
-
-(setq auto-mode-alist
-      (append '(("\.tt$"  . web-mode))
-              auto-mode-alist))
 
 (setq auto-mode-alist
       (append '(("\.scss$"  . sass-mode))
