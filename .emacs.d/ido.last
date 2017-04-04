@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" . "components/")
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/" . "src/")
  ("/Users/kev/code/ocaml-sg/reason-react-example/src/" . "todomvc/")
  ("/Users/kev/code/ocaml-sg/reason-react-example/" . "src/")
  ("/Users/kev/code/ocaml-sg/" . "reason-react-example/")
@@ -175,8 +177,19 @@
 ;; ----- ido-work-directory-list -----
 (
  "/Users/kev/.emacs.d/"
- "/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/"
+ "/Users/kev/"
  "/Users/kev/code/robotbones/attempts/stackgl/regl-budo/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/"
+ "/Users/kev/code/robotbones/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/public/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/"
+ "/Users/kev/org/atlassian/"
+ "/Users/kev/Dropbox (Personal)/org/"
+ "/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/"
  "/Users/kev/code/ocaml-sg/reason-react-example/"
  "/Users/kev/org/"
  "/Users/kev/code/robotbones/attempts/three/qubicle-import/"
@@ -187,10 +200,7 @@
  "/Users/kev/code/easeread/"
  "/Users/kev/code/easeread/bin/"
  "/Users/kev/code/easeread/views/"
- "/Users/kev/org/atlassian/"
- "/Users/kev/"
  "/Users/kev/code/org-stream/"
- "/Users/kev/Dropbox (Personal)/org/"
  "/Users/kev/code/blendergltf/tests/"
  "/Users/kev/org/archive/"
  "/Users/kev/code/skeletal-animation-system/"
@@ -216,79 +226,93 @@
  "/Users/kev/code/shaderschool/00-intro-0/"
  "/Users/kev/code/skeletal-animation-system/node_modules/load-collada-dae/src/"
  "/Users/kev/code/skeletal-animation-system/node_modules/load-collada-dae/src/shader/"
- "/Users/kev/Dropbox/org/"
- "/usr/local/bin/"
- "/Users/kev/Dropbox (Personal)/org/archive/"
- "/Users/kev/code/load-collada-dae/src/"
- "/Users/kev/code/load-collada-dae/src/draw/"
- "/Users/kev/code/load-collada-dae/src/shader/"
- "/Users/kev/code/robotbones/attempts/three/bones/"
- "/Users/kev/Desktop/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  "init.el"
- "init-custom.el"
- "init-javascript.el"
- "todoItem.re"
+ "init-package.el"
+ ".bashrc"
+ "VoxelMesh.js"
+ "QubicleMesh.js"
  "index.js"
- "package.json"
- "plebland.org"
- "app.js"
- "style.sass"
- "pandoc-meshing-minecraft.epub"
+ "triangle.js"
+ "ReglRect.js"
+ "ReglApp.js"
+ "Regl.js"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/kev/.emacs.d/" (22740 15285 0 0) "url/" "tramp" "secrets.el.gpg" "secrets.el" "request/" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" ".org-id-locations" ".mc-lists.el" ".cask/" "../" "./")
+ ("/Users/kev/.emacs.d/" (22753 15816 0 0) "url/" "tramp" "secrets.el" "request/" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" ".org-id-locations" ".mc-lists.el" ".cask/" "../" "./")
 
- ("/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/" (22740 17147 0 0) "todoItem.re" "todoFooter.re" "index.html" "app.re" "../" "./")
+ ("/Users/kev/" (22753 15204 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "cool/" "code/" "Applications/" ".znc/" ".yarnrc" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.5.372.42.kev.json" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".serverless/" ".ruby-version" ".profile" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "#*message*-20161204-094852#" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/" (22753 10432 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" ".#personal.org" ".#gcal.org" "#personal.org#" "#gcal.org#" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/" (22752 10328 0 0) "triangle.js" "Title.js" "Root.prod.js" "Root.js" "Root.dev.js" "ReglRect.js" "ReglApp.js" "Menu.js" "Game.js" "DevTools.js" "App.js" ".#Root.dev.js" "#Root.dev.js#" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/" (22752 10337 0 0) "VoxelMesh.js" "QubicleMesh.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" (22752 9256 0 0) "store/" "routes.js" "reducers/" "middleware/" "index.js" "index.css" "containers/" "components/" "actions/" ".#App.js" "#App.js#" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/" (22750 56227 0 0) "regl-budo/" "reactify/" "node_modules/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/code/robotbones/" (22750 56208 0 0) "node_modules/" "attempts/" "assets/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/" (22750 55889 0 0) "yarn.lock" "src/" "README.md" "public/" "package.json" "node_modules/" ".gitignore" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/" (22750 53398 0 0) "paginate.js" "index.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/public/" (22750 51490 0 0) "index.html" "favicon.ico" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/" (22750 53197 0 0) "configureStore.prod.js" "configureStore.js" "configureStore.dev.js" "../" "./")
+
+ ("/usr/local/bin/" (22750 51326 0 0) "yarnpkg" "yarn" "wrjpgcom" "wheel" "wget" "webgl-workshop" "utop" "update-mime-database" "tryaffix" "tiffsplit" "tiffset" "tiffmedian" "tiffinfo" "tiffdump" "tiffdither" "tiffcrop" "tiffcp" "tiffcmp" "tiff2rgba" "tiff2ps" "tiff2pdf" "tiff2bw" "texdist" "symilar" "standard" "srptool" "smtpd2.py" "smtpd2.7.py" "smtpd.py" "shader-school" "sexp-conv" "sdl2-config" "rtop" "rsvg-convert" "reopt" "refmttype" "refmt_merlin" "refmt" "rebuild" "reactjs_jsx_ppx" "rdjpgcom" "raw2tiff" "pythonw2.7" "pythonw2" "pythonw" "python2.7-config" "python2.7" "python2-config" "python2" "python-config" "python" "pyreverse" "pylint-gui" "pylint" "pydoc2.7" "pydoc2" "pydoc" "pth-config" "psktool" "ppm2tiff" "pngfix" "png-fix-itxt" "pkg-config" "pkcs1-conv" "pip2.7" "pip2" "pip" "pinentry-curses" "pinentry" "pcretest" "pcregrep" "pcre-config" "pango-view" "pandoc" "pal2rgb" "p11tool" "p11-kit" "onig-config" "ocsptool" "ocamlrun" "ocamlopt" "ocamlmerlin-reason" "ocamlmerlin" "ocamlc" "ocaml" "npth-config" "npm" "notary" "nosetests-2.7" "nosetests" "node" "nettle-pbkdf2" "nettle-lfib-stream" "nettle-hash" "munchlist" "mpicalc" "mongotop" "mongostat" "mongos" "mongorestore" "mongoperf" "mongooplog" "mongoimport" "mongofiles" "mongoexport" "mongodump" "mongod" "mongo" "mackup" "libusb-config" "libpng16-config" "libpng-config" "libgcrypt-config" "libassuan-config" "ksba-config" "jshint" "jq" "jpegtran" "ispell" "isort" "introtowebgl" "ijoin" "idle2.7" "idle2" "idle" "icombine" "hmac256" "hb-shape" "hb-ot-shape-closure" "gtester-report" "gtester" "gsettings" "gresource" "gpg-error-config" "gpg-error" "gpg-agent" "gpg" "gobject-query" "gnutls-serv" "gnutls-cli-debug" "gnutls-cli" "gnutls-certtool" "glslViewer" "glslLoader" "glib-mkenums" "glib-gettextize" "glib-genmarshal" "glib-compile-schemas" "glib-compile-resources" "gitk" "git-upload-pack" "git-upload-archive" "git-subtree" "git-shell" "git-receive-pack" "git-cvsserver" "git-credential-osxkeychain" "git-credential-netrc" "git" "gio-querymodules" "gio" "gdk-pixbuf-thumbnailer" "gdk-pixbuf-query-loaders" "gdk-pixbuf-pixdata" "gdk-pixbuf-csource" "gdbus-codegen" "gdbus" "gdbmtool" "gdbm_load" "gdbm_dump" "gapplication" "g-ir-scanner" "g-ir-inspect" "g-ir-generate" "g-ir-compiler" "g-ir-annotation-tool" "freetype-config" "findaffix" "fc-validate" "fc-scan" "fc-query" "fc-pattern" "fc-match" "fc-list" "fc-cat" "fc-cache" "fax2tiff" "fax2ps" "f2py" "epylint" "emacs" "eatiht" "easy_install-2.7" "easy_install" "dumpsexp" "docker-machine" "docker-compose" "docker" "djpeg" "dirmngr-client" "dirmngr" "defmt-sh" "defmt-c" "cythonize" "cython" "cygdb" "csslint-0.6" "croco-0.6-config" "create-react-app" "coverage2" "coverage-2.7" "coverage" "cordova" "cjpeg" "chardetect" "cask" "cairo-trace" "cairo-sphinx" "buildhash" "bsondump" "brew" "blender" "berror" "asn1Parser" "asn1Decoding" "asn1Coding" "adnsresfilter" "adnslogres" "adnshost" "adnsheloex" "ack" "2to3-2.7" "2to3-2" "2to3" "../" "./")
+
+ ("/Users/kev/Dropbox/org/" (22750 26426 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/atlassian/" (22750 47205 0 0) "setting-up-a-repository.org" "setting-up-a-repository" "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org-52933KyL.html" ".git/" "../" "./")
+
+ ("/Users/kev/org/archive/" (22749 59221 0 0) "tilt.org_archive" "read.org_archive" "plebland.org_archive" "personal.org_archive_archive" "personal.org_archive" "personal (Kevin’s MacBook Pro's conflicted copy 2016-10-24).org_archive" "mobile-inbox.org_archive" "gmail-inbox.org.txt_archive" "gcal.org_archive" "2017-03-01 (Kev’s MacBook Pro's conflicted copy 2017-03-01).org_archive" "2017-02-21.org_archive" "2017-02-12.org_archive" "2017-01-31.org_archive" "2017-01-06.org_archive" "2017-01-01.org_archive" "2016-12-30.org_archive" "2016-12-02.org_archive" "2016-11-07.org_archive" "2016-11-01.org_archive" "2016-10-31.org_archive" "2016-10-30.org_archive" "2016-10-28.org_archive" "2016-10-27.org_archive" "2016-10-25.org_archive" "2016-10-23.org_archive" "2016-09-25.org_archive" "2016-09-11.org_archive" "2016-09-08.org_archive" "../" "./")
+
+ ("/Users/kev/code/easeread/views/" (22739 7962 0 0) "index.ejs" "error.ejs" "converter.ejs" "../" "./")
+
+ ("/Users/kev/code/easeread/" (22739 7964 0 0) "views/" "routes/" "public/" "package.json" "npm-debug.log" "node_modules/" "bin/" "app.js" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/code/easeread/routes/" (22739 7962 0 0) "users.js" "index.js" "cool-cat.jpg" "convert.js" "../" "./")
+
+ ("/Users/kev/code/easeread/public/ebooks/" (22737 445 0 0) "pandoc-meshing-minecraft.epub" "meshing.epub" "meshing-minecraft-part-2" "mathascode.md" "mathascode.epub" "epubstream.epub" "epubpress.epub" "../" "./")
+
+ ("/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/" (22740 20342 0 0) "todoItem.re" "todoFooter.re" "index.html" "app.re" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/regl-budo/" (22750 26495 0 0) "VoxelMesh.js" "QubicleMesh.js" "package.json" "node_modules/" "index.js" "assets/" "#index.js#" "../" "./")
+
+ ("/Users/kev/org/atlassian/" (22750 47205 0 0) "setting-up-a-repository.org" "setting-up-a-repository" "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org-52933KyL.html" ".git/" "../" "./")
+
+ ("/Users/kev/code/" (22750 51280 0 0) "wizardwarz/" "VoxLords/" "threejs-animation-workflow/" "three.js/" "thebookofshaders/" "testimportthing/" "test_blender_addons/" "skeletal-animation-system/" "sitepoint-aws-lambda-tutorial/" "shaderschool/" "robotbones/" "regl_basics/" "regl-greedy-test/" "react-three-renderer/" "qake/" "plebland/" "peerchan/" "parse-qubicle/" "parse-magica-voxel/" "org-stream/" "ocaml-sg/" "node_modules/" "node-peer-hub/" "NativeOrg/" "memory/" "magicavoxel-three/" "magicavoxel-ndarray/" "load-collada-dae/" "kevzettler.github.com/" "js-peers/" "glslViewer/" "game-off-2016/" "emacs.d/" "easeread/" "CEWBS/" "blendergltf/" "Babylon.js-FPS/" "Babylon.js/" "ao-shader/" "aakrobot/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/org/" (22750 26426 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
+
+ ("/Users/kev/Applications/" (22723 47034 0 0) "Streets of Rogue.app/" "Chrome Apps.localized/" "Blue Jeans.app/" ".localized" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/journal/" (22750 26470 0 0) "OhlifeExport/" "2017-03-31.org" "2017-03-30.org" "2017-03-29.org" "2017-03-28.org" "2017-03-26.org" "2017-03-24.org" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" "2016-9-3.org" "2016-12-30.org" "2016-12-29.org" "2016-12-28.org" "2016-12-27.org" "2016-12-25.org" "2016-12-24.org" "2016-12-23.org" "2016-12-22.org" "2016-12-19.org" "2016-12-18.org" "2016-12-17.org" "2016-12-16.org" "2016-12-15.org" "2016-12-14.org" "2016-12-13.org" "2016-12-12.org" "2016-12-11.org" "2016-12-10.org" "2016-12-09.org" "2016-12-08.org" "2016-12-07.org" "2016-12-06.org" "2016-12-05.org" "2016-12-04.org" "2016-12-03.org" "2016-12-02.org" "2016-12-01.org" "2016-11-30.org" "2016-11-29.org" "2016-11-28.org" "2016-11-27.org" "2016-11-26.org" "2016-11-25.org" "2016-11-24.org" "2016-11-23.org" "2016-11-22.org" "2016-11-21.org" "2016-11-20.org" "2016-11-19.org" "2016-11-18.org" "2016-11-17.org" "2016-11-16.org" "2016-11-15.org" "2016-11-14.org" "2016-11-13.org" "2016-11-12.org" "2016-11-11.org" "2016-11-10.org" "2016-11-09.org" "2016-11-08.org" "2016-11-07.org" "2016-11-06.org" "2016-11-05.org" "2016-11-04.org" "2016-11-03.org" "2016-11-02.org" "2016-11-01.org" "2016-10-31.org" "2016-10-30.org" "2016-10-29.org" "2016-10-28.org" "2016-10-27.org" "2016-10-26.org" "2016-10-25.org" "2016-10-24.org" "2016-10-23.org" "2016-10-22.org" "2016-10-21.org" "2016-10-20.org" "2016-10-19.org" "2016-10-18.org" "2016-10-17.org" "2016-10-16.org" "2016-10-15.org" "2016-10-14.org" "2016-10-13.org" "2016-10-12.org" "2016-10-11.org" "2016-10-10.org" "2016-10-09.org" "2016-10-08.org" "2016-10-07.org" "2016-10-06.org" "2016-10-05.org" "2016-10-04.org" "2016-10-02.org" "2016-09-30.org" "2016-09-29.org" "2016-09-28.org" "2016-09-27.org" "2016-09-26.org" "2016-09-25.org" "2016-09-24.org" "2016-09-23.org" "2016-09-22.org" "2016-09-21.org" "2016-09-20.org" "2016-09-19.org" "2016-09-17.org" "2016-09-16.org" "2016-09-15.org" "2016-09-14.org" "2016-09-13.org" "2016-09-12.org" "2016-09-11.org" "2016-09-10.org" "2016-09-09.org" "2016-09-08.org" "2016-09-07.org" "2016-09-06.org" "2016-09-05.org" "2016-09-04.org" "2016-09-03.org" "2016-09-02.org" "2016-09-01.org" "2016-08-31.org" "2016-08-30.org" "2016-08-29.org" "2016-08-28.org" "2016-08-27.org" "2016-08-26.org" "2016-08-25.org" "2016-08-24.org" "2016-08-23.org" "2016-08-22.org" "2016-08-21.org" "2016-08-20.org" "2016-08-19.org" "2016-08-18.org" "2016-08-17.org" "2016-08-11.org" "2016-08-10.org" "2016-08-09.org" "2016-08-08.org" "2016-08-07.org" "2016-08-04.org" "2016-08-03.org" "2016-08-02.org" "2016-07-31.org" "2016-07-30.org" "2016-07-29.org" "2016-07-28.org" "2016-07-27.org" "2016-07-26.org" "2016-07-25.org" "2016-07-24.org" ".#2017-03-07.org" "#2016-11-23.org#" "../" "./")
+
+ ("/Users/kev/code/VoxLords/" (22719 22067 0 0) "webpack/" "textures/" "Termfile" "src/" "sound/" "server/" "PixVoxelAssets/" "package.json" "npm-shrinkwrap.json" "node_modules/" "node-server-loader.js" "node-loader.js" "models/" "maps/" "libs/" "lab/" "index.html" "Dockerfile" "dist/" "debug-server.html" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/" (22678 44896 0 0) "three/" "stackgl/" "qubicle-voxlords/" "babylon/" ".DS_Store" "../" "./")
 
  ("/Users/kev/code/ocaml-sg/reason-react-example/src/" (22740 15376 0 0) "todomvc/" "simple/" "logo/" "kandan/" "interop/" "../" "./")
 
  ("/Users/kev/code/ocaml-sg/reason-react-example/" (22740 16794 0 0) "webpack.config.js" "src/" "resources/" "README.md" "package.json" "node_modules/" "lib/" "bsconfig.json" ".merlin" ".gitignore" ".git/" "../" "./")
 
- ("/Users/kev/code/robotbones/attempts/stackgl/regl-budo/" (22737 46385 0 0) "webpack.config.js" "package.json" "node_modules/" "index.js" "greedy_tri.js" "assets/" "../" "./")
-
- ("/Users/kev/code/" (22740 13922 0 0) "wizardwarz/" "VoxLords/" "threejs-animation-workflow/" "three.js/" "testimportthing/" "test_blender_addons/" "skeletal-animation-system/" "sitepoint-aws-lambda-tutorial/" "shaderschool/" "robotbones/" "regl_basics/" "regl-greedy-test/" "react-three-renderer/" "qake/" "plebland/" "peerchan/" "parse-qubicle/" "parse-magica-voxel/" "org-stream/" "ocaml-sg/" "node_modules/" "node-peer-hub/" "NativeOrg/" "memory/" "magicavoxel-three/" "magicavoxel-ndarray/" "load-collada-dae/" "kevzettler.github.com/" "js-peers/" "game-off-2016/" "emacs.d/" "easeread/" "crossbuilder/" "CEWBS/" "blendergltf/" "Babylon.js-FPS/" "Babylon.js/" "ao-shader/" "aakrobot/" ".DS_Store" "../" "./")
-
- ("/Users/kev/" (22740 16361 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "cool/" "code/" "Applications/" ".znc/" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".serverless/" ".ruby-version" ".profile" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "#*message*-20161204-094852#" "../" "./")
-
  ("/Users/kev/code/ocaml-sg/" (22740 15331 0 0) "reason-react-example/" "../" "./")
-
- ("/Users/kev/org/" (22739 6829 0 0) "remeber.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
-
- ("/Users/kev/Dropbox (Personal)/org/journal/" (22739 46765 0 0) "OhlifeExport/" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" "2016-9-3.org" "2016-12-30.org" "2016-12-29.org" "2016-12-28.org" "2016-12-27.org" "2016-12-25.org" "2016-12-24.org" "2016-12-23.org" "2016-12-22.org" "2016-12-19.org" "2016-12-18.org" "2016-12-17.org" "2016-12-16.org" "2016-12-15.org" "2016-12-14.org" "2016-12-13.org" "2016-12-12.org" "2016-12-11.org" "2016-12-10.org" "2016-12-09.org" "2016-12-08.org" "2016-12-07.org" "2016-12-06.org" "2016-12-05.org" "2016-12-04.org" "2016-12-03.org" "2016-12-02.org" "2016-12-01.org" "2016-11-30.org" "2016-11-29.org" "2016-11-28.org" "2016-11-27.org" "2016-11-26.org" "2016-11-25.org" "2016-11-24.org" "2016-11-23.org" "2016-11-22.org" "2016-11-21.org" "2016-11-20.org" "2016-11-19.org" "2016-11-18.org" "2016-11-17.org" "2016-11-16.org" "2016-11-15.org" "2016-11-14.org" "2016-11-13.org" "2016-11-12.org" "2016-11-11.org" "2016-11-10.org" "2016-11-09.org" "2016-11-08.org" "2016-11-07.org" "2016-11-06.org" "2016-11-05.org" "2016-11-04.org" "2016-11-03.org" "2016-11-02.org" "2016-11-01.org" "2016-10-31.org" "2016-10-30.org" "2016-10-29.org" "2016-10-28.org" "2016-10-27.org" "2016-10-26.org" "2016-10-25.org" "2016-10-24.org" "2016-10-23.org" "2016-10-22.org" "2016-10-21.org" "2016-10-20.org" "2016-10-19.org" "2016-10-18.org" "2016-10-17.org" "2016-10-16.org" "2016-10-15.org" "2016-10-14.org" "2016-10-13.org" "2016-10-12.org" "2016-10-11.org" "2016-10-10.org" "2016-10-09.org" "2016-10-08.org" "2016-10-07.org" "2016-10-06.org" "2016-10-05.org" "2016-10-04.org" "2016-10-02.org" "2016-09-30.org" "2016-09-29.org" "2016-09-28.org" "2016-09-27.org" "2016-09-26.org" "2016-09-25.org" "2016-09-24.org" "2016-09-23.org" "2016-09-22.org" "2016-09-21.org" "2016-09-20.org" "2016-09-19.org" "2016-09-17.org" "2016-09-16.org" "2016-09-15.org" "2016-09-14.org" "2016-09-13.org" "2016-09-12.org" "2016-09-11.org" "2016-09-10.org" "2016-09-09.org" "2016-09-08.org" "2016-09-07.org" "2016-09-06.org" "2016-09-05.org" "2016-09-04.org" "2016-09-03.org" "2016-09-02.org" "2016-09-01.org" "2016-08-31.org" "2016-08-30.org" "2016-08-29.org" "2016-08-28.org" "2016-08-27.org" "2016-08-26.org" "2016-08-25.org" "2016-08-24.org" "2016-08-23.org" "2016-08-22.org" "2016-08-21.org" "2016-08-20.org" "2016-08-19.org" "2016-08-18.org" "2016-08-17.org" "2016-08-11.org" "2016-08-10.org" "2016-08-09.org" "2016-08-08.org" "2016-08-07.org" "2016-08-04.org" "2016-08-03.org" "2016-08-02.org" "2016-07-31.org" "2016-07-30.org" "2016-07-29.org" "2016-07-28.org" "2016-07-27.org" "2016-07-26.org" "2016-07-25.org" "2016-07-24.org" ".#2017-03-23.org" ".#2017-03-21.org" ".#2017-03-07.org" "#2017-03-21.org#" "#2016-11-23.org#" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/" (22737 38573 0 0) "regl-budo/" ".DS_Store" "../" "./")
 
  ("/Users/kev/code/easeread/public/stylesheets/" (22737 1378 0 0) "style.sass" "style.css.map" "style.css" "../" "./")
 
- ("/Users/kev/code/easeread/views/" (22737 1295 0 0) "index.ejs" "error.ejs" "converter.ejs" ".#converter.ejs" "../" "./")
-
- ("/Users/kev/code/easeread/public/ebooks/" (22737 251 0 0) "pandoc-meshing-minecraft.epub" "meshing.epub" "meshing-minecraft-part-2" "mathascode.md" "mathascode.epub" "epubstream.epub" "epubpress.epub" "../" "./")
-
- ("/Users/kev/code/easeread/" (22736 51697 0 0) "views/" "routes/" "public/" "package.json" "npm-debug.log" "node_modules/" "bin/" "app.js" ".gitignore" ".git/" ".DS_Store" ".#app.js" "#app.js#" "../" "./")
-
- ("/Users/kev/code/easeread/routes/" (22736 51697 0 0) "users.js" "index.js" "cool-cat.jpg" "convert.js" ".#convert.js" "#convert.js#" "../" "./")
-
- ("/usr/local/bin/" (22736 36246 0 0) "yarnpkg" "yarn" "wrjpgcom" "wheel" "wget" "webgl-workshop" "update-mime-database" "tryaffix" "tiffsplit" "tiffset" "tiffmedian" "tiffinfo" "tiffdump" "tiffdither" "tiffcrop" "tiffcp" "tiffcmp" "tiff2rgba" "tiff2ps" "tiff2pdf" "tiff2bw" "thumbnail" "symilar" "standard" "srptool" "smtpd2.py" "smtpd2.7.py" "smtpd.py" "shader-school" "sexp-conv" "sdl2-config" "rsvg-convert" "rgb2ycbcr" "rdjpgcom" "raw2tiff" "ras2tiff" "pythonw2.7" "pythonw2" "pythonw" "python2.7-config" "python2.7" "python2-config" "python2" "python-config" "python" "pyreverse" "pylint-gui" "pylint" "pydoc2.7" "pydoc2" "pydoc" "pth-config" "psktool" "ppm2tiff" "pngfix" "png-fix-itxt" "pkg-config" "pkcs1-conv" "pip2.7" "pip2" "pip" "pinentry-curses" "pinentry" "pcretest" "pcregrep" "pcre-config" "pango-view" "pandoc" "pal2rgb" "p11tool" "p11-kit" "onig-config" "ocsptool" "npth-config" "npm" "notary" "nosetests-2.7" "nosetests" "node" "nettle-pbkdf2" "nettle-lfib-stream" "nettle-hash" "munchlist" "mpicalc" "mongotop" "mongostat" "mongos" "mongorestore" "mongoperf" "mongooplog" "mongoimport" "mongofiles" "mongoexport" "mongodump" "mongod" "mongo" "mackup" "libusb-config" "libpng16-config" "libpng-config" "libgcrypt-config" "libassuan-config" "ksba-config" "jshint" "jq" "jpegtran" "ispell" "isort" "introtowebgl" "ijoin" "idle2.7" "idle2" "idle" "icombine" "hmac256" "hb-shape" "hb-ot-shape-closure" "gtester-report" "gtester" "gsettings" "gresource" "gpg-error-config" "gpg-error" "gpg-agent" "gpg" "gobject-query" "gnutls-serv" "gnutls-cli-debug" "gnutls-cli" "gnutls-certtool" "glib-mkenums" "glib-gettextize" "glib-genmarshal" "glib-compile-schemas" "glib-compile-resources" "gitk" "git-upload-pack" "git-upload-archive" "git-subtree" "git-shell" "git-receive-pack" "git-cvsserver" "git-credential-osxkeychain" "git" "gio-querymodules" "gio" "gif2tiff" "gdk-pixbuf-query-loaders" "gdk-pixbuf-pixdata" "gdk-pixbuf-csource" "gdbus-codegen" "gdbus" "gdbmtool" "gdbm_load" "gdbm_dump" "gapplication" "g-ir-scanner" "g-ir-inspect" "g-ir-generate" "g-ir-compiler" "g-ir-annotation-tool" "freetype-config" "findaffix" "fc-validate" "fc-scan" "fc-query" "fc-pattern" "fc-match" "fc-list" "fc-cat" "fc-cache" "fax2tiff" "fax2ps" "f2py" "epylint" "emacs" "eatiht" "easy_install-2.7" "easy_install" "dumpsexp" "docker-machine" "docker-compose" "docker" "djpeg" "dirmngr-client" "dirmngr" "defmt-sh" "defmt-c" "cythonize" "cython" "cygdb" "csslint-0.6" "croco-0.6-config" "coverage2" "coverage-2.7" "coverage" "cordova" "cjpeg" "chardetect" "cask" "cairo-trace" "cairo-sphinx" "buildhash" "bsondump" "brew" "bmp2tiff" "blender" "asn1Parser" "asn1Decoding" "asn1Coding" "adnsresfilter" "adnslogres" "adnshost" "adnsheloex" "ack" "2to3-2.7" "2to3-2" "2to3" "../" "./")
-
- ("/Users/kev/Dropbox/org/" (22736 20916 0 0) "remeber.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
-
- ("/Users/kev/Dropbox (Personal)/org/atlassian/" (22736 28122 0 0) "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org" "git_config" ".git/" "../" "./")
-
- ("/Users/kev/Dropbox (Personal)/org/" (22736 20916 0 0) "remeber.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
-
  ("/Users/kev/code/easeread/bin/" (22736 36856 0 0) "www" "test_dragnet.py" "../" "./")
 
- ("/Users/kev/org/atlassian/" (22736 28122 0 0) "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org" "git_config" ".git/" "../" "./")
-
  ("/Users/kev/Dropbox (Personal)/org/archive/" (22733 51222 0 0) "tilt.org_archive" "read.org_archive" "plebland.org_archive" "personal.org_archive_archive" "personal.org_archive" "personal (Kevin’s MacBook Pro's conflicted copy 2016-10-24).org_archive" "mobile-inbox.org_archive" "gmail-inbox.org.txt_archive" "gcal.org_archive" "2017-03-01 (Kev’s MacBook Pro's conflicted copy 2017-03-01).org_archive" "2017-02-21.org_archive" "2017-02-12.org_archive" "2017-01-31.org_archive" "2017-01-06.org_archive" "2017-01-01.org_archive" "2016-12-30.org_archive" "2016-12-02.org_archive" "2016-11-07.org_archive" "2016-11-01.org_archive" "2016-10-31.org_archive" "2016-10-30.org_archive" "2016-10-28.org_archive" "2016-10-27.org_archive" "2016-10-25.org_archive" "2016-10-23.org_archive" "2016-09-25.org_archive" "2016-09-11.org_archive" "2016-09-08.org_archive" "../" "./")
-
- ("/Users/kev/org/archive/" (22733 51222 0 0) "tilt.org_archive" "read.org_archive" "plebland.org_archive" "personal.org_archive_archive" "personal.org_archive" "personal (Kevin’s MacBook Pro's conflicted copy 2016-10-24).org_archive" "mobile-inbox.org_archive" "gmail-inbox.org.txt_archive" "gcal.org_archive" "2017-03-01 (Kev’s MacBook Pro's conflicted copy 2017-03-01).org_archive" "2017-02-21.org_archive" "2017-02-12.org_archive" "2017-01-31.org_archive" "2017-01-06.org_archive" "2017-01-01.org_archive" "2016-12-30.org_archive" "2016-12-02.org_archive" "2016-11-07.org_archive" "2016-11-01.org_archive" "2016-10-31.org_archive" "2016-10-30.org_archive" "2016-10-28.org_archive" "2016-10-27.org_archive" "2016-10-25.org_archive" "2016-10-23.org_archive" "2016-09-25.org_archive" "2016-09-11.org_archive" "2016-09-08.org_archive" "../" "./")
 
  ("/Users/kev/code/easeread/public/" (22734 59206 0 0) "stylesheets/" "javascripts/" "images/" "ebooks/" ".DS_Store" "../" "./")
 
@@ -420,29 +444,7 @@
 
  ("/Users/kev/Library/" (22684 65373 0 0) "WebKit/" "Voices/" "Unity/" "SyncedPreferences/" "Suggestions/" "Spelling/" "Sounds/" "Sharing/" "Services/" "Scripts/" "Screen Savers/" "Saved Application State/" "Safari/" "RescueTime.com/" "PubSub/" "Printers/" "Preferences/" "PreferencePanes/" "Passes/" "Mobile Documents/" "Metadata/" "Messages/" "Maps/" "Mail/" "Logs/" "LaunchAgents/" "LanguageModeling/" "Keychains/" "KeyboardServices/" "Keyboard Layouts/" "Keyboard/" "iTunes/" "Internet Plug-Ins/" "Input Methods/" "iMovie/" "IdentityServices/" "Group Containers/" "Google/" "GameKit/" "Fonts/" "FontCollections/" "Favorites/" "Dictionaries/" "Developer/" "CoreFollowUp/" "CoreData/" "Cookies/" "Containers/" "Compositions/" "com.apple.nsurlsessiond/" "com.amplitude.plist" "com.amplitude.archiveDict" "ColorSync/" "Colors/" "ColorPickers/" "CallServices/" "Calendars/" "Caches/" "Breakpad/" "Audio/" "Assistants/" "Assistant/" "Application Support/" "Application Scripts/" "Accounts/" ".localized" "../" "./")
 
- ("/Users/kev/Applications/" (22672 58977 0 0) "Chrome Apps.localized/" "Blue Jeans.app/" ".localized" "../" "./")
-
  ("/Users/kev/Downloads/three.js-r69/utils/exporters/" (22685 19630 0 0) "revit/" "maya/" "max/" "blender/" ".DS_Store" "../" "./")
-
- ("/Users/kev/Downloads/three.js-r69/utils/" (22685 19630 0 0) "servers/" "npm/" "exporters/" "editors/" "converters/" "build/" ".DS_Store" "../" "./")
-
- ("/Users/kev/Downloads/three.js-r69/" (22685 19630 0 0) "utils/" "test/" "src/" "README.md" "LICENSE" "examples/" "editor/" "docs/" "CONTRIBUTING.md" "build/" "bower.json" ".gitignore" ".DS_Store" "../" "./")
-
- ("/Users/kev/Downloads/" (22685 19618 0 0) "Winning the Brain Game - Fixing the 7 Fatal Flaws of Thinking (2016) (Pdf) Gooner/" "VSCode-darwin-stable.zip" "vs_community_ENU__1453384775.1482517438.exe" "UnityDownloadAssistant-5.5.0f3.dmg" "Twin Peaks Season 1/" "towerOfBabel.5.0.zip" "tower-of-babel/" "three.js-r69.zip" "three.js-r69/" "The Brain's Way of Healing by Norman Doidge.epub" "Smooth Voxel Terrain (Part 2) _ 0 FPS.pdf" "Smooth Voxel Terrain (Part 1) _ 0 FPS.pdf" "Simplifying Isosurfaces (Part 2) _ 0 FPS.pdf" "Simplifying Isosurfaces (Part 1) _ 0 FPS.pdf" "SelfControl-2.1.1.zip" "Screen Shot 2017-01-01 at 5.34.41 PM.png" "SC-problemset.pdf" "sageconsultantinfoform.zip" "sageconsultantinfoform/" "Princess.Mononoke.1080p.DualAudio.English.Japanese.6ch.hime.OST.Extras.BRrip.BDrip.[KoTuWa]/" "OpenBlender.app.zip" "ndarray modules _ 0 FPS.pdf" "monero.mac.x64.v0-10-1-0.tar.bz2" "monero.mac.x64.v0-10-1-0/" "Meshing in a Minecraft Game _ 0 FPS.pdf" "Meshing in a Minecraft Game (Part 2) _ 0 FPS.pdf" "mechsnipervoxelshopexport.dae" "materials/" "Klok2.air" "kevzettler_Technical_writer.pdf" "kevzettler-fe-challenge.zip" "kevzettler-fe-challenge/" "Intelligent Data Engineering and Automated Learning – IDEAL 2016 - 17th International Conference.pdf" "Implementing Multidimensional Arrays in JavaScript _ 0 FPS.pdf" "Handbook of Stress and the Brain Part 2 Stress Integrative and Clinical Aspects.pdf" "goodgood.gif" "Future Brain The 12 Keys to Create Your High-Performance Brain by Jenny Brockis.epub" "front-end-handbook-2017.epub" "Foundations of Higher Mathemetics.pdf" "Focus-latest.zip" "fe-challenge-master.zip" "ents.gif" "CPU-20170204T224536.cpuprofile" "Colloquy.app/" "colloquy-latest.zip" "coding-challenge.zip" "calibre-2.76.0.dmg" "Cache oblivious array operations _ 0 FPS.pdf" "botwalk.gif" "Blue Jeans Launcher.dmg" "aovox.gif" "Anti-Inflammatory Eating for a Happy, Healthy Brain (2016) [WWRG]/" "Ambient occlusion for Minecraft-like worlds _ 0 FPS.pdf" "250px-NES-ROB.png" ".localized" ".DS_Store" ".com.google.Chrome.UkgWrH" "../" "./")
-
- ("/Users/kev/code/wizardwarz/js/" (22684 52541 0 0) "weapons.js" "utils.js" "text.js" "spells.js" "ShaderParticles.js" "player.js" "objects.js" "net.js" "menu.js" "loader.js" "libs/" "itemfactory.js" "game.js" "enemies.js" "ammo.js" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/src/" (22685 5334 0 0) "parsed-model.json" "client.js" ".#client.js" "#client.js#" "../" "./")
-
- ("/Users/kev/code/wizardwarz/" (22683 31003 0 0) "textures/" "sounds/" "server/" "README.md" "promo.png" "models/" "LICENSE" "js/" "index.html" "images/" "icons/" "fonts/" "css/" ".git/" "../" "./")
-
- ("/Users/kev/code/Babylon.js/src/Cameras/" (22682 45884 0 0) "VR/" "Inputs/" "Holographic/" "babylon.virtualJoysticksCamera.ts" "babylon.virtualJoysticksCamera.js.map" "babylon.virtualJoysticksCamera.js" "babylon.universalCamera.ts" "babylon.universalCamera.js.map" "babylon.universalCamera.js" "babylon.touchCamera.ts" "babylon.touchCamera.js.map" "babylon.touchCamera.js" "babylon.targetCamera.ts" "babylon.targetCamera.js.map" "babylon.targetCamera.js" "babylon.stereoscopicCameras.ts" "babylon.stereoscopicCameras.js.map" "babylon.stereoscopicCameras.js" "babylon.gamepadCamera.ts" "babylon.gamepadCamera.js.map" "babylon.gamepadCamera.js" "babylon.freeCameraInputsManager.ts" "babylon.freeCameraInputsManager.js.map" "babylon.freeCameraInputsManager.js" "babylon.freeCamera.ts" "babylon.freeCamera.js.map" "babylon.freeCamera.js" "babylon.followCamera.ts" "babylon.followCamera.js.map" "babylon.followCamera.js" "babylon.deviceOrientationCamera.ts" "babylon.deviceOrientationCamera.js.map" "babylon.deviceOrientationCamera.js" "babylon.cameraInputsManager.ts" "babylon.cameraInputsManager.js.map" "babylon.cameraInputsManager.js" "babylon.camera.ts" "babylon.camera.js.map" "babylon.camera.js" "babylon.arcRotateCameraInputsManager.ts" "babylon.arcRotateCameraInputsManager.js.map" "babylon.arcRotateCameraInputsManager.js" "babylon.arcRotateCamera.ts" "babylon.arcRotateCamera.js.map" "babylon.arcRotateCamera.js" "../" "./")
-
- ("/Users/kev/code/Babylon.js/src/" (22682 45884 0 0) "tsconfig.json" "Tools/" "States/" "Sprites/" "Shaders/" "Rendering/" "Probes/" "PostProcess/" "Physics/" "Particles/" "Mesh/" "Math/" "Materials/" "Loading/" "Lights/" "LensFlare/" "Layer/" "Debug/" "Culling/" "Collisions/" "Cameras/" "Bones/" "babylon.scene.ts" "babylon.scene.js.map" "babylon.scene.js" "babylon.node.ts" "babylon.node.js.map" "babylon.node.js" "babylon.mixins.ts" "babylon.mixins.js.map" "babylon.mixins.js" "babylon.engine.ts" "babylon.engine.js.map" "babylon.engine.js" "Audio/" "Animations/" "Actions/" "../" "./")
-
- ("/Users/kev/code/Babylon.js/" (22682 45632 0 0) "what's new.md" "Web.config" "Tools/" "tests/" "src/" "serializers/" "readme.md" "proceduralTexturesLibrary/" "postProcessLibrary/" "Playground/" "materialsLibrary/" "localDev/" "loaders/" "inspector/" "Exporters/" "dist/" "canvas2D/" "bower.json" "Babylon.sln" "Babylon.csproj" "assets/" ".vscode/" ".travis.yml" ".gitmodules" ".gitignore" ".gitattributes" ".git/" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/" (22678 44896 0 0) "three/" "stackgl/" "qubicle-voxlords/" "babylon/" ".DS_Store" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

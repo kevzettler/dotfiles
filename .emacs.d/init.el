@@ -16,11 +16,11 @@
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message "damned")
 
-;; Secret keys
+;;
+;; Configure and load secrets
+;;
 (setf epa-pinentry-mode 'loopback)
 (custom-set-variables '(epg-gpg-program  "/usr/local/opt/gnupg\@2.1/bin/gpg2"))
-
-
 (load (expand-file-name "secrets.el" user-emacs-directory))
 
 
@@ -28,7 +28,6 @@
 ;;; Load Path
 ;;;
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
-
 (defun load-init-file (file)
   (load (locate-user-emacs-file file)))
 
@@ -49,6 +48,7 @@
 (setq solarized-use-variable-pitch nil)
 
 
+;; Bar cursor instead of 70s highlight thing
 (setq-default cursor-type 'bar)
 
 
