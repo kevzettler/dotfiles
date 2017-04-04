@@ -132,9 +132,11 @@
       (append '(("\.yaml$"  . yaml-mode))
                 auto-mode-alist))
 
-;; Markdown 
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-hook 'markdown-mode-hook 'visual-line-mode)
+;; Markdown
+(use-package markdown-mode
+  :mode (("\\.md\\'" . markdown-mode))
+  :config
+  (add-hook 'markdown-mode-hook 'visual-line-mode))
 
 ; paren hilite
 ; http://www.emacsblog.org/2007/08/07/quick-tip-show-paren-mode/
@@ -184,9 +186,6 @@
 (global-set-key "\C-c\C-m" 'execute-extended-command)
 
 (global-set-key (kbd "C-;") 'goto-line)
-
-;;wtf
-;;(global-git-commit-mode t)
 
 ;; Expand to the region
 (use-package expand-region
