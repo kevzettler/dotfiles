@@ -213,13 +213,6 @@
   (nvm-use version)
   (exec-path-from-shell-copy-env "PATH"))
 
-;; (defun run-node (cwd)
-;;   (interactive "DDirectory: ")
-;;   (unless (executable-find "node")
-;;     (call-interactively 'do-nvm-use))
-;;   (let ((default-directory cwd))
-;;         (pop-to-buffer (make-comint (format "node-repl-%s" cwd) "node" nil "--interactive"))))
-
 ;;; Fix junk characters in shell-mode
 (add-hook 'shell-mode-hook 
           'ansi-color-for-comint-mode-on)
@@ -263,7 +256,6 @@
 ;; Reason setup
 ;;----------------------------------------------------------------------------
 
-(require 'company)
 
 (defun chomp-end (str)
   "Chomp tailing whitespace from STR."
