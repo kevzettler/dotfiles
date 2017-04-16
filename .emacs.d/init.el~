@@ -1,9 +1,16 @@
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
-(require 'cl-lib)
 
-;; start as focused window
-(x-focus-frame nil)
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+ (package-refresh-contents)
+ (package-install 'use-package))
 
+;; Save adding :ensure t on every use package
+(setq use-package-always-ensure t)
 
 ;; make sure the display is clean to start with
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -12,36 +19,64 @@
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message "damned")
 
-;;;
-;;; Customize
-;;;
-;; I want to keep the customize stuff out of this config file.  I
-;; don't use customize for much so I don't generally want to see it.
-(setq custom-file (locate-user-emacs-file "init-custom.el"))
-(load custom-file)
+;;
+;; Configure and load secrets
+;;
+(setf epa-pinentry-mode 'loopback)
+(custom-set-variables '(epg-gpg-program  "/usr/local/opt/gnupg\@2.1/bin/gpg2"))
+(load (expand-file-name "secrets.el" user-emacs-directory))
+
 
 ;;;
 ;;; Load Path
 ;;;
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
-
 (defun load-init-file (file)
   (load (locate-user-emacs-file file)))
 
 ;;;
-;;; Package
+;;; External inits
 ;;;
-(load-init-file "init-package")
 (load-init-file "init-javascript")
 (load-init-file "init-org")
+(load-init-file "init-reason")
 
+;;
+;; Theme
+;;
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
 (load-theme `solarized-light t)
+;;(load-theme `solarized-dark t)
 
-;; auto-complete
-(ac-config-default)
+;; Don't change size of org-mode headlines (but keep other size-changes)
+(setq solarized-scale-org-headlines nil)
 
-; IDO mode
+;; Don't change the font for some headings and titles
+(setq solarized-use-variable-pitch nil)
+
+
+;; Bar cursor instead of 70s highlight thing
+(setq-default cursor-type 'bar)
+
+
+;;; Automatically reload files that were changed on disk, if they have
+;;; not been modified in Emacs since the last time they were saved.
+(global-auto-revert-mode 1)
+
+;;; Turn the delay on auto-reloading from 5 seconds down to 1 second.
+(setq auto-revert-interval 1)
+
+;; IDO mode
+(use-package ido
+  :config
+  (ido-mode 'both)
+  (setq
+   ido-mode 1
+   ido-everywhere 1
+   ido-max-directory-size 100000
+   ;; Use the current window when visiting files and buffers with ido
+   ido-default-file-method 'selected-window
+   ido-default-buffer-method 'selected-window))
 (ido-mode 1)
 (ido-everywhere 1)
 
@@ -70,8 +105,6 @@
 ;; Use y or n instead of yes or not
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(setq inhibit-startup-message t)
-
 ; lines
 (setq scroll-step 1)
 (line-number-mode 1)
@@ -90,18 +123,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-;; WEB MODE
-(setq auto-mode-alist
-      (append '(("\.tpl$"  . web-mode))
-                auto-mode-alist))
 
-(setq auto-mode-alist
-      (append '(("\.erb$"  . web-mode))
-              auto-mode-alist))
-
-(setq auto-mode-alist
-      (append '(("\.tt$"  . web-mode))
-              auto-mode-alist))
 
 (setq auto-mode-alist
       (append '(("\.scss$"  . sass-mode))
@@ -111,9 +133,11 @@
       (append '(("\.yaml$"  . yaml-mode))
                 auto-mode-alist))
 
-;; Markdown 
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-hook 'markdown-mode-hook 'visual-line-mode)
+;; Markdown
+(use-package markdown-mode
+  :mode (("\\.md\\'" . markdown-mode))
+  :config
+  (add-hook 'markdown-mode-hook 'visual-line-mode))
 
 ; paren hilite
 ; http://www.emacsblog.org/2007/08/07/quick-tip-show-paren-mode/
@@ -190,13 +214,6 @@
   (nvm-use version)
   (exec-path-from-shell-copy-env "PATH"))
 
-;; (defun run-node (cwd)
-;;   (interactive "DDirectory: ")
-;;   (unless (executable-find "node")
-;;     (call-interactively 'do-nvm-use))
-;;   (let ((default-directory cwd))
-;;         (pop-to-buffer (make-comint (format "node-repl-%s" cwd) "node" nil "--interactive"))))
-
 ;;; Fix junk characters in shell-mode
 (add-hook 'shell-mode-hook 
           'ansi-color-for-comint-mode-on)
@@ -208,34 +225,20 @@
 
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
                              "~/Dropbox (Personal)/org/journal"
-                             "~/Dropbox (Personal)/org/gcal.org"
-                             "~/Dropbox (Personal)/org/gmail-inbox.org.txt"))
+                             "~/Dropbox (Personal)/org/gcal.org"))
 
 
 
 ;; GCAL INTEGRATION
 (setq package-check-signature nil)
 
-
 (use-package org-gcal
   :ensure t
+  :init
+  (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
   :config
-  (setq org-gcal-client-id "1041440649655-i0ml59it7qqotutg97s28rsoh4phab6m.apps.googleusercontent.com"
-	org-gcal-client-secret "KNeqGIw-DEJlD6PuJvMbmzCf"
-	org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/Dropbox (Personal)/org/gcal.org"))))
-
-(add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
-
-
-(use-package circe
-  :config
-  (setq circe-network-options
-        '(("Freenode"
-           :host "107.170.230.187"
-           :port "32768"
-           :tls t
-           ))))
-  
+  (require 'secrets)
+  (setq org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/org/gcal.org"))))
 
 
 (defun insert-date (prefix)
@@ -249,3 +252,10 @@
           (system-time-locale "de_DE"))
       (insert (format-time-string format))))
 
+
+
+;;;
+;;; Customize
+;;;
+(setq custom-file (locate-user-emacs-file "init-custom.el"))
+(load custom-file)

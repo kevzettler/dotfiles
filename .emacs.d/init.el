@@ -12,12 +12,13 @@
 ;; Save adding :ensure t on every use package
 (setq use-package-always-ensure t)
 
-;; make sure the display is clean to start with
-(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(setq inhibit-splash-screen t
-      inhibit-startup-echo-area-message "damned")
+;; Ensure environment variables inside Emacs look the same as in the user's shell.
+;; only need exec-path-from-shell on OSX
+;; this hopefully sets up path and other vars better
+(use-package exec-path-from-shell)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 
 ;;
 ;; Configure and load secrets
@@ -39,6 +40,15 @@
 ;;;
 (load-init-file "init-javascript")
 (load-init-file "init-org")
+;;(load-init-file "init-reason")
+
+
+;; make sure the display is clean to start with
+(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(setq inhibit-splash-screen t
+      inhibit-startup-echo-area-message "damned")
 
 ;;
 ;; Theme
@@ -251,43 +261,6 @@
           (system-time-locale "de_DE"))
       (insert (format-time-string format))))
 
-
-;;----------------------------------------------------------------------------
-;; Reason setup
-;;----------------------------------------------------------------------------
-
-
-(defun chomp-end (str)
-  "Chomp tailing whitespace from STR."
-  (replace-regexp-in-string (rx (* (any " \t\n")) eos)
-                            ""
-                            str))
-
-(let ((support-base-dir (concat (replace-regexp-in-string "refmt" "" (file-truename (chomp-end (shell-command-to-string "which refmt")))) ".."))
-      (merlin-base-dir (concat (replace-regexp-in-string "ocamlmerlin" "" (file-truename (chomp-end (shell-command-to-string "which ocamlmerlin")))) "..")))
-  ;; Add npm merlin.el to the emacs load path and tell emacs where to find ocamlmerlin
-  (add-to-list 'load-path (concat merlin-base-dir "/share/emacs/site-lisp/"))
-  (setq merlin-command (concat merlin-base-dir "/bin/ocamlmerlin"))
-
-  ;; Add npm reason-mode to the emacs load path and tell emacs where to find refmt
-  (add-to-list 'load-path (concat support-base-dir "/share/emacs/site-lisp"))
-  (setq refmt-command (concat support-base-dir "/bin/refmt")))
-
-(require 'reason-mode)
-(require 'merlin)
-(add-hook 'reason-mode-hook (lambda ()
-                              (add-hook 'before-save-hook 'refmt-before-save)
-                              (merlin-mode)))
-
-(setq merlin-ac-setup t)
-
-(require 'iedit)
-(defun evil-custom-merlin-iedit ()
-  (interactive)
-  (if iedit-mode (iedit-mode)
-    (merlin-iedit-occurrences)))
-
-(define-key merlin-mode-map (kbd "C-c C-e") 'evil-custom-merlin-iedit)
 
 
 ;;;
