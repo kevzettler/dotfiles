@@ -99,4 +99,5 @@
 ;; multiple-cursors-mode
 (use-package multiple-cursors
   :bind (("s-d" . mc/mark-next-like-this)
-         ("M-d" . mc/mark-all-like-this)))
+         ("M-d" . mc/mark-all-like-this)
+         ("s-<mouse-1>" . mc/add-cursor-on-click)))

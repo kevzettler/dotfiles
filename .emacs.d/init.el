@@ -40,7 +40,7 @@
 ;;;
 (load-init-file "init-javascript")
 (load-init-file "init-org")
-;;(load-init-file "init-reason")
+(load-init-file "init-reason")
 
 
 ;; make sure the display is clean to start with
@@ -109,7 +109,6 @@
 
 ;; Flash instead of that annoying bell
 (setq visible-bell t)
-
 
 ;; Use y or n instead of yes or not
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -184,8 +183,6 @@
 (global-set-key (kbd "C-x ;") 'goto-line)
 (global-set-key (kbd "M-<right>") 'forward-word)
 (global-set-key (kbd "M-<left>") 'backward-word)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "s-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-/") 'comment-dwim)
 (global-set-key (kbd "s-[") 'hs-hide-block)
 (global-set-key (kbd "s-]") 'hs-show-block)
