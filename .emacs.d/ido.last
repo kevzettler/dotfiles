@@ -2,7 +2,16 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" . "components/")
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/layouts/" . "_default/")
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/" . "layouts/")
+ ("/Users/kev/code/hugoblog/themes/" . "hugo-theme-bootstrap4-blog/")
+ ("/Users/kev/code/hugoblog/content/programming/2015/06/" . "07/")
+ ("/Users/kev/code/hugoblog/content/programming/2015/" . "06/")
+ ("/Users/kev/code/hugoblog/content/programming/" . "2015/")
+ ("/Users/kev/code/hugoblog/content/" . "programming/")
+ ("/Users/kev/code/hugoblog/" . "content/")
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/public/" . "assets/")
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" . "containers/")
  ("/Users/kev/code/robotbones/attempts/stackgl/reactify/" . "src/")
  ("/Users/kev/code/ocaml-sg/reason-react-example/src/" . "todomvc/")
  ("/Users/kev/code/ocaml-sg/reason-react-example/" . "src/")
@@ -34,7 +43,7 @@
  ("/Users/kev/Downloads/three.js-r69/" . "utils/")
  ("/Users/kev/code/wizardwarz/js/" . "libs/")
  ("/Users/kev/code/skeletal-animation-system/" . "demo/")
- ("/Users/kev/code/robotbones/attempts/stackgl/" . "regl-budo/")
+ ("/Users/kev/code/robotbones/attempts/stackgl/" . "reactify/")
  ("/Users/kev/code/wizardwarz/" . "js/")
  ("/Users/kev/Dropbox/org/atlassian/template/" . "info/")
  ("/Users/kev/Dropbox/org/atlassian/" . "template/")
@@ -177,21 +186,33 @@
 ;; ----- ido-work-directory-list -----
 (
  "/Users/kev/.emacs.d/"
- "/Users/kev/"
- "/Users/kev/code/robotbones/attempts/stackgl/regl-budo/"
- "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/"
+ "/Users/kev/Dropbox (Personal)/org/journal/"
  "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/"
+ "/Users/kev/Dropbox (Personal)/org/atlassian/"
+ "/Users/kev/org/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/public/"
+ "/Users/kev/code/robotbones/attempts/stackgl/regl-budo/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/actions/"
  "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/selectors/"
+ "/Users/kev/code/hugoblog/"
+ "/Users/kev/code/hugoblog/content/programming/2015/06/07/"
+ "/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/layouts/_default/"
+ "/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/archetypes/"
+ "/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/"
+ "/Users/kev/code/hugoblog/content/post/"
+ "/Users/kev/code/hugoblog/content/posts/"
+ "/Users/kev/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/"
+ "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/middleware/"
  "/Users/kev/code/robotbones/"
  "/Users/kev/code/robotbones/attempts/stackgl/reactify/"
- "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/"
- "/Users/kev/code/robotbones/attempts/stackgl/reactify/public/"
- "/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/"
  "/Users/kev/org/atlassian/"
  "/Users/kev/Dropbox (Personal)/org/"
  "/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/"
  "/Users/kev/code/ocaml-sg/reason-react-example/"
- "/Users/kev/org/"
  "/Users/kev/code/robotbones/attempts/three/qubicle-import/"
  "/Users/kev/code/robotbones/attempts/three/qubicle-import/src/"
  "/Users/kev/code/easeread/public/stylesheets/"
@@ -210,71 +231,108 @@
  "/Users/kev/code/ao-shader/"
  "/Users/kev/code/blendergltf/"
  "/Users/kev/code/test_blender_addons/"
- "/Users/kev/Dropbox (Personal)/org/atlassian/"
  "/Users/kev/code/mesher/demo/src/meshers/"
  "/Users/kev/code/mesher/src/"
  "/Users/kev/code/mesher/demo/src/"
  "/Users/kev/code/mesher/demo/"
- "/Users/kev/code/vj-stuff/lib/"
- "/Users/kev/code/vj-stuff/"
- "/Users/kev/code/robotbones/attempts/babylon/babylon-bones-qubicle-CEWBS/src/"
- "/Users/kev/code/robotbones/attempts/stackgl/react-hot-boilerplate/src/"
- "/Users/kev/code/robotbones/attempts/stackgl/react-hot-boilerplate/"
- "/Users/kev/code/robotbones/attempts/stackgl/"
- "/Users/kev/code/robotbones/attempts/babylon/babylon-bones-qubicle-CEWBS/"
- "/Users/kev/code/shaderschool/01-intro-1/"
- "/Users/kev/code/shaderschool/00-intro-0/"
- "/Users/kev/code/skeletal-animation-system/node_modules/load-collada-dae/src/"
- "/Users/kev/code/skeletal-animation-system/node_modules/load-collada-dae/src/shader/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "init-custom.el"
  "init.el"
- "init-package.el"
- ".bashrc"
+ "2017-03-13.org"
+ "init-org.el"
+ "Title.js"
  "VoxelMesh.js"
- "QubicleMesh.js"
- "index.js"
- "triangle.js"
- "ReglRect.js"
+ "ReglBasic.js"
  "ReglApp.js"
- "Regl.js"
+ "git_config.org"
+ "plebland.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/kev/.emacs.d/" (22753 15816 0 0) "url/" "tramp" "secrets.el" "request/" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" ".org-id-locations" ".mc-lists.el" ".cask/" "../" "./")
+ ("/Users/kev/.emacs.d/" (22762 6254 0 0) "url/" "tramp" "secrets.el.gpg" "secrets.el" "request/" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" ".org-id-locations" ".mc-lists.el" ".cask/" "../" "./")
 
- ("/Users/kev/" (22753 15204 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "cool/" "code/" "Applications/" ".znc/" ".yarnrc" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.5.372.42.kev.json" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".serverless/" ".ruby-version" ".profile" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "#*message*-20161204-094852#" "../" "./")
+ ("/Users/kev/Dropbox (Personal)/org/journal/" (22762 6023 0 0) "OhlifeExport/" "2017-04-09.org" "2017-04-07.org" "2017-04-06.org" "2017-04-05.org" "2017-04-03.org" "2017-04-02.org" "2017-03-31.org" "2017-03-30.org" "2017-03-29.org" "2017-03-28.org" "2017-03-26.org" "2017-03-24.org" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" "2016/" ".DS_Store" ".#2017-03-07.org" "#2016-11-23.org#" "../" "./")
 
- ("/Users/kev/Dropbox (Personal)/org/" (22753 10432 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" ".#personal.org" ".#gcal.org" "#personal.org#" "#gcal.org#" "../" "./")
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/" (22761 49712 0 0) "VoxelMesh.js" "ReglBasic.js" "QubicleMesh.js" ".#VoxelMesh.js" "#VoxelMesh.js#" "../" "./")
 
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/" (22752 10328 0 0) "triangle.js" "Title.js" "Root.prod.js" "Root.js" "Root.dev.js" "ReglRect.js" "ReglApp.js" "Menu.js" "Game.js" "DevTools.js" "App.js" ".#Root.dev.js" "#Root.dev.js#" "../" "./")
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/containers/" (22761 49508 0 0) "triangle.js" "Title.js" "Root.prod.js" "Root.js" "Root.dev.js" "ReglRect.js" "ReglApp.js" "Menu.js" "Game.js" "DevTools.js" "App.js" "../" "./")
 
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/components/" (22752 10337 0 0) "VoxelMesh.js" "QubicleMesh.js" "../" "./")
+ ("/Users/kev/org/archive/" (22761 4111 0 0) "tilt.org_archive" "read.org_archive" "plebland.org_archive" "personal.org_archive_archive" "personal.org_archive" "personal (Kevin’s MacBook Pro's conflicted copy 2016-10-24).org_archive" "mobile-inbox.org_archive" "gmail-inbox.org.txt_archive" "gcal.org_archive" "2017-03-01 (Kev’s MacBook Pro's conflicted copy 2017-03-01).org_archive" "2017-02-21.org_archive" "2017-02-12.org_archive" "2017-01-31.org_archive" "2017-01-06.org_archive" "2017-01-01.org_archive" "2016-12-30.org_archive" "2016-12-02.org_archive" "2016-11-07.org_archive" "2016-11-01.org_archive" "2016-10-31.org_archive" "2016-10-30.org_archive" "2016-10-28.org_archive" "2016-10-27.org_archive" "2016-10-25.org_archive" "2016-10-23.org_archive" "2016-09-25.org_archive" "2016-09-11.org_archive" "2016-09-08.org_archive" "../" "./")
 
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" (22752 9256 0 0) "store/" "routes.js" "reducers/" "middleware/" "index.js" "index.css" "containers/" "components/" "actions/" ".#App.js" "#App.js#" "../" "./")
+ ("/Users/kev/org/atlassian/" (22761 31027 0 0) "pandoc.sh" "git_config.org" "git_config" ".git/" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/middleware/" (22758 42804 0 0) "api.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/" (22758 42804 0 0) "configureStore.prod.js" "configureStore.js" "configureStore.dev.js" "../" "./")
+
+ ("/Users/kev/code/hugoblog/" (22758 27293 0 0) "themes/" "static/" "layouts/" "data/" "content/" "config.toml" "archetypes/" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/" (22759 59802 0 0) "paginate.js" "index.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/actions/" (22759 59802 0 0) "regl.js" "entities.js" "assets.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/public/" (22759 10155 0 0) "index.html" "index.css" "favicon.ico" "assets/" "../" "./")
+
+ ("/Users/kev/org/" (22761 35626 0 0) "setting-up-a-repository" "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" ".#personal.org" "../" "./")
+
+ ("/Users/kev/code/robotbones/" (22758 42804 0 0) "node_modules/" "attempts/" "assets/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/code/" (22761 9667 0 0) "wizardwarz/" "VoxLords/" "threejs-animation-workflow/" "three.js/" "thebookofshaders/" "testimportthing/" "test_blender_addons/" "skeletal-animation-system/" "sitepoint-aws-lambda-tutorial/" "shaderschool/" "scene-tree/" "robotbones/" "regl_basics/" "regl-greedy-test/" "react-three-renderer/" "react-regl/" "react-datasheet/" "qake/" "plebland/" "peerchan/" "parse-qubicle/" "parse-magica-voxel/" "org-stream/" "ocaml-sg/" "node_modules/" "node-peer-hub/" "NativeOrg/" "memory/" "magicavoxel-three/" "magicavoxel-ndarray/" "load-collada-dae/" "kevzettler.github.com/" "js-peers/" "hugoblog/" "go/" "glslViewer/" "game-off-2016/" "emacs.d/" "easeread/" "CEWBS/" "blendergltf/" "Babylon.js-FPS/" "Babylon.js/" "ao-shader/" "aakrobot/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/" (22761 46256 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "cool/" "code/" "Applications/" ".znc/" ".yarnrc" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.5.372.42.kev.json" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".serverless/" ".ruby-version" ".profile" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "#*message*-20161204-094852#" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/" (22761 45185 0 0) "Zettler, Kevin/" "webdump/" "Unsync-Archived/" "todo.txt" "tiltlife/" "The_Boss_Fight_Books_Bundle_with_Bonus/" "textexpander/" "streams/" "StardewValley/" "Screenshots/" "Screenshot 2016-08-19 21.51.19.png" "savedexport.html" "Public/" "OYFpodcast.mp3" "oyf2008ish.jpg" "OYF Lyrics.csv" "org/" "Old-hardrive/" "oaklandcranes.jpg" "NOOK NST Side-Loaded apps/" "Nicolet, Gabrielle/" "Music/" "MIT mathematics for computer science.pdf" "memes/" "meetupphoto.jpeg" "Mackup/" "keys/" "kev_badstock08.jpg" "iterm2settings/" "IMG_2365.JPG" "Icon
+" "highres_459397655.jpeg" "HelloSign/" "HelloFax/" "Guitar/" "googlemeetup.jpeg" "Godaddybox/" "Godaddy/" "giphy.gif" "Game assets/" "File Mar 10, 11 37 20 AM.png" "Europe (My Photos)/" "emu/" "Documents/" "design/" "dead-moon-logo.360x0-is-pid15092.jpg" "DannyDew pbr meme.mp4" "com.googlecode.iterm2.plist" "code/" "Camera Uploads/" "Calibre/" "Bushido-tax-setup/" "Bunniemaster history/" "Bry-bet.png" "Apps/" "application support/" "23andme/" "13516428_10157136888960323_4704590767972153238_n.jpg" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/" (22761 35626 0 0) "setting-up-a-repository" "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" ".#personal.org" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/atlassian/" (22761 31027 0 0) "pandoc.sh" "git_config.org" "git_config" ".git/" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/regl-budo/" (22758 56413 0 0) "VoxelMesh.js" "QubicleMesh.js" "package.json" "node_modules/" "index.js" "assets/" "#index.js#" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/" (22758 52667 0 0) "store/" "selectors/" "routes.js" "reducers/" "middleware/" "index.js" "containers/" "components/" "App.js" "actions/" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/selectors/" (22758 43064 0 0) "qubicle.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/" (22758 42804 0 0) "yarn.lock" "src/" "README.md" "public/" "package.json" "node_modules/" ".gitignore" "../" "./")
+
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/layouts/_default/" (22757 35670 0 0) "summary.html" "single.html" "list.html" "content.html" "baseof.html" "../" "./")
+
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/layouts/" (22757 33494 0 0) "robots.txt" "partials/" "_default/" "404.html" "../" "./")
+
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/archetypes/" (22757 33494 0 0) "default.md" "../" "./")
+
+ ("/Users/kev/code/hugoblog/themes/hugo-theme-bootstrap4-blog/" (22757 33527 0 0) "theme.toml" "static/" "source/" "screenshot.png" "README.md" "package.json" "node_modules/" "LICENSE.txt" "layouts/" "images/" "i18n/" "exampleSite/" "data/" "build/" "archetypes/" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/themes/" (22757 33490 0 0) "hugo-theme-bootstrap4-blog/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/layouts/" (22757 31893 0 0) "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/programming/2015/06/07/" (22757 35417 0 0) "rapid_local_development_vagrant_docker_node.md" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/post/" (22757 34285 0 0) "testmarkdown.md" "hugo-org-test.org" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/programming/2015/06/" (22757 34074 0 0) "07/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/programming/2015/" (22757 34074 0 0) "06/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/programming/" (22757 34074 0 0) "2015/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/" (22757 34083 0 0) "programming/" "post/" "../" "./")
+
+ ("/Users/kev/code/hugoblog/content/posts/" (22757 32882 0 0) "hugo-org-test.org" "../" "./")
+
+ ("/Users/kev/code/robotbones/attempts/stackgl/reactify/public/assets/" (22756 1671 0 0) "tree1.vox" "tetris.qbcl" "tetris.qb" "mechsniper.qb" "mechsniper-hands.qb" "foot.qb" ".DS_Store" "../" "./")
 
  ("/Users/kev/code/robotbones/attempts/stackgl/" (22750 56227 0 0) "regl-budo/" "reactify/" "node_modules/" ".DS_Store" "../" "./")
-
- ("/Users/kev/code/robotbones/" (22750 56208 0 0) "node_modules/" "attempts/" "assets/" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/" (22750 55889 0 0) "yarn.lock" "src/" "README.md" "public/" "package.json" "node_modules/" ".gitignore" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/reducers/" (22750 53398 0 0) "paginate.js" "index.js" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/public/" (22750 51490 0 0) "index.html" "favicon.ico" "../" "./")
-
- ("/Users/kev/code/robotbones/attempts/stackgl/reactify/src/store/" (22750 53197 0 0) "configureStore.prod.js" "configureStore.js" "configureStore.dev.js" "../" "./")
 
  ("/usr/local/bin/" (22750 51326 0 0) "yarnpkg" "yarn" "wrjpgcom" "wheel" "wget" "webgl-workshop" "utop" "update-mime-database" "tryaffix" "tiffsplit" "tiffset" "tiffmedian" "tiffinfo" "tiffdump" "tiffdither" "tiffcrop" "tiffcp" "tiffcmp" "tiff2rgba" "tiff2ps" "tiff2pdf" "tiff2bw" "texdist" "symilar" "standard" "srptool" "smtpd2.py" "smtpd2.7.py" "smtpd.py" "shader-school" "sexp-conv" "sdl2-config" "rtop" "rsvg-convert" "reopt" "refmttype" "refmt_merlin" "refmt" "rebuild" "reactjs_jsx_ppx" "rdjpgcom" "raw2tiff" "pythonw2.7" "pythonw2" "pythonw" "python2.7-config" "python2.7" "python2-config" "python2" "python-config" "python" "pyreverse" "pylint-gui" "pylint" "pydoc2.7" "pydoc2" "pydoc" "pth-config" "psktool" "ppm2tiff" "pngfix" "png-fix-itxt" "pkg-config" "pkcs1-conv" "pip2.7" "pip2" "pip" "pinentry-curses" "pinentry" "pcretest" "pcregrep" "pcre-config" "pango-view" "pandoc" "pal2rgb" "p11tool" "p11-kit" "onig-config" "ocsptool" "ocamlrun" "ocamlopt" "ocamlmerlin-reason" "ocamlmerlin" "ocamlc" "ocaml" "npth-config" "npm" "notary" "nosetests-2.7" "nosetests" "node" "nettle-pbkdf2" "nettle-lfib-stream" "nettle-hash" "munchlist" "mpicalc" "mongotop" "mongostat" "mongos" "mongorestore" "mongoperf" "mongooplog" "mongoimport" "mongofiles" "mongoexport" "mongodump" "mongod" "mongo" "mackup" "libusb-config" "libpng16-config" "libpng-config" "libgcrypt-config" "libassuan-config" "ksba-config" "jshint" "jq" "jpegtran" "ispell" "isort" "introtowebgl" "ijoin" "idle2.7" "idle2" "idle" "icombine" "hmac256" "hb-shape" "hb-ot-shape-closure" "gtester-report" "gtester" "gsettings" "gresource" "gpg-error-config" "gpg-error" "gpg-agent" "gpg" "gobject-query" "gnutls-serv" "gnutls-cli-debug" "gnutls-cli" "gnutls-certtool" "glslViewer" "glslLoader" "glib-mkenums" "glib-gettextize" "glib-genmarshal" "glib-compile-schemas" "glib-compile-resources" "gitk" "git-upload-pack" "git-upload-archive" "git-subtree" "git-shell" "git-receive-pack" "git-cvsserver" "git-credential-osxkeychain" "git-credential-netrc" "git" "gio-querymodules" "gio" "gdk-pixbuf-thumbnailer" "gdk-pixbuf-query-loaders" "gdk-pixbuf-pixdata" "gdk-pixbuf-csource" "gdbus-codegen" "gdbus" "gdbmtool" "gdbm_load" "gdbm_dump" "gapplication" "g-ir-scanner" "g-ir-inspect" "g-ir-generate" "g-ir-compiler" "g-ir-annotation-tool" "freetype-config" "findaffix" "fc-validate" "fc-scan" "fc-query" "fc-pattern" "fc-match" "fc-list" "fc-cat" "fc-cache" "fax2tiff" "fax2ps" "f2py" "epylint" "emacs" "eatiht" "easy_install-2.7" "easy_install" "dumpsexp" "docker-machine" "docker-compose" "docker" "djpeg" "dirmngr-client" "dirmngr" "defmt-sh" "defmt-c" "cythonize" "cython" "cygdb" "csslint-0.6" "croco-0.6-config" "create-react-app" "coverage2" "coverage-2.7" "coverage" "cordova" "cjpeg" "chardetect" "cask" "cairo-trace" "cairo-sphinx" "buildhash" "bsondump" "brew" "blender" "berror" "asn1Parser" "asn1Decoding" "asn1Coding" "adnsresfilter" "adnslogres" "adnshost" "adnsheloex" "ack" "2to3-2.7" "2to3-2" "2to3" "../" "./")
 
  ("/Users/kev/Dropbox/org/" (22750 26426 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
-
- ("/Users/kev/Dropbox (Personal)/org/atlassian/" (22750 47205 0 0) "setting-up-a-repository.org" "setting-up-a-repository" "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org-52933KyL.html" ".git/" "../" "./")
-
- ("/Users/kev/org/archive/" (22749 59221 0 0) "tilt.org_archive" "read.org_archive" "plebland.org_archive" "personal.org_archive_archive" "personal.org_archive" "personal (Kevin’s MacBook Pro's conflicted copy 2016-10-24).org_archive" "mobile-inbox.org_archive" "gmail-inbox.org.txt_archive" "gcal.org_archive" "2017-03-01 (Kev’s MacBook Pro's conflicted copy 2017-03-01).org_archive" "2017-02-21.org_archive" "2017-02-12.org_archive" "2017-01-31.org_archive" "2017-01-06.org_archive" "2017-01-01.org_archive" "2016-12-30.org_archive" "2016-12-02.org_archive" "2016-11-07.org_archive" "2016-11-01.org_archive" "2016-10-31.org_archive" "2016-10-30.org_archive" "2016-10-28.org_archive" "2016-10-27.org_archive" "2016-10-25.org_archive" "2016-10-23.org_archive" "2016-09-25.org_archive" "2016-09-11.org_archive" "2016-09-08.org_archive" "../" "./")
 
  ("/Users/kev/code/easeread/views/" (22739 7962 0 0) "index.ejs" "error.ejs" "converter.ejs" "../" "./")
 
@@ -286,17 +344,7 @@
 
  ("/Users/kev/code/ocaml-sg/reason-react-example/src/todomvc/" (22740 20342 0 0) "todoItem.re" "todoFooter.re" "index.html" "app.re" "../" "./")
 
- ("/Users/kev/code/robotbones/attempts/stackgl/regl-budo/" (22750 26495 0 0) "VoxelMesh.js" "QubicleMesh.js" "package.json" "node_modules/" "index.js" "assets/" "#index.js#" "../" "./")
-
- ("/Users/kev/org/atlassian/" (22750 47205 0 0) "setting-up-a-repository.org" "setting-up-a-repository" "rewriting-history.org-93961qgq.html" "pandoc.sh" "outfile.txt" "git_config.org-52933KyL.html" ".git/" "../" "./")
-
- ("/Users/kev/code/" (22750 51280 0 0) "wizardwarz/" "VoxLords/" "threejs-animation-workflow/" "three.js/" "thebookofshaders/" "testimportthing/" "test_blender_addons/" "skeletal-animation-system/" "sitepoint-aws-lambda-tutorial/" "shaderschool/" "robotbones/" "regl_basics/" "regl-greedy-test/" "react-three-renderer/" "qake/" "plebland/" "peerchan/" "parse-qubicle/" "parse-magica-voxel/" "org-stream/" "ocaml-sg/" "node_modules/" "node-peer-hub/" "NativeOrg/" "memory/" "magicavoxel-three/" "magicavoxel-ndarray/" "load-collada-dae/" "kevzettler.github.com/" "js-peers/" "glslViewer/" "game-off-2016/" "emacs.d/" "easeread/" "CEWBS/" "blendergltf/" "Babylon.js-FPS/" "Babylon.js/" "ao-shader/" "aakrobot/" ".DS_Store" "../" "./")
-
- ("/Users/kev/org/" (22750 26426 0 0) "remeber.org" "recipies.org" "read.org" "read (Kev’s MacBook Pro's conflicted copy 2017-03-25).org" "proposal.org" "plebland.org" "personal.org" "mobile-inbox.org" "journal/" "gcal.org" "atlassian/" "archive/" "2017_resolutions.org" "../" "./")
-
  ("/Users/kev/Applications/" (22723 47034 0 0) "Streets of Rogue.app/" "Chrome Apps.localized/" "Blue Jeans.app/" ".localized" "../" "./")
-
- ("/Users/kev/Dropbox (Personal)/org/journal/" (22750 26470 0 0) "OhlifeExport/" "2017-03-31.org" "2017-03-30.org" "2017-03-29.org" "2017-03-28.org" "2017-03-26.org" "2017-03-24.org" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" "2016-9-3.org" "2016-12-30.org" "2016-12-29.org" "2016-12-28.org" "2016-12-27.org" "2016-12-25.org" "2016-12-24.org" "2016-12-23.org" "2016-12-22.org" "2016-12-19.org" "2016-12-18.org" "2016-12-17.org" "2016-12-16.org" "2016-12-15.org" "2016-12-14.org" "2016-12-13.org" "2016-12-12.org" "2016-12-11.org" "2016-12-10.org" "2016-12-09.org" "2016-12-08.org" "2016-12-07.org" "2016-12-06.org" "2016-12-05.org" "2016-12-04.org" "2016-12-03.org" "2016-12-02.org" "2016-12-01.org" "2016-11-30.org" "2016-11-29.org" "2016-11-28.org" "2016-11-27.org" "2016-11-26.org" "2016-11-25.org" "2016-11-24.org" "2016-11-23.org" "2016-11-22.org" "2016-11-21.org" "2016-11-20.org" "2016-11-19.org" "2016-11-18.org" "2016-11-17.org" "2016-11-16.org" "2016-11-15.org" "2016-11-14.org" "2016-11-13.org" "2016-11-12.org" "2016-11-11.org" "2016-11-10.org" "2016-11-09.org" "2016-11-08.org" "2016-11-07.org" "2016-11-06.org" "2016-11-05.org" "2016-11-04.org" "2016-11-03.org" "2016-11-02.org" "2016-11-01.org" "2016-10-31.org" "2016-10-30.org" "2016-10-29.org" "2016-10-28.org" "2016-10-27.org" "2016-10-26.org" "2016-10-25.org" "2016-10-24.org" "2016-10-23.org" "2016-10-22.org" "2016-10-21.org" "2016-10-20.org" "2016-10-19.org" "2016-10-18.org" "2016-10-17.org" "2016-10-16.org" "2016-10-15.org" "2016-10-14.org" "2016-10-13.org" "2016-10-12.org" "2016-10-11.org" "2016-10-10.org" "2016-10-09.org" "2016-10-08.org" "2016-10-07.org" "2016-10-06.org" "2016-10-05.org" "2016-10-04.org" "2016-10-02.org" "2016-09-30.org" "2016-09-29.org" "2016-09-28.org" "2016-09-27.org" "2016-09-26.org" "2016-09-25.org" "2016-09-24.org" "2016-09-23.org" "2016-09-22.org" "2016-09-21.org" "2016-09-20.org" "2016-09-19.org" "2016-09-17.org" "2016-09-16.org" "2016-09-15.org" "2016-09-14.org" "2016-09-13.org" "2016-09-12.org" "2016-09-11.org" "2016-09-10.org" "2016-09-09.org" "2016-09-08.org" "2016-09-07.org" "2016-09-06.org" "2016-09-05.org" "2016-09-04.org" "2016-09-03.org" "2016-09-02.org" "2016-09-01.org" "2016-08-31.org" "2016-08-30.org" "2016-08-29.org" "2016-08-28.org" "2016-08-27.org" "2016-08-26.org" "2016-08-25.org" "2016-08-24.org" "2016-08-23.org" "2016-08-22.org" "2016-08-21.org" "2016-08-20.org" "2016-08-19.org" "2016-08-18.org" "2016-08-17.org" "2016-08-11.org" "2016-08-10.org" "2016-08-09.org" "2016-08-08.org" "2016-08-07.org" "2016-08-04.org" "2016-08-03.org" "2016-08-02.org" "2016-07-31.org" "2016-07-30.org" "2016-07-29.org" "2016-07-28.org" "2016-07-27.org" "2016-07-26.org" "2016-07-25.org" "2016-07-24.org" ".#2017-03-07.org" "#2016-11-23.org#" "../" "./")
 
  ("/Users/kev/code/VoxLords/" (22719 22067 0 0) "webpack/" "textures/" "Termfile" "src/" "sound/" "server/" "PixVoxelAssets/" "package.json" "npm-shrinkwrap.json" "node_modules/" "node-server-loader.js" "node-loader.js" "models/" "maps/" "libs/" "lab/" "index.html" "Dockerfile" "dist/" "debug-server.html" ".gitignore" ".git/" "../" "./")
 
@@ -352,9 +400,6 @@
 
  ("/Users/kev/Dropbox (Personal)/code/" (22581 7548 0 0) "react-three-renderer/" "game-off-2016/" "../" "./")
 
- ("/Users/kev/Dropbox (Personal)/" (22723 1958 0 0) "Zettler, Kevin/" "webdump/" "voxelimage.jpg" "Unsync-Archived/" "todo.txt" "tiltlife/" "The_Boss_Fight_Books_Bundle_with_Bonus/" "textexpander/" "taq/" "streams/" "StardewValley/" "Screenshots/" "Screenshot 2017-01-31 13.13.56.png" "Screenshot 2016-11-29 08.37.01.png" "Screenshot 2016-08-19 21.51.19.png" "Screenshot 2016-07-23 22.11.33.png" "savedexport.html" "Public/" "Photos from iPhoto/" "OYFpodcast.mp3" "oyf2008ish.jpg" "OYF Lyrics.csv" "org/" "Old-hardrive/" "oaklandcranes.jpg" "Nicolet, Gabrielle/" "Music/" "MIT mathematics for computer science.pdf" "memes/" "Mackup/" "keys/" "kev_badstock08.jpg" "iterm2settings/" "IMG_2365.JPG" "Icon
-" "HelloSign/" "HelloFax/" "Guitar/" "Godaddybox/" "Godaddy/" "git-completion.bash" "giphy.gif" "Game assets/" "File Mar 10, 11 37 20 AM.png" "Europe (My Photos)/" "emu/" "Documents/" "design/" "dead-moon-logo.360x0-is-pid15092.jpg" "com.googlecode.iterm2.plist" "code/" "Camera Uploads/" "Calibre/" "Bushido-tax-setup/" "Bunniemaster history/" "Apps/" "application support/" "13516428_10157136888960323_4704590767972153238_n.jpg" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
-
  ("/Users/kev/code/skeletal-animation-system/demo/" (22723 11609 0 0) "upper-body.js" "render-controls.js" "render-canvas.js" "regl.js" "lower-body.js" "demo.js" "create-canvas.js" "control/" "browser.js" "asset/" "#upper-body.js#" "#regl.js#" "#demo.js#" "../" "./")
 
  ("/Users/kev/code/mesher/demo/src/meshers/" (22722 60404 0 0) "NavMeshMesher.ts" "BasicMesher.ts" "AoMesher.ts" "../" "./")
@@ -408,43 +453,6 @@
  ("/usr/local/" (22667 49057 0 0) "var/" "share/" "sbin/" "opt/" "lib/" "include/" "Homebrew/" "Frameworks/" "etc/" "Cellar/" "Caskroom/" "bin/" "../" "./")
 
  ("/usr/" (22647 50114 0 0) "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "../" "./")
-
- ("/Users/kev/Dropbox/" (22693 59508 0 0) "Zettler, Kevin/" "webdump/" "voxelimage.jpg" "Unsync-Archived/" "todo.txt" "tiltlife/" "The_Boss_Fight_Books_Bundle_with_Bonus/" "textexpander/" "taq/" "streams/" "StardewValley/" "Screenshots/" "Screenshot 2017-01-31 13.13.56.png" "Screenshot 2016-11-29 08.37.01.png" "Screenshot 2016-08-19 21.51.19.png" "Screenshot 2016-07-23 22.11.33.png" "savedexport.html" "Public/" "Photos from iPhoto/" "OYFpodcast.mp3" "oyf2008ish.jpg" "OYF Lyrics.csv" "org/" "Old-hardrive/" "Nicolet, Gabrielle/" "Music/" "memes/" "Mackup/" "keys/" "kev_badstock08.jpg" "iterm2settings/" "IMG_2365.JPG" "Icon
-" "HelloSign/" "HelloFax/" "Guitar/" "Godaddybox/" "Godaddy/" "git-completion.bash" "giphy.gif" "Game assets/" "Europe (My Photos)/" "emu/" "Documents/" "design/" "dead-moon-logo.360x0-is-pid15092.jpg" "com.googlecode.iterm2.plist" "code/" "Camera Uploads/" "Calibre/" "Bushido-tax-setup/" "Apps/" "application support/" "13516428_10157136888960323_4704590767972153238_n.jpg" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
-
- ("/Users/kev/code/skeletal-animation-system/node_modules/load-collada-dae/" (22685 884 0 0) "test/" "src/" "README.md" "package.json" ".travis.yml" ".npmignore" "../" "./")
-
- ("/Users/kev/code/regl_basics/" (22689 4532 0 0) "node_modules/" "index.js" ".git/" "../" "./")
-
- ("/Users/kev/code/Babylon.js/src/Loading/" (22682 45884 0 0) "Plugins/" "babylon.sceneLoader.ts" "babylon.sceneLoader.js.map" "babylon.sceneLoader.js" "#babylon.sceneLoader.ts#" "../" "./")
-
- ("/Users/kev/code/Babylon.js/src/Loading/Plugins/" (22682 45884 0 0) "babylon.babylonFileLoader.ts" "babylon.babylonFileLoader.js.map" "babylon.babylonFileLoader.js" "../" "./")
-
- ("/Users/kev/code/Babylon.js/src/Mesh/" (22682 45884 0 0) "babylon.vertexBuffer.ts" "babylon.vertexBuffer.js.map" "babylon.vertexBuffer.js" "babylon.subMesh.ts" "babylon.subMesh.js.map" "babylon.subMesh.js" "babylon.polygonMesh.ts" "babylon.polygonMesh.js.map" "babylon.polygonMesh.js" "babylon.meshSimplification.ts" "babylon.meshSimplification.js.map" "babylon.meshSimplification.js" "babylon.meshLODLevel.ts" "babylon.meshLODLevel.js.map" "babylon.meshLODLevel.js" "babylon.meshBuilder.ts" "babylon.meshBuilder.js.map" "babylon.meshBuilder.js" "babylon.mesh.vertexData.ts" "babylon.mesh.vertexData.js.map" "babylon.mesh.vertexData.js" "babylon.mesh.ts" "babylon.mesh.js.map" "babylon.mesh.js" "babylon.linesMesh.ts" "babylon.linesMesh.js.map" "babylon.linesMesh.js" "babylon.instancedMesh.ts" "babylon.instancedMesh.js.map" "babylon.instancedMesh.js" "babylon.groundMesh.ts" "babylon.groundMesh.js.map" "babylon.groundMesh.js" "babylon.geometry.ts" "babylon.geometry.js.map" "babylon.geometry.js" "babylon.csg.ts" "babylon.csg.js.map" "babylon.csg.js" "babylon.buffer.ts" "babylon.buffer.js.map" "babylon.buffer.js" "babylon.abstractMesh.ts" "babylon.abstractMesh.js.map" "babylon.abstractMesh.js" "../" "./")
-
- ("/Users/kev/Library/Application Support/Blender/2.78/scripts/addons/io_mesh_threejs/" (22685 20007 0 0) "import_threejs.py" "export_threejs.py" "__pycache__/" "__init__.py" "../" "./")
-
- ("/Users/kev/code/wizardwarz/js/libs/" (22685 64681 0 0) "THREEx.WindowResize.js" "THREEx.KeyboardState.js" "THREEx.FullScreen.js" "three.min.js_r64" "three.min.js" "Three.js" "SubdivisionModifier.js_old" "SubdivisionModifier.js" "Stats.js" "PointerLockControls.js" "ParticleEngine.js_bak" "OrbitControls.js" "OBJMTLLoader.js_old" "OBJMTLLoader.js" "OBJLoader.js_r2" "OBJLoader.js" "MTLLoader.js" "MD2Character.js" "jquery-1.9.1.js" "ImprovedNoise.js" "FlyControls.js" "bootstrap.min.js" "../" "./")
-
- ("/Users/kev/code/skeletal-animation-system/demo/control/" (22685 836 0 0) "upper-body-controls.js" "lower-body-controls.js" "full-body-control.js" "../" "./")
-
- ("/Users/kev/code/skeletal-animation-system/src/" (22685 836 0 0) "skeletal-animation-system.js" "get-previous-animation-data.js" "blend-dual-quaternions.js" "../" "./")
-
- ("/Users/kev/code/load-collada-dae/" (22686 24902 0 0) "test/" "src/" "README.md" "package.json" "node_modules/" ".travis.yml" ".gitignore" ".git/" "../" "./")
-
- ("/Users/kev/code/load-collada-dae/src/shader/" (22686 22703 0 0) "generate-vertex-shader.js" "generate-shader.js" "generate-fragment-shader.js" "../" "./")
-
- ("/Users/kev/code/load-collada-dae/src/" (22686 23984 0 0) "shader/" "load-collada-dae.js" "init-texture.js" "expand-vertices.js" "draw-model.js" "draw/" ".#load-collada-dae.js" ".#expand-vertices.js" ".#draw-model.js" "#load-collada-dae.js#" "#expand-vertices.js#" "#draw-model.js#" "../" "./")
-
- ("/Users/kev/Documents/" (22612 35467 0 0) "Qubicle 3.0/" "Colloquy Transcripts/" ".localized" "../" "./")
-
- ("/Users/kev/Library/Application Support/Blender/2.78/scripts/addons/" (22685 19815 0 0) "tower_of_babel/" "io_three/" "io_mesh_threejs/" "io_export_babylon.py" "__pycache__/" "../" "./")
-
- ("/Users/kev/Library/Application Support/" (22685 5981 0 0) "unity.Wolfbrew Games.Slain/" "unity.noio.Kingdom/" "unity.hydezeke.flamberge/" "Unity/" "Ubiquity/" "Tunnelblick/" "Transmission/" "TextExpander/" "Telegram/" "SyncServices/" "Sublime Text 3/" "Steam/" "Spotify/" "SizeUp/" "Quick Look/" "Preview/" "org.videolan.vlc/" "org.openemu.OEXPCCAgent.Agents/" "OpenEmu/" "NotificationCenter/" "MobileSync/" "LICEcap/" "iTerm2/" "iTerm/" "iCloud/" "icdd/" "Google/" "Franz/" "Focus/" "Flux/" "ExpanDrive/" "Dock/" "DiskImages/" "DefaultCompany/" "CrashReporter/" "com.fourbitfriday.catacombkids.osx/" "com.bluemanchu.CardHunter/" "com.apple.TCC/" "com.apple.spotlight.Shortcuts" "com.apple.spotlight/" "com.apple.sharedfilelist/" "com.apple.sbd/" "Colloquy/" "CloudDocs/" "Charles/" "CEF/" "CallHistoryTransactions/" "CallHistoryDB/" "Blue Jeans/" "Blender/" "App Store/" "AddressBook/" "../" "./")
-
- ("/Users/kev/Library/" (22684 65373 0 0) "WebKit/" "Voices/" "Unity/" "SyncedPreferences/" "Suggestions/" "Spelling/" "Sounds/" "Sharing/" "Services/" "Scripts/" "Screen Savers/" "Saved Application State/" "Safari/" "RescueTime.com/" "PubSub/" "Printers/" "Preferences/" "PreferencePanes/" "Passes/" "Mobile Documents/" "Metadata/" "Messages/" "Maps/" "Mail/" "Logs/" "LaunchAgents/" "LanguageModeling/" "Keychains/" "KeyboardServices/" "Keyboard Layouts/" "Keyboard/" "iTunes/" "Internet Plug-Ins/" "Input Methods/" "iMovie/" "IdentityServices/" "Group Containers/" "Google/" "GameKit/" "Fonts/" "FontCollections/" "Favorites/" "Dictionaries/" "Developer/" "CoreFollowUp/" "CoreData/" "Cookies/" "Containers/" "Compositions/" "com.apple.nsurlsessiond/" "com.amplitude.plist" "com.amplitude.archiveDict" "ColorSync/" "Colors/" "ColorPickers/" "CallServices/" "Calendars/" "Caches/" "Breakpad/" "Audio/" "Assistants/" "Assistant/" "Application Support/" "Application Scripts/" "Accounts/" ".localized" "../" "./")
-
- ("/Users/kev/Downloads/three.js-r69/utils/exporters/" (22685 19630 0 0) "revit/" "maya/" "max/" "blender/" ".DS_Store" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

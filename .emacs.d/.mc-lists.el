@@ -9,6 +9,7 @@
 (setq mc/cmds-to-run-once
       '(
         ido-find-file
+        ido-switch-buffer
         indent-for-tab-command
         mouse-set-region
         org-self-insert-command
