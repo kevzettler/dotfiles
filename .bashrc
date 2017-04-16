@@ -11,6 +11,9 @@ export HISTCONTROL=ignoreboth:erasedups
 source ~/git-completion.bash
 
 
+export GOPATH=/Users/kev/code/go
+export PATH=/Users/kev/code/go/bin:$PATH
+
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 
