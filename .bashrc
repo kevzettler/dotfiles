@@ -1,3 +1,6 @@
+# helper function for working with bare repo home directory
+# see: for setup
+# https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 function git ()
 {
     if [ "$PWD" == "$HOME" ];
