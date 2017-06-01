@@ -37,14 +37,6 @@ export EDITOR=/usr/local/bin/emacs
 #export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
 
 
-localvpn(){ cat ~/Desktop/vpn.txt; }
-timevpn(){ oathtool --totp -b HPZIHZCWSFNVO7NZ; }
-
-vpn(){
-    x="$(localvpn)$(timevpn)"
-    echo "$x" | pbcopy;
-}
-
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
 
