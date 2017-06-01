@@ -11,7 +11,9 @@
         ido-find-file
         ido-switch-buffer
         indent-for-tab-command
+        mouse-drag-secondary
         mouse-set-region
+        org-open-at-mouse
         org-self-insert-command
         yaml-electric-backspace
         ))

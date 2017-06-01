@@ -4,6 +4,7 @@
 (message "require org-install")
 (setq org-directory "~/Dropbox (Personal)/org")
 (message "org directory")
+
 (setq org-archive-location "~/Dropbox (Personal)/org/archive/%s_archive::")
 
 (setq org-log-done 'time)

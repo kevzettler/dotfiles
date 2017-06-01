@@ -229,8 +229,9 @@
          (lambda (output)
            (replace-regexp-in-string "\033\\[[0-9]+[GK]" "" output)))
 
+
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
-                             "~/Dropbox (Personal)/org/journal"
+                             "~/Dropbox (Personal)/org/journal"                             
                              "~/Dropbox (Personal)/org/gcal.org"))
 
 

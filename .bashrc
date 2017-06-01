@@ -1,4 +1,12 @@
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+function git ()
+{
+    if [ "$PWD" == "$HOME" ];
+    then /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
+    else /usr/bin/git "$@"
+    fi;
+}
+
+
 
 #Don't record duplicate commands to history
 export HISTCONTROL=ignoreboth:erasedups
