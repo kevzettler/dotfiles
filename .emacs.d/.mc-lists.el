@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        end-of-buffer
         js2-mode-show-node
         ))
 
@@ -13,6 +14,7 @@
         indent-for-tab-command
         mouse-drag-secondary
         mouse-set-region
+        org-find-file-at-mouse
         org-open-at-mouse
         org-self-insert-command
         yaml-electric-backspace
