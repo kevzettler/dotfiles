@@ -70,6 +70,8 @@
 
 ;;; Automatically reload files that were changed on disk, if they have
 ;;; not been modified in Emacs since the last time they were saved.
+(setq auto-revert-verbose nil)
+
 (global-auto-revert-mode 1)
 
 ;;; Turn the delay on auto-reloading from 5 seconds down to 1 second.
@@ -122,6 +124,7 @@
 (setq make-backup-files t)
 (setq version-control t)
 (setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
+(setq auto-save-file-name-transforms`((".*" ,"~/.emacs_backups/" t)))
 ; ----------------------------------------
 
 ;scrolling
