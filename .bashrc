@@ -37,8 +37,9 @@ export EDITOR=/usr/local/bin/emacs
 #export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
 
 
-#export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # put this in your .bash_profile
 if [ $ITERM_SESSION_ID ]; then
@@ -59,3 +60,4 @@ fi
 # see: stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script
 # then we append the rest of $PROMPT_COMMAND so as not to remove what was already there
 # voilà!
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
