@@ -83,7 +83,8 @@
   (ido-mode 'both)
   (setq
    ido-mode 1
-   ido-everywhere 1
+   ido-everywhere t
+   ido-enable-flex-matching t
    ido-max-directory-size 100000
    ;; Use the current window when visiting files and buffers with ido
    ido-default-file-method 'selected-window
