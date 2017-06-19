@@ -76,7 +76,6 @@
 
 ;;; Turn the delay on auto-reloading from 5 seconds down to 1 second.
 (setq auto-revert-interval 1)
-
 ;; IDO mode
 (use-package ido
   :config
