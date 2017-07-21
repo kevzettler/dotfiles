@@ -10,37 +10,40 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (counsel-projectile counsel org-brain merlin tuareg pos-tip company-tern tern company-web
-                        (js2-mode
-                         (web-mode
-                          (glsl-mode
-                           (iedit
-                            (company
-                             (sass-mode
-                              (sass-mode
-                               (sass-mode
-                                ((js2-mode
-                                  (org-preview-html
-                                   (typescript-mode
-                                    (circe
-                                     (expand-region
-                                      (markdown-mode
-                                       (ivy
-                                        (helm
-                                         (js2-mode
-                                          (flycheck
-                                           (flymake-jshint
-                                            (flymake-jshint
-                                             (use-package
-                                               (org-gcal
-                                                (yaml-mode
-                                                 (yaml-mode
-                                                  (multiple-cursors
-                                                   (web-mode
-                                                    (exec-path-from-shell
-                                                     (auto-complete
-                                                      (solarized-theme auto-complete
-                                                                       (solarized-theme tern nvm exec-path-from-shell yaml-mode web-mode sass-mode php-mode org multiple-cursors markdown-mode json-mode jade-mode furl flycheck editorconfig color-theme-solarized auto-complete ac-js2)))))))))))))))))))))))))))))))))))
+    (jade-mode pug-mode counsel-projectile counsel org-brain merlin tuareg pos-tip company-tern tern company-web
+               (js2-mode
+                (web-mode
+                 (glsl-mode
+                  (iedit
+                   (company
+                    (sass-mode
+                     (sass-mode
+                      (sass-mode
+                       ((js2-mode
+                         (org-preview-html
+                          (typescript-mode
+                           (circe
+                            (expand-region
+                             (markdown-mode
+                              (ivy
+                               (helm
+                                (js2-mode
+                                 (flycheck
+                                  (flymake-jshint
+                                   (flymake-jshint
+                                    (use-package
+                                      (org-gcal
+                                       (yaml-mode
+                                        (yaml-mode
+                                         (multiple-cursors
+                                          (web-mode
+                                           (exec-path-from-shell
+                                            (auto-complete
+                                             (solarized-theme auto-complete
+                                                              (solarized-theme tern nvm exec-path-from-shell yaml-mode web-mode sass-mode php-mode org multiple-cursors markdown-mode json-mode jade-mode furl flycheck editorconfig color-theme-solarized auto-complete ac-js2))))))))))))))))))))))))))))))))))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 587))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

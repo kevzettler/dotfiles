@@ -9,11 +9,13 @@
 
 (setq mc/cmds-to-run-once
       '(
+        handle-switch-frame
         ido-find-file
         ido-switch-buffer
         indent-for-tab-command
         mouse-drag-secondary
         mouse-set-region
+        org-agenda
         org-find-file-at-mouse
         org-open-at-mouse
         org-self-insert-command
