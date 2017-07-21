@@ -248,7 +248,11 @@
   (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
   :config
   (require 'secrets)
-  (setq org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/org/gcal.org"))))
+  (setq org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/org/gcal.org")))
+  (defun new/org-gcal--notify (title mes)
+    (message "org-gcal::%s - %s" title mes))
+  (fset 'org-gcal--notify 'new/org-gcal-notify))
+
 
 
 (defun insert-date (prefix)
