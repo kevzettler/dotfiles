@@ -30,6 +30,11 @@ export PATH="$HOME/.cask/bin:$PATH"
 
 export EDITOR=/usr/local/bin/emacs
 
+
+# prevents iterm from overriding set tab names?
+# https://superuser.com/questions/343747/how-do-i-stop-automatic-changing-of-iterm-tab-titles
+export TERM=vt100
+
 #Git aware bash prompt
 #export GITAWAREPROMPT=~/.bash/git-aware-prompt
 #source "${GITAWAREPROMPT}/main.sh"
