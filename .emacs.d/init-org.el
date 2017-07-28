@@ -64,6 +64,12 @@
       (if (and b e (< (point) e)) (setq rlt nil)))
     (setq ad-return-value rlt)))
 
+
+(setq org-todo-keywords
+           '((sequence "TODO" "DONE")
+             (sequence "UNREAD" "READ")))
+
+
 (require 'cl)
 (defun bk-kill-buffers (regexp)
   "Kill buffers matching REGEXP without asking for confirmation."

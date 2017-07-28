@@ -57,3 +57,16 @@ Camera Uploads
 cd ./Camera\ Uploads/
 ls
 pwd
+cd ~/code/
+ls
+cd org-stream/
+git status
+npm run zip
+npm run zip
+cd kevdev
+cd ssh:kevdev
+cd ssh:/kevdev/
+cd /ssh:kevdev:
+ls
+quit
+exit

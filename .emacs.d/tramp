@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <17/07/09 12:07:44 /Users/kev/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <17/07/26 22:19:24 /Users/kev/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -55,5 +55,66 @@
   ("gid-string" "ec2-user")
   ("readlink" "\\readlink")
   ("uid-integer" 500))
- (["scp" nil "scp" nil nil]
+ (["scp" nil "jaydev" nil nil]
+  ("uname" "Linux 4.9.32-15.41.amzn1.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/ec2-user")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 500)
+  ("gid-string" "ec2-user")
+  ("readlink" "\\readlink")
+  ("file-exists" "test -e"))
+ (["scp" nil "ssh" nil nil]
+  nil)
+ (["ssh" nil "jaydev" nil nil]
+  ("uname" "Linux 4.9.32-15.41.amzn1.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/ec2-user")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 500)
+  ("gid-string" "ec2-user")
+  ("readlink" "\\readlink"))
+ (["sudo" "root" "jaydev" nil nil]
+  ("uname" "Linux 4.9.32-15.41.amzn1.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~root" "/root")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("gid-string" "root")
+  ("env-u-option" t)
+  ("git" "\\git")
+  ("uid-integer" 0))
+ (["scp" nil "sudo" nil nil]
   nil))

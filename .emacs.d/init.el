@@ -234,7 +234,8 @@
 
 
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
-                             "~/Dropbox (Personal)/org/journal"                             
+                             "~/Dropbox (Personal)/org/journal"
+                             "~/Dropbox (Personal)/org/brain/todo.org"                                                          
                              "~/Dropbox (Personal)/org/gcal.org"))
 
 

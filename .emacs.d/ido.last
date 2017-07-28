@@ -2,6 +2,13 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/" . "cordova-plugin-live-broadcast/")
+ ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/" . "Plugins/")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/" . "msm_api/")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/" . "jay/")
+ ("/ssh:jaydev|sudo:root@jaydev:/" . "home/")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/" . "utils/")
+ (#("/scp:jaydev:/home/" 1 4 (tramp-default t)) . "jay/")
  ("/scp:kevdev:/home/" . "ec2-user/")
  ("/scp:kevdev:/home/ec2-user/" . "msm_api/")
  ("/scp:kevdev:/home/ec2-user/msm_api/tools/db/" . "schema/")
@@ -22,8 +29,8 @@
  ("/Users/kev/msmci/millionaire/platforms/ios/www/" . "plugins/")
  ("/Users/kev/msmci/millionaire/platforms/ios/" . "MegastarMillionaire/")
  ("/Users/kev/msmci/millionaire/platforms/" . "ios/")
- ("/Users/kev/msmci/millionaire/source/www/js/views/" . "screens/")
- ("/Users/kev/msmci/millionaire/source/www/js/" . "views/")
+ ("/Users/kev/msmci/millionaire/source/www/js/views/" . "widgets/")
+ ("/Users/kev/msmci/millionaire/source/www/js/" . "models/")
  ("/Users/kev/msmci/millionaire/source/www/templates/" . "widgets/")
  ("/Users/kev/msmci/millionaire/source/www/" . "js/")
  ("/Users/kev/msmci/millionaire/source/" . "www/")
@@ -157,7 +164,7 @@
  ("/Users/kev/Dropbox/code/game-off-2016/" . "src/")
  ("/Users/kev/Dropbox/code/" . "game-off-2016/")
  ("/Users/kev/Dropbox/" . "offend your friends/")
- ("/Users/kev/" . ".emacs.d/")
+ ("/Users/kev/" . "msmci/")
  ("/Users/kev/Dropbox (Personal)/code/js-peers/Authors/Kev Zettler/" . "03 - Getting Started With Node.js On AWS Lambda/")
  ("/Users/kev/Dropbox (Personal)/code/js-peers/Authors/" . "Kev Zettler/")
  ("/Users/kev/Dropbox (Personal)/code/js-peers/" . "Authors/")
@@ -244,6 +251,22 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/utils/"
+ "/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/cordova-plugin-live-broadcast/"
+ "/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/controllers/"
+ "/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/models/"
+ "/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/.git/"
+ "/Users/kev/msmci/millionaire/source/www/js/server/"
+ "/Users/kev/msmci/millionaire/source/www/js/managers/"
+ "/Users/kev/msmci/millionaire/source/www/js/views/widgets/"
+ "/Users/kev/msmci/millionaire/config/"
+ "/Users/kev/msmci/millionaire/source/www/js/views/screens/"
+ "/Users/kev/msmci/"
+ "/ssh:jaydev|sudo:jaydev:"
+ "/ssh:jaydev|sudo:"
+ "/ssh:jaydev:"
+ #("/scp:jaydev:/home/jay/" 1 4 (tramp-default t))
+ "/jaydev:"
  "/Users/kev/.emacs.d/"
  "/Users/kev/org/"
  "/Users/kev/Dropbox (Personal)/org/"
@@ -257,12 +280,10 @@
  "/scp:kevdev:/home/ec2-user/msm_api/views/"
  "/scp:kevdev:/home/ec2-user/msm_api/models/"
  "/scp:kevdev:/home/ec2-user/msm_api/"
- "/Users/kev/msmci/"
  "/scp:kevdev:/home/ec2-user/msm_api/utils/"
  "/scp:kevdev:/home/ec2-user/msm_api/routes/"
  "/scp:kevdev:/home/ec2-user/msm_api/tools/db/schema/"
  "/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/"
- "/Users/kev/msmci/millionaire/source/www/js/views/screens/"
  "/kevdev:"
  "/Users/kev/msmci/millionaire/source/www/css/"
  "/Users/kev/msmci/millionaire/source/www/"
@@ -277,66 +298,122 @@
  "/Users/kev/msmci/millionaire/source/www/js/views/"
  "/Users/kev/msmci/msm_api/"
  "/Users/kev/msmci/msm_api/routes/"
- "/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/cordova-plugin-live-broadcast/"
  "/Users/kev/msmci/millionaire/platforms/ios/www/plugins/cordova-plugin-live-broadcast/www/"
  "/Users/kev/msmci/millionaire/"
  "/Users/kev/msmci/msm_api/controllers/"
- "/Users/kev/msmci/msm_api/config/app/"
- "/Users/kev/msmci/php_wowza_proxy/"
- "/Users/kev/msmci/msm_api/utils/"
- "/Users/kev/.ssh/"
- "/kevdev:.ssh/"
- "/kevdev:msm_api/controllers/"
- "/wowza:/usr/local/WowzaStreamingEngine-4.7.0/conf/"
- "/wowza:"
- "/Users/kev/msmci/millionaire/source/www/js/server/"
- "/Users/kev/msmci/millionaire/source/www/js/managers/"
- "/Users/kev/msmci/millionaire/source/www/js/controllers/"
- "/Users/kev/msmci/millionaire/source/www/templates/screens/"
- "/Users/kev/msmci/millionaire/source/www/templates/widgets/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "personal.org"
- "parser.js"
- "ass.org"
- "math.org"
- "plebland.org"
- "default.yml"
- "userProfileAdmin.js"
- "admin.js"
- "style.css"
+ "wowza.js"
+ "LiveBroadcastPlugin.m"
+ "LiveBroadcastController.m"
+ "stream.js"
+ "config"
+ "ServerConfig.js"
+ "ChatStreamManager.js"
+ "ChatSection.js"
+ "jaydev.ServerConfig.js"
+ "Server.js"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/kev/.emacs.d/" (22881 51471 0 0) "url/" "tramp" "secrets.el.gpg" "secrets.el" "request/" "projectile-bookmarks.eld" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-reason.el~" "init-reason.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" "abbrev_defs" ".org-id-locations" ".mc-lists.el" ".cask/" "%backup%~" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/utils/" (ftp . 416974.05011449696) "db_util.js" "wowza.js" "error.js" "api_util.js" "./" "session.js" "fb_graph.js" "scrubHtml.js" "git.js" "lang.js" "iap.js" "abTest.js" "../" "logger.js" "pagination.js" "google.js")
 
- ("/Users/kev/Dropbox (Personal)/org/brain/" (22882 31625 0 0) "web.org" "travel.org" "theory.org" "tech.org" "root.org" "recipes.org" "music.org" "mental.org" "math.org" "linear-algebra.org" "javascript.org" "investing.org" "guitar.org" "games.org" "emacs.org" "dev.org" "denver.org" "crypto.org" "cooking.org" "books.org" "biz.org" "ass.org" "art.org" "anxiety.org" "3d.org" ".#root.org" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/" (ftp . 416974.04976502166) "models/" "test/" "routes/" "webpack.config.js" "./" "tools/" "tasks.js" "node_modules/" ".gitignore" "public/" "controllers/" ".git/" "views/" "utils/" "app.js" "package.json" "../" ".env" "config/")
 
- ("/Users/kev/org/" (22881 23057 0 0) "setting-up-a-repository" "reduxderiveddata.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "parser.js" "offline_content/" "node_modules/" "mobile-inbox.org" "journal/" "git_fork" "gcal.org" "brain/" "atlassian/" "archive/" "2017_resolutions.org" ".DS_Store" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/controllers/" (ftp . 416974.0492788089) "megastar.js" "competition.js" "store.js" "stream.js" "comment.js" "./" "server.js" "performer.js" "tournament.js" "static.js" "fanPrize.js" "../" "auth.js" "video.js" "user.js" "admin.js")
 
- ("/Users/kev/msmci/" (22880 64552 0 0) "woza-notes" "RESTAPIDocumentationWebpage/" "php_wowza_proxy/" "msmci.org" "msm_api/" "millionaire/" ".DS_Store" "../" "./")
+ ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/" (22886 22435 0 0) "urbanairship-cordova/" "README" "msm-plugin-keyboard/" "io.branch.sdk/" "cordova-universal-clipboard/" "cordova-plugin-x-socialsharing/" "cordova-plugin-wizpurchase/" "cordova-plugin-uniquedeviceid/" "cordova-plugin-statusbar/" "cordova-plugin-splashscreen/" "cordova-plugin-network-information/" "cordova-plugin-live-broadcast/" "cordova-plugin-inappbrowser/" "cordova-plugin-googleplus/" "cordova-plugin-facebook4/" "cordova-plugin-device/" "cordova-plugin-buildinfo/" "cordova-lazy-load-push-plugin/" "cordova-hot-code-push-plugin/" "com.adjust.sdk/" "../" "./")
 
- ("/Users/kev/Dropbox (Personal)/org/" (22881 12026 0 0) "setting-up-a-repository" "reduxderiveddata.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "node_modules/" "mobile-inbox.org" "journal/" "git_fork" "gcal.org" "brain/" "atlassian/" "archive/" "2017_resolutions.org" ".DS_Store" "../" "./")
+ ("/Users/kev/msmci/millionaire/platforms/ios/" (22886 22436 0 0) "www_lazy/" "www/" "scripts/" "MegastarMillionaire.xcodeproj/" "MegastarMillionaire/" "ios.json" "frameworks.json" "CordovaLib/" "cordova/" ".gitignore" ".DS_Store" ".chcpignore" "../" "./")
 
- ("/Users/kev/org/brain/" (22881 12950 0 0) "web.org" "travel.org" "theory.org" "tech.org" "root.org" "recipes.org" "notavailabletotalbullshit.org" "music.org" "mental.org" "math.org" "linear-algebra.org" "javascript.org" "investing.org" "guitar.org" "games.org" "emacs.org" "dev.org" "denver.org" "crypto.org" "cooking.org" "books.org" "biz.org" "ass.org" "art.org" "anxiety.org" "3d.org" ".#root.org" "../" "./")
+ ("/Users/kev/msmci/millionaire/platforms/" (22886 22436 0 0) "platforms.json" "ios/" "android/" ".DS_Store" "../" "./")
 
- ("/Users/kev/" (22881 12373 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "msmci/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Creative Cloud Files/" "cool/" "code/" "Applications/" ".znc/" ".yarnrc" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.5.372.43.3b812175a3bbca97b079857d20ee12f1.json" ".v8flags.5.5.372.42.kev.json" ".v8flags.5.5.372.42.3b812175a3bbca97b079857d20ee12f1.json" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".ssb/" ".serverlessrc" ".serverless/" ".ruby-version" ".profile" ".pm2/" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mysql_history" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "*message*-20170708-121823" "#*message*-20161204-094852#" "../" "./")
+ ("/Users/kev/msmci/millionaire/source/www/js/views/widgets/" (22905 4159 0 0) "VoteCollector.js" "VideoListItem.js" "VideoList.js" "UserStatusBar.js" "SubmissionDisplay.js" "StreamListItem.js" "StreamList.js" "PerformerListItem.js" "PerformerList.js" "PerformerInfoDisplay.js" "HeatList.js" "HeatInfoDisplay.js" "Header.js" "GoldenTicketList.js" "GoalItem.js" "Footer.js" "FollowedPerformerItem.js" "FeaturedItemCarousel.js" "FacebookFriendItem.js" "CommentsSection.js" "CommentReply.js" "Comment.js" "ChatSection.js" "CategoryList.js" "../" "./")
 
- ("/Users/kev/Dropbox (Personal)/org/journal/" (22881 10708 0 0) "tech.org" "plebland.org" "OhlifeExport/" "data.org" "2017-07-08.org" "2017-07-07.org" "2017-07-06.org" "2017-07-05.org" "2017-06-30.org" "2017-06-29.org" "2017-06-27.org" "2017-06-26.org" "2017-06-25.org" "2017-06-22.org" "2017-06-21.org" "2017-06-20.org" "2017-06-19.org" "2017-06-18.org" "2017-06-16.org" "2017-06-15.org" "2017-06-14.org" "2017-06-12.org" "2017-06-11.org" "2017-06-09.org" "2017-06-08.org" "2017-06-07.org" "2017-06-06.org" "2017-06-05.org" "2017-06-04.org" "2017-06-03.org" "2017-06-02.org" "2017-06-01.org" "2017-05-30.org" "2017-05-25.org" "2017-05-22.org" "2017-05-20.org" "2017-05-19.org" "2017-05-18.org" "2017-05-17.org" "2017-05-16.org" "2017-05-15.org" "2017-05-14.org" "2017-05-12.org" "2017-05-11.org" "2017-05-10.org" "2017-05-09.org" "2017-05-08.org" "2017-05-07.org" "2017-05-06.org" "2017-05-04.org" "2017-05-03.org" "2017-05-01.org" "2017-04-30.org" "2017-04-29.org" "2017-04-28.org" "2017-04-27.org" "2017-04-26.org" "2017-04-21.org" "2017-04-19.org" "2017-04-18.org" "2017-04-17.org" "2017-04-16.org" "2017-04-14.org" "2017-04-13.org" "2017-04-12.org" "2017-04-11.org" "2017-04-10.org" "2017-04-09.org" "2017-04-07.org" "2017-04-06.org" "2017-04-05.org" "2017-04-03.org" "2017-04-02.org" "2017-03-31.org" "2017-03-30.org" "2017-03-29.org" "2017-03-28.org" "2017-03-26.org" "2017-03-24.org" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" ".DS_Store" ".#2017-07-08.org" "#2017-06-18.org#" "#2016-11-23.org#" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/models/" (ftp . 416973.0428993003) "competition.js" "heatHelper.js" "store.js" "stream.js" "goal.js" "comment.js" "notification.js" "./" "rules.js" "performer.js" "social.js" "tournament.js" "static.js" "grantHelper.js" "authHelper.js" "../" "video.js" "user.js" "admin.js")
 
- ("/Users/kev/msmci/millionaire/" (22879 51177 0 0) "source/" "scripts/" "platforms/" "package.json" "node_modules/" "msm_api/" "Gulpfile.js" "config/" ".gitmodules" ".gitignore" ".git/" ".chcpignore" ".#Gulpfile.js" "../" "./")
+ ("/Users/kev/msmci/millionaire/source/www/js/models/" (22886 22436 0 0) "User.js" "Performer.js" "FanParticipationModel.js" "../" "./")
 
- ("/Users/kev/msmci/millionaire/source/www/js/views/" (22879 51177 0 0) "widgets/" "TransitionViewBase.js" "TooltipContainer.js" "toasters/" "ToasterContainer.js" "screens/" "modals/" "ModalContainer.js" "components/" "AppView.js" "../" "./")
+ ("/Users/kev/msmci/millionaire/source/www/js/managers/" (22905 367 0 0) "YouTubeManager.js" "UtilsManager.js" "UserManager.js" "StatusBarManager.js" "StateManager.js" "SplashScreenManager.js" "SocialManager.js" "PushNotificationsManager.js" "NetworkManager.js" "LoginManager.js" "LiveBroadcastManager.js" "LazyLoadManager.js" "KeyboardManager.js" "InAppPurchaseManager.js" "GoogleManager.js" "FacebookManager.js" "DeviceId.js" "ChatStreamManager.js" "BranchIO.js" "AppUpdateManager.js" "AnalyticsManager.js" "AdjustManager.js" ".#ChatStreamManager.js" "../" "./")
 
- ("/Users/kev/msmci/millionaire/source/www/" (22879 51177 0 0) "templates/" "plugins/" "loading.html" "lib/" "js/" "index.html" "data/" "css/" "cordova_plugins.js" "cordova.js" "cordova-js-src/" "chcp.manifest" "chcp.json" "assets/" ".jshintrc" ".jscsrc" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/msm_api/.git/" (ftp . 416972.69762291585) "packed-refs" "ORIG_HEAD" "hooks/" "info/" "./" "logs/" "refs/" "index" "COMMIT_EDITMSG" "HEAD" "description" "objects/" "FETCH_HEAD" "branches/" "../" "config")
 
- ("/Users/kev/msmci/millionaire/source/www/js/views/screens/" (22879 51177 0 0) "Tournament.js" "Test.js" "Stream.js" "StorePurchaseInitiation.js" "Store.js" "SingleVideo.js" "Search.js" "RegisterAsPerformerSelectVideo.js" "RegisterAsPerformerSelectCategory.js" "RegisterAsPerformerLinkYoutube.js" "RegisterAsPerformerIntro.js" "RegisterAsPerformerForm.js" "RegisterAsPerformerForbidden.js" "RegisterAsPerformerCopyrightWarning.js" "Profile.js" "Notifications.js" "Menu.js" "Maintenance.js" "Leaderboard.js" "JWFTest.js" "JLEETest.js" "HTMLWrapper.js" "HowHeatsWork.js" "Home.js" "FollowedPerformers.js" "FacebookFriends.js" "CompetitionSchedule.js" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/" (ftp . 416972.6926656172) "var/" "selinux/" ".autorelabel" "sbin/" "srv/" "proc/" "local/" "run/" "dev/" "./" ".autofsck" "boot/" "media/" "lost+found/" "bin/" "cgroup/" "etc/" "mnt/" "usr/" "home/" "root/" "sys/" "lib64/" "../" "lib/" "opt/" "tmp/")
 
- ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/" (22879 51177 0 0) "Resources/" "Plugins/" "MegastarMillionaire-Prefix.pch" "MegastarMillionaire-Info.plist" "Megastar.entitlements" "main.m" "Images.xcassets/" "config.xml" "Classes/" "Bridging-Header.h" ".gitignore" "../" "./")
+ ("/ssh:jaydev|sudo:root@jaydev:/home/" (ftp . 416972.6923558081) "ec2-user/" "./" "jay/" "../" "eric/")
+
+ ("/ssh:jaydev|sudo:root@jaydev:/home/jay/" (ftp . 416972.6921952861) ".npm/" ".ssh/" "node-v7.9.0-linux-x64.tar.gz" "./" ".gitconfig" ".viminfo" ".bash_profile" ".pm2/" "msm_api/" ".bash_logout" ".bashrc" ".bash_history" "../" "node-v7.9.0-linux-x64/" ".mysql_history")
+
+ ("/Users/kev/msmci/millionaire/source/www/js/server/" (22904 64024 0 0) "ServerGateway.js" "ServerConfig.js" "Server.js" "../" "./")
+
+ ("/Users/kev/msmci/msm_api/utils/" (22886 22716 0 0) "wowza.js" "session.js" "scrubHtml.js" "pagination.js" "logger.js" "lang.js" "iap.js" "google.js" "git.js" "fb_graph.js" "error.js" "db_util.js" "api_util.js" "abTest.js" "../" "./")
+
+ ("/Users/kev/msmci/msm_api/config/app/" (22886 22716 0 0) "tools.yml" "stage.yml" "qa.yml" "prod.yml" "devserver.yml" "devlocal.yml" "development.yml" "default.yml" "default-0.yml" "../" "./")
+
+ ("/Users/kev/msmci/msm_api/controllers/" (22886 22716 0 0) "video.js" "user.js" "tournament.js" "stream.js" "store.js" "static.js" "server.js" "performer.js" "megastar.js" "fanPrize.js" "competition.js" "comment.js" "auth.js" "admin.js" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/platforms/ios/www/plugins/cordova-plugin-live-broadcast/www/" (22886 22436 0 0) "LiveBroadcast.js" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/cordova-plugin-live-broadcast/" (22886 22435 0 0) "LiveBroadcastPlugin.m" "LiveBroadcastPlugin.h" "LiveBroadcastController.m" "LiveBroadcastController.h" "../" "./")
+
+ ("/Users/kev/msmci/msm_api/routes/" (22886 22716 0 0) "index.js" "health_check.js" "api.js" "admin.js" "../" "./")
+
+ ("/Users/kev/msmci/msm_api/" (22893 14931 0 0) "webpack.config.js" "views/" "utils/" "tools/" "test/" "tasks.js" "routes/" "public/" "package.json" "nounce.js" "node_modules/" "models/" "controllers/" "config/" "app.js" ".gitignore" ".git/" ".env" "../" "./")
+
+ ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/dsl/scene/" (22903 57397 0 0) "selectors.js" "reducer.js" "nodes/" "constants.js" "actions.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/" (22904 6112 0 0) "VoxelMesh.js" "util/" "ui/" "rootReducer.js" "QubicleMesh.js" "index.js" "dsl/" "configureStore.js" "../" "./")
+
+ ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/ui/" (22903 41754 0 0) "Title.jsx" "Stats.jsx" "Game.jsx" "equipScene.js" "Equip.jsx" "../" "./")
+
+ ("/Users/kev/org/atlassian/" (22902 36619 0 0) "test.org" "pandoc.sh" "git_branch.org" "git_branch" ".git/" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/www/css/" (22886 24194 0 0) "main.css" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/" (22886 22435 0 0) "Resources/" "Plugins/" "MegastarMillionaire-Prefix.pch" "MegastarMillionaire-Info.plist" "Megastar.entitlements" "main.m" "Images.xcassets/" "config.xml" "Classes/" "Bridging-Header.h" ".gitignore" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/brain/" (22904 5058 0 0) "web.org" "travel.org" "todo.org" "theory.org" "tech.org" "root.org" "recipes.org" "music.org" "mental.org" "math.org" "linear-algebra.org" "javascript.org" "investing.org" "guitar.org" "games.org" "food.org" "emacs.org" "dev.org" "denver.org" "crypto.org" "cooking.org" "books.org" "biz.org" "ass.org" "art.org" "anxiety.org" "3d.org" "../" "./")
+
+ ("/Users/kev/org/brain/" (22904 5058 0 0) "web.org" "travel.org" "todo.org" "theory.org" "tech.org" "root.org" "recipes.org" "music.org" "mental.org" "math.org" "linear-algebra.org" "javascript.org" "investing.org" "guitar.org" "games.org" "food.org" "emacs.org" "dev.org" "denver.org" "crypto.org" "cooking.org" "books.org" "biz.org" "ass.org" "art.org" "anxiety.org" "3d.org" "../" "./")
+
+ ("/Users/kev/Dropbox (Personal)/org/" (22904 57787 0 0) "setting-up-a-repository" "reduxderiveddata.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "parser.js" "offline_content/" "node_modules/" "msmci.org" "mobile-inbox.org" "journal/" "git_fork" "gcal.org" "brain.tsv" "brain/" "atlassian/" "archive/" "2017_resolutions.org" ".DS_Store" "../" "./")
+
+ ("/Users/kev/org/" (22904 57787 0 0) "setting-up-a-repository" "reduxderiveddata.org" "recipies.org" "read.org" "proposal.org" "plebland.org" "personal.org" "parser.js" "offline_content/" "node_modules/" "msmci.org" "mobile-inbox.org" "journal/" "git_fork" "gcal.org" "brain.tsv" "brain/" "atlassian/" "archive/" "2017_resolutions.org" ".DS_Store" "../" "./")
+
+ ("/Users/kev/.emacs.d/" (22904 5064 0 0) "url/" "tramp" "secrets.el.gpg" "secrets.el" "request/" "projectile-bookmarks.eld" "org-gcal/" "network-security.data" "lisp/" "init.el~" "init.el" "init-reason.el~" "init-reason.el" "init-package.el~" "init-package.el" "init-org.el~" "init-org.el" "init-javascript.el~" "init-javascript.el" "init-custom.el~" "init-custom.el" "ido.last" "eshell/" "elpa/" "auto-save-list/" "ac-comphist.dat" "ac-comphist (Kev’s MacBook Pro's conflicted copy 2016-11-22).dat" "abbrev_defs" ".org-id-locations" ".mc-lists.el" ".cask/" "%backup%~" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/config/" (22904 58173 0 0) "stage.ServerConfig.js" "serverdev.ServerConfig.js" "qa.ServerConfig.js" "live.ServerConfig.js" "kevdev.ServerConfig.js" "jaydev.ServerConfig.js" "ios/" "android/" ".#jaydev.ServerConfig.js" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/www/js/views/screens/" (22904 53182 0 0) "Tournament.js" "Test.js" "StreamingSingleVideo.js" "StreamingPermissions.js" "Stream.js" "StorePurchaseInitiation.js" "Store.js" "SingleVideo.js" "Search.js" "RegisterAsPerformerSelectVideo.js" "RegisterAsPerformerSelectCategory.js" "RegisterAsPerformerLinkYoutube.js" "RegisterAsPerformerIntro.js" "RegisterAsPerformerForm.js" "RegisterAsPerformerForbidden.js" "RegisterAsPerformerCopyrightWarning.js" "Profile.js" "Notifications.js" "Menu.js" "Maintenance.js" "Leaderboard.js" "JWFTest.js" "JLEETest.js" "HTMLWrapper.js" "HowHeatsWork.js" "Home.js" "FollowedPerformers.js" "FacebookFriends.js" "CompetitionSchedule.js" "Broadcast.js" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/www/js/views/" (22904 53182 0 0) "widgets/" "TransitionViewBase.js" "TooltipContainer.js" "toasters/" "ToasterContainer.js" "screens/" "modals/" "ModalContainer.js" "components/" "AppView.js" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/www/js/" (22886 22436 0 0) "views/" "utils/" "server/" "models/" "managers/" "localization/" "loading.js" "kickstart.js" "i18n/" "controllers/" "collections/" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/www/" (22904 53182 0 0) "templates/" "plugins/" "loading.html" "lib/" "js/" "index.html" "data/" "css/" "cordova_plugins.js" "cordova.js" "cordova-js-src/" "chcp.manifest" "chcp.json" "assets/" ".jshintrc" ".jscsrc" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/source/" (22886 22436 0 0) "www_lazy/" "www/" "svg/" "scss/" "cordova-hcp.json" ".DS_Store" ".chcpignore" "../" "./")
+
+ ("/Users/kev/msmci/millionaire/" (22886 22434 0 0) "source/" "scripts/" "platforms/" "package.json" "node_modules/" "msm_api/" "Gulpfile.js" "config/" ".gitmodules" ".gitignore" ".git/" ".chcpignore" ".#Gulpfile.js" "../" "./")
+
+ ("/Users/kev/msmci/" (22893 13591 0 0) "woza-notes" "wowza_support.zip" "wowza_support.org" "wowza_put.txt" "wowza_get.txt" "RESTAPIDocumentationWebpage/" "php_wowza_proxy/" "nounce.js/" "msmci.org" "msm_api/" "millionaire/" "hulk.tar" "hulk/" ".DS_Store" "../" "./")
+
+ ("/Users/kev/" (22901 4161 0 0) "shader-school/" "scratch.html" "Public/" "Pictures/" "org/" "Music/" "msmci/" "Movies/" "Library/" "git-completion.bash" "Dropbox (Personal)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Creative Cloud Files/" "cool/" "code/" "Applications/" ".znc/" ".yarnrc" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".voxelshop/" ".viminfo" ".v8flags.5.5.372.43.3b812175a3bbca97b079857d20ee12f1.json" ".v8flags.5.5.372.42.kev.json" ".v8flags.5.5.372.42.3b812175a3bbca97b079857d20ee12f1.json" ".v8flags.5.1.281.84.kev.json" ".Trash/" ".thumbnails/" ".subversion/" ".standard-cache/" ".ssh/" ".ssb/" ".serverlessrc" ".serverless/" ".ruby-version" ".profile" ".pm2/" ".nvm/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".mysql_history" ".mongorc.js" ".local/" ".lesshst" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".forever/" ".esy/" ".emacs_backups/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".cordova/" ".consularc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".aws/" ".atom/" ".ansible/" ".(null).padl" "*message*-20170708-121823" "#*message*-20161204-094852#" "../" "./")
+
+ ("/ssh:jaydev:/" (ftp . 416970.2009816347) "var/" "selinux/" ".autorelabel" "sbin/" "srv/" "proc/" "local/" "run/" "dev/" "./" ".autofsck" "boot/" "media/" "lost+found/" "bin/" "cgroup/" "etc/" "mnt/" "usr/" "home/" "root/" "sys/" "lib64/" "../" "lib/" "opt/" "tmp/")
+
+ ("/ssh:jaydev:/home/" (ftp . 416970.20079053415) "ec2-user/" "./" "jay/" "../" "eric/")
+
+ ("/ssh:jaydev:/home/ec2-user/" (ftp . 416970.1980101011) ".npm/" ".ssh/" "node-v7.9.0-linux-x64.tar.gz" "./" "node_modules/" ".pki/" ".viminfo" ".bash_profile" ".pm2/" "msm_api/" ".bash_logout" ".bashrc" ".bash_history" "../" "node-v7.9.0-linux-x64/" ".mysql_history")
+
+ (#("/scp:jaydev:/home/" 1 4 (tramp-default t)) (ftp . 416970.1777859886) "ec2-user/" "./" "jay/" "../" "eric/")
+
+ (#("/scp:jaydev:/home/ec2-user/" 1 4 (tramp-default t)) (ftp . 416970.17698063725) ".npm/" ".ssh/" "node-v7.9.0-linux-x64.tar.gz" "./" "node_modules/" ".pki/" ".viminfo" ".bash_profile" ".pm2/" "msm_api/" ".bash_logout" ".bashrc" ".bash_history" "../" "node-v7.9.0-linux-x64/" ".mysql_history")
+
+ ("/Users/kev/Dropbox (Personal)/org/journal/" (22904 56074 0 0) "todo.org" "tech.org" "plebland.org" "OhlifeExport/" "data.org" "2017-07-26.org" "2017-07-25.org" "2017-07-24.org" "2017-07-23.org" "2017-07-22.org" "2017-07-21.org" "2017-07-20.org" "2017-07-19.org" "2017-07-18.org" "2017-07-17.org" "2017-07-13.org" "2017-07-12.org" "2017-07-11.org" "2017-07-10.org" "2017-07-09.org" "2017-07-08.org" "2017-07-07.org" "2017-07-06.org" "2017-07-05.org" "2017-06-30.org" "2017-06-29.org" "2017-06-27.org" "2017-06-26.org" "2017-06-25.org" "2017-06-22.org" "2017-06-21.org" "2017-06-20.org" "2017-06-19.org" "2017-06-18.org" "2017-06-16.org" "2017-06-15.org" "2017-06-14.org" "2017-06-12.org" "2017-06-11.org" "2017-06-09.org" "2017-06-08.org" "2017-06-07.org" "2017-06-06.org" "2017-06-05.org" "2017-06-04.org" "2017-06-03.org" "2017-06-02.org" "2017-06-01.org" "2017-05-30.org" "2017-05-25.org" "2017-05-22.org" "2017-05-20.org" "2017-05-19.org" "2017-05-18.org" "2017-05-17.org" "2017-05-16.org" "2017-05-15.org" "2017-05-14.org" "2017-05-12.org" "2017-05-11.org" "2017-05-10.org" "2017-05-09.org" "2017-05-08.org" "2017-05-07.org" "2017-05-06.org" "2017-05-04.org" "2017-05-03.org" "2017-05-01.org" "2017-04-30.org" "2017-04-29.org" "2017-04-28.org" "2017-04-27.org" "2017-04-26.org" "2017-04-21.org" "2017-04-19.org" "2017-04-18.org" "2017-04-17.org" "2017-04-16.org" "2017-04-14.org" "2017-04-13.org" "2017-04-12.org" "2017-04-11.org" "2017-04-10.org" "2017-04-09.org" "2017-04-07.org" "2017-04-06.org" "2017-04-05.org" "2017-04-03.org" "2017-04-02.org" "2017-03-31.org" "2017-03-30.org" "2017-03-29.org" "2017-03-28.org" "2017-03-26.org" "2017-03-24.org" "2017-03-23.org" "2017-03-21.org" "2017-03-20.org" "2017-03-18.org" "2017-03-17.org" "2017-03-16.org" "2017-03-15.org" "2017-03-14.org" "2017-03-13.org" "2017-03-10.org" "2017-03-09.org" "2017-03-08.org" "2017-03-06.org" "2017-03-04.org" "2017-03-03.org" "2017-03-02.org" "2017-03-01.org" "2017-02-28.org" "2017-02-27.org" "2017-02-26.org" "2017-02-25.org" "2017-02-24.org" "2017-02-23.org" "2017-02-21.org" "2017-02-20.org" "2017-02-19.org" "2017-02-17.org" "2017-02-16.org" "2017-02-15.org" "2017-02-14.org" "2017-02-13.org" "2017-02-12.org" "2017-02-11.org" "2017-02-10.org" "2017-02-09.org" "2017-02-08.org" "2017-02-06.org" "2017-02-04.org" "2017-02-03.org" "2017-02-02.org" "2017-02-01.org" "2017-01-31.org" "2017-01-30.org" "2017-01-29.org" "2017-01-29.odt" "2017-01-28.org" "2017-01-27.org" "2017-01-26.org" "2017-01-25.org" "2017-01-23.org" "2017-01-22.org" "2017-01-21.org" "2017-01-20.org" "2017-01-19.org" "2017-01-18.org" "2017-01-17.org" "2017-01-16.org" "2017-01-15.org" "2017-01-14.org" "2017-01-13.org" "2017-01-12.org" "2017-01-06.org" "2017-01-05.org" "2017-01-04.org" "2017-01-03.org" "2017-01-02.org" "2017-01-01.org" ".DS_Store" ".#2017-07-09.org" "#2017-06-18.org#" "#2016-11-23.org#" "../" "./")
 
  ("/Users/kev/msmci/millionaire/source/www/templates/widgets/" (22878 45142 0 0) "video_list_item.html" "user_status_bar.html" "submission_display.html" "store_section.html" "store_item.html" "request_progress_overlay.html" "reply.html" "purchased_sticker.html" "performer_list_item.html" "performer_info_display.html" "leaderboard_performer_info_display.html" "heat_info_display.html" "header.html" "goal_item.html" "footer.html" "followed_performer_item.html" "featured_item_tournament.html" "featured_item.html" "facebook_friend_item.html" "comments_section.html" "comment.html" "../" "./")
 
@@ -344,15 +421,7 @@
 
  ("/Users/kev/msmci/millionaire/source/www/js/controllers/" (22878 45142 0 0) "Router.js" "App.js" "../" "./")
 
- ("/Users/kev/msmci/millionaire/source/www/js/managers/" (22878 45142 0 0) "YouTubeManager.js" "UtilsManager.js" "UserManager.js" "StatusBarManager.js" "StateManager.js" "SplashScreenManager.js" "SocialManager.js" "PushNotificationsManager.js" "NetworkManager.js" "LoginManager.js" "LiveBroadcastManager.js" "LazyLoadManager.js" "KeyboardManager.js" "InAppPurchaseManager.js" "GoogleManager.js" "FacebookManager.js" "DeviceId.js" "BranchIO.js" "AppUpdateManager.js" "AnalyticsManager.js" "AdjustManager.js" ".#LiveBroadcastManager.js" "../" "./")
-
- ("/Users/kev/msmci/millionaire/source/www/js/server/" (22878 50487 0 0) "ServerGateway.js" "ServerConfig.js" "Server.js" "../" "./")
-
- ("/Users/kev/msmci/millionaire/source/www/css/" (22878 45142 0 0) "main.css" "../" "./")
-
  ("/Users/kev/msmci/millionaire/platforms/ios/www/" (22878 28150 0 0) "plugins/" "cordova_plugins.js" "cordova.js" "cordova-js-src/" "../" "./")
-
- ("/Users/kev/msmci/millionaire/source/www/js/" (22878 45142 0 0) "views/" "utils/" "server/" "models/" "managers/" "localization/" "loading.js" "kickstart.js" "i18n/" "dist/" "controllers/" "collections/" "../" "./")
 
  ("/Users/kev/code/" (22857 18824 0 0) "wizardwarz/" "webgl-wield-item-tutorial/" "VoxLords/" "v4-dev.zip" "threejs-animation-workflow/" "three.js/" "thebookofshaders/" "testimportthing/" "test_blender_addons/" "test/" "skeletal-animation-system/" "sitepoint-aws-lambda-tutorial/" "shaderschool/" "serverless-client-s3/" "scene-tree/" "robotbones/" "regl_basics/" "regl-greedy-test/" "react-three-renderer-fiber/" "react-three-renderer/" "react-regl-omg/" "react-regl-bak/" "react-regl/" "react-datasheet/" "react/" "qake/" "plebland/" "peerchan/" "passthrough-server/" "parse-qubicle/" "parse-magica-voxel/" "pabla/" "org-stream/" "orbit-camera/" "ocaml-sg/" "node_modules/" "node-peer-hub/" "NativeOrg/" "mintseashell/" "memory/" "magicavoxel-three/" "magicavoxel-ndarray/" "load-collada-dae/" "kevzettler.github.com/" "js-peers/" "hugoblog/" "go/" "glslViewer/" "game-off-2016/" "first-person-camera/" "emacs.d/" "easeread/" "create-orbit-camera/" "CEWBS/" "ccc/" "blendergltf/" "berry-chaser/" "Babylon.js-FPS/" "Babylon.js/" "ao-shader/" "aakrobot/" "3d.city/" ".DS_Store" "../" "./")
 
@@ -366,31 +435,9 @@
 
  ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/util/" (22857 49681 0 0) "topDownDrawScopes.js" "mouse.js" "batchChildren.js" "../" "./")
 
- ("/Users/kev/msmci/msm_api/utils/" (22878 29258 0 0) "wowza.js" "session.js" "scrubHtml.js" "pagination.js" "logger.js" "lang.js" "iap.js" "google.js" "git.js" "fb_graph.js" "error.js" "db_util.js" "api_util.js" "abTest.js" "../" "./")
-
  ("/Users/kev/msmci/php_wowza_proxy/" (22865 18192 0 0) "requestBroadcast.php" "fetchVods.php" "fetchIncomingStreams.php" "fakeData.php" "creds.php" "applicationData.php" "../" "./")
 
- ("/Users/kev/msmci/msm_api/config/app/" (22869 24260 0 0) "tools.yml" "stage.yml" "qa.yml" "prod.yml" "devserver.yml" "devlocal.yml" "development.yml" "default.yml" "default-0.yml" "../" "./")
-
- ("/Users/kev/msmci/msm_api/controllers/" (22869 42014 0 0) "video.js" "user.js" "tournament.js" "stream.js" "store.js" "static.js" "server.js" "performer.js" "fanPrize.js" "competition.js" "comment.js" "auth.js" "admin.js" "../" "./")
-
- ("/Users/kev/msmci/millionaire/platforms/ios/www/plugins/cordova-plugin-live-broadcast/www/" (22878 28150 0 0) "LiveBroadcast.js" "../" "./")
-
- ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/cordova-plugin-live-broadcast/" (22878 28150 0 0) "LiveBroadcastPlugin.m" "LiveBroadcastPlugin.h" "LiveBroadcastController.m" "LiveBroadcastController.h" "../" "./")
-
- ("/Users/kev/msmci/msm_api/routes/" (22859 64374 0 0) "index.js" "health_check.js" "api.js" "admin.js" "../" "./")
-
- ("/Users/kev/msmci/msm_api/" (22869 42014 0 0) "views/" "utils/" "tools/" "test/" "tasks.js" "routes/" "public/" "package.json" "node_modules/" "models/" "controllers/" "config/" "app.js" ".gitignore" ".git/" ".env" "../" "./")
-
  ("/Users/kev/code/robotbones/engines/stackgl/reactify/src/containers/" (22857 43581 0 0) "Title.js" "Root.prod.js" "Root.js" "Root.dev.js" "Menu.js" "Game.js" "DevTools.js" "App.js" "../" "./")
-
- ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/dsl/scene/" (22866 57290 0 0) "selectors.js" "reducer.js" "nodes/" "constants.js" "actions.js" "../" "./")
-
- ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/" (22866 60559 0 0) "VoxelMesh.js" "util/" "ui/" "rootReducer.js" "QubicleMesh.js" "index.js" "dsl/" "configureStore.js" "../" "./")
-
- ("/Users/kev/code/robotbones/engines/stackgl/regl-budo/src/ui/" (22866 60516 0 0) "Title.jsx" "Stats.jsx" "Game.jsx" "equipScene.js" "Equip.jsx" ".#Equip.jsx" "../" "./")
-
- ("/Users/kev/org/atlassian/" (22877 10845 0 0) "test.org" "pandoc.sh" "git_rebase.org" "git_rebase" ".git/" "../" "./")
 
  ("/Users/kev/code/robotbones/engines/stackgl/reactify/src/" (22808 40419 0 0) "workers/" "store/" "selectors/" "routes.js" "reducers/" "QubicleMesh.js" "paddVoxelNDarray.js" "middleware/" "index.js" "containers/" "connectContext.js" "components/" "App.js" "actions/" ".DS_Store" "../" "./")
 
@@ -406,21 +453,11 @@
 
  ("/Users/kev/msmci/millionaire/platforms/ios/www/plugins/" (22849 46050 0 0) "urbanairship-cordova/" "msm-plugin-keyboard/" "io.branch.sdk/" "es6-promise-plugin/" "cordova-universal-clipboard/" "cordova-plugin-x-socialsharing/" "cordova-plugin-wizpurchase/" "cordova-plugin-uniquedeviceid/" "cordova-plugin-statusbar/" "cordova-plugin-splashscreen/" "cordova-plugin-network-information/" "cordova-plugin-live-broadcast/" "cordova-plugin-inappbrowser/" "cordova-plugin-googleplus/" "cordova-plugin-facebook4/" "cordova-plugin-device/" "cordova-plugin-buildinfo/" "cordova-lazy-load-push-plugin/" "cordova-hot-code-push-plugin/" "com.adjust.sdk/" "../" "./")
 
- ("/Users/kev/msmci/millionaire/platforms/ios/" (22849 50073 0 0) "www_lazy/" "www/" "scripts/" "MegastarMillionaire.xcodeproj/" "MegastarMillionaire/" "ios.json" "frameworks.json" "CordovaLib/" "cordova/" ".gitignore" ".DS_Store" ".chcpignore" "../" "./")
-
- ("/Users/kev/msmci/millionaire/platforms/" (22849 50067 0 0) "platforms.json" "ios/" "android/" ".DS_Store" "../" "./")
-
- ("/Users/kev/msmci/millionaire/platforms/ios/MegastarMillionaire/Plugins/" (22849 46050 0 0) "urbanairship-cordova/" "README" "msm-plugin-keyboard/" "io.branch.sdk/" "cordova-universal-clipboard/" "cordova-plugin-x-socialsharing/" "cordova-plugin-wizpurchase/" "cordova-plugin-uniquedeviceid/" "cordova-plugin-statusbar/" "cordova-plugin-splashscreen/" "cordova-plugin-network-information/" "cordova-plugin-live-broadcast/" "cordova-plugin-inappbrowser/" "cordova-plugin-googleplus/" "cordova-plugin-facebook4/" "cordova-plugin-device/" "cordova-plugin-buildinfo/" "cordova-lazy-load-push-plugin/" "cordova-hot-code-push-plugin/" "com.adjust.sdk/" "../" "./")
-
  ("/Users/kev/.ssh/" (22851 6230 0 0) "msmdev.pem" "known_hosts" "id_rsa.pub" "id_rsa" "config" "../" "./")
 
  ("/Users/kev/msmci/millionaire/scripts/" (22849 36749 0 0) "jenkins_update_version.sh" "jenkins_update_manifest.sh" "jenkins_update_js_file_count.sh" "jenkins_store_variables.sh" "jenkins_server_config.sh" "jenkins_post_build.sh" "jenkins_copy_config_assets.sh" "jenkins_config_update_helper.sh" "jenkins_config_update.py" "app_updater/" "../" "./")
 
  ("/Users/" (22537 34052 0 0) "Shared/" "kev/" "Guest/" ".localized" "../" "./")
-
- ("/Users/kev/msmci/millionaire/source/" (22849 52378 0 0) "www_lazy/" "www/" "svg/" "scss/" "cordova-hcp.json" ".DS_Store" ".chcpignore" "../" "./")
-
- ("/Users/kev/msmci/millionaire/source/www/js/views/widgets/" (22849 41663 0 0) "VoteCollector.js" "VideoListItem.js" "VideoList.js" "UserStatusBar.js" "SubmissionDisplay.js" "StreamListItem.js" "StreamList.js" "PerformerListItem.js" "PerformerList.js" "PerformerInfoDisplay.js" "HeatList.js" "HeatInfoDisplay.js" "Header.js" "GoldenTicketList.js" "GoalItem.js" "Footer.js" "FollowedPerformerItem.js" "FeaturedItemCarousel.js" "FacebookFriendItem.js" "CommentsSection.js" "CommentReply.js" "Comment.js" "CategoryList.js" "../" "./")
 
  ("/Users/kev/msmci/millionaire/source/www/templates/" (22849 36749 0 0) "widgets/" "toasters/" "static_templates/" "screens/" "modals/" "../" "./")
 
