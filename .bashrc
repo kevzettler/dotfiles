@@ -16,7 +16,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 
 # RBENV init
-#eval "$(rbenv init -)";
+eval "$(rbenv init -)";
 
 #Git completion
 source ~/git-completion.bash
