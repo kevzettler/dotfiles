@@ -5,9 +5,12 @@
          ("\\.erb\\'" . web-mode)
          ("\\.yaml\\'" . web-mode)
          ("\\.todo\\'" . web-mode)
+         ("\\.hbs\\'" . web-mode)
          ("\\.py\\'" . web-mode))
   :config
   (setq
+   web-mode-enable-auto-closing nil
+   web-mode-enable-auto-pairing nil
    web-mode-code-indent-offset 2
    web-mode-css-indent-offset 2
    web-mode-enable-css-colorization t
