@@ -66,11 +66,31 @@
 
 
 (setq org-todo-keywords
-           '((sequence "TODO" "DONE")
+           '((sequence "TODO" "|" "DONE" "WONTDO")
              (sequence "UNREAD" "READ")))
 
 
 (require 'cl)
+
+;;
+;; org-babel
+;;
+
+(setenv "NODE_PATH"
+  (concat
+   (getenv "HOME") "/org/node_modules"  ":"
+   (getenv "NODE_PATH")
+  )
+)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((js . t)))
+
+
+;;
+;; Custom journal commands
+;;
 (defun bk-kill-buffers (regexp)
   "Kill buffers matching REGEXP without asking for confirmation."
   (interactive "sKill buffers matching this regular expression: ")
