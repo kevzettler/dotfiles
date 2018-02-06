@@ -66,3 +66,10 @@ fi
 # then we append the rest of $PROMPT_COMMAND so as not to remove what was already there
 # voilà!
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/kev/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /Users/kev/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/kev/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /Users/kev/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
