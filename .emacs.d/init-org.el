@@ -5,6 +5,9 @@
 (setq org-directory "~/Dropbox (Personal)/org")
 (message "org directory")
 
+(load-file "~/.emacs.d/plugins/emacs-grammarly/emacs-grammarly.el")
+(global-set-key (kbd "C-c C-g") 'grammarly-save-region-and-run)
+
 (setq org-archive-location "~/Dropbox (Personal)/org/archive/%s_archive::")
 
 (setq org-log-done 'time)
@@ -67,7 +70,8 @@
 
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE" "WONTDO")
-             (sequence "UNREAD" "READ")))
+             (sequence "UNREAD" "READ")
+             (sequence "UNKNOWN" "ANSWERED")))
 
 
 (require 'cl)
@@ -118,4 +122,24 @@
   (journal))
 
 (global-set-key "\C-j" 'journal)
+(global-set-key "\C-x j" 'journal)
+(global-set-key "\C-c j" 'journal)
 (journal)
+
+
+(defun capture-comment-line (&optional line)
+  (let ((c
+        (save-excursion
+          (save-window-excursion
+            (switch-to-buffer (plist-get org-capture-plist :original-buffer))
+          comment-start)
+          )))
+    (while (string-prefix-p c line)
+      (setq line (string-remove-prefix c line)))
+    (comment-string-strip line t t)
+    ))
+
+(setq org-capture-templates
+      '(("C" "TODO code comment" entry (file+headline "~/org/brain/code.org" "Tasks")
+        "* %(capture-comment-line \"%i\")\n  %a"
+        )))

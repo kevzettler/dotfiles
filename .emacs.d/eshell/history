@@ -70,3 +70,45 @@ cd /ssh:kevdev:
 ls
 quit
 exit
+cd /kevdev:
+ls
+cd msm_api/
+m
+mysql -u -root
+mysql -u -root
+exit
+cd /kevdev:
+ls
+ls
+ssh kevdev
+cd /ssh:kevdev:
+ls
+ps
+ps -aux
+root      2637  0.0  0.1   4308  1436 tty5     Ss+  Sep23   0:00 /sbin/mingetty /dev/tty5
+clear
+
+cd ..
+ls
+rm -rf packt/
+cat reduxderiveddata.org 
+clear
+
+pwd
+npm init .
+ls
+npm install --save-dev babel-cli babel-preset-stage-0 babel-preset-es2015 babel-preset-react
+cd /ssh:kevdev:
+lss
+ls
+ps aux
+cd ~
+ls
+sudo find ~/ -name "*.pdf"
+cd ~/org/atlassian/
+git branch
+git status
+cat ~/.bashrc 
+source ~/git-completion.bash 
+cd /kevzettler@0161e81.netsolhost.com
+cd /ftp:kevzettler@0161e81.netsolhost.com

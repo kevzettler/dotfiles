@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <17/07/26 22:19:24 /Users/kev/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/02/01 20:22:32 /Users/kev/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -37,24 +37,12 @@
   ("readlink" "\\readlink")
   ("gid-integer" 500)
   ("file-exists" "test -e")
-  ("env-u-option" t))
+  ("env-u-option" t)
+  ("~" "/home/ec2-user")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t))
  (["scp" nil "wowza" nil nil]
-  ("uname" "Linux 4.9.20-11.31.amzn1.x86_64")
-  ("locale" "LC_ALL=en_US.utf8")
-  ("test" "test")
-  ("remote-path"
-   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
-  ("remote-shell" "/bin/sh")
-  ("file-exists" "test -e")
-  ("stat" nil)
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("id" "/usr/bin/id")
-  ("gid-integer" 500)
-  ("gid-string" "ec2-user")
-  ("readlink" "\\readlink")
-  ("uid-integer" 500))
+  nil)
  (["scp" nil "jaydev" nil nil]
   ("uname" "Linux 4.9.32-15.41.amzn1.x86_64")
   ("locale" "LC_ALL=en_US.utf8")
@@ -74,8 +62,6 @@
   ("gid-string" "ec2-user")
   ("readlink" "\\readlink")
   ("file-exists" "test -e"))
- (["scp" nil "ssh" nil nil]
-  nil)
  (["ssh" nil "jaydev" nil nil]
   ("uname" "Linux 4.9.32-15.41.amzn1.x86_64")
   ("locale" "LC_ALL=en_US.utf8")
@@ -116,5 +102,128 @@
   ("env-u-option" t)
   ("git" "\\git")
   ("uid-integer" 0))
+ (["scp" nil "qa" nil nil]
+  ("uname" "Linux 4.4.41-36.55.amzn1.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/ec2-user")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 500)
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("gid-string" "ec2-user")
+  ("git" "\\git")
+  ("env-u-option" t))
+ (["sudo" "root" "localhost" nil nil]
+  ("uname" "Darwin 16.6.0")
+  ("locale" "LC_ALL=en_US.UTF-8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~root" "/var/root")
+  ("ls" "/bin/ls")
+  ("ls-dired" nil)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("gid-string" "wheel")
+  ("readlink" nil)
+  ("file-exists" "test -e")
+  ("uid-integer" 0)
+  ("git" "\\git"))
+ (["ssh" nil "kevdev" nil nil]
+  ("uname" "Linux 4.9.20-11.31.amzn1.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/ec2-user")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 500)
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("gid-string" "ec2-user")
+  ("env-u-option" t)
+  ("git" "\\git"))
+ (["scp" nil "psftp" nil nil]
+  nil)
+ (["scp" nil "ftp" nil nil]
+  nil)
+ (["scp" nil "sftp" nil nil]
+  nil)
+ (["scp" nil "gateway" nil nil]
+  nil)
+ (["scp" nil "api" nil nil]
+  nil)
+ (["scp" nil "10.0.50." nil nil]
+  nil)
+ (["scp" nil "bastion1" nil nil]
+  nil)
+ (["scp" nil "ec2-35-161-96-251.us-west-2.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "ec2-34-223-212-103.us-west-2.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "ec2-54-187-28-203.us-west-2.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "ec2-35-167-173-226.us-west-2.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "104.192.143.1" nil nil]
+  nil)
+ (["scp" nil "ec2-52-35-212-50.us-west-2.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "104.192.143.2" nil nil]
+  nil)
+ (["scp" nil "104.192.143.3" nil nil]
+  nil)
+ (["scp" nil "192.30.255.113" nil nil]
+  nil)
+ (["scp" nil "192.30.255.112" nil nil]
+  nil)
+ (["scp" nil "2401" nil nil]
+  nil)
+ (["scp" nil "bitbucket.org" nil nil]
+  nil)
+ (["scp" nil "107.170.230.187" nil nil]
+  nil)
+ (["scp" nil "104.236.185.123" nil nil]
+  nil)
+ (["scp" nil "192.30.253.112" nil nil]
+  nil)
+ (["scp" nil "github.com" nil nil]
+  nil)
+ (["scp" nil "ssh" nil nil]
+  nil)
+ (["ftp" "kevzettler" "YW31t1F10c3w" nil nil]
+  nil)
+ (["sftp" "kevzettler" "0161e81.netsolhost.com" nil nil]
+  nil)
+ (["scp" "kevzettler" "0161e81.netsolhost.com" nil nil]
+  nil)
+ (["ftp" "kevzettler" "0161e81.netsolhost.com" nil nil]
+  ("started" t))
+ (["scp" nil "su" nil nil]
+  nil)
  (["scp" nil "sudo" nil nil]
+  nil)
+ (["su" "root" "localhost" nil nil]
   nil))

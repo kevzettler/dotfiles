@@ -8,6 +8,9 @@
          ("\\.hbs\\'" . web-mode)
          ("\\.py\\'" . web-mode))
   :config
+  (add-hook 'web-mode-hook
+            (lambda ()
+              (hs-minor-mode t)))
   (setq
    web-mode-enable-auto-closing nil
    web-mode-enable-auto-pairing nil

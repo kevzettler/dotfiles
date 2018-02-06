@@ -119,7 +119,7 @@
 (setq scroll-step 1)
 (line-number-mode 1)
 (column-number-mode 1)
- 
+
 ; backup
 (setq make-backup-files t)
 (setq version-control t)
@@ -138,6 +138,11 @@
 
 (setq auto-mode-alist
       (append '(("\.scss$"  . sass-mode))
+              auto-mode-alist))
+
+
+(setq auto-mode-alist
+      (append '(("\.kiwi$"  . idl-mode))
               auto-mode-alist))
 
 (setq auto-mode-alist
@@ -168,9 +173,9 @@
   "Use with isearch hook to end search at first char of match."
   (when isearch-forward (goto-char isearch-other-end)))
 ; ----------------------------------------
- 
+
 (setq resize-minibuffer-mode t)
- 
+
 (defun pbcopy-region (start end)
   "Copies text into the system clipboard on OS X"
   (interactive "r")
@@ -224,7 +229,7 @@
   (exec-path-from-shell-copy-env "PATH"))
 
 ;;; Fix junk characters in shell-mode
-(add-hook 'shell-mode-hook 
+(add-hook 'shell-mode-hook
           'ansi-color-for-comint-mode-on)
 (setenv "NODE_NO_READLINE" "1")
 (add-to-list
@@ -235,7 +240,7 @@
 
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
                              "~/Dropbox (Personal)/org/journal"
-                             "~/Dropbox (Personal)/org/brain/todo.org"                                                          
+                             "~/Dropbox (Personal)/org/brain"
                              "~/Dropbox (Personal)/org/gcal.org"))
 
 

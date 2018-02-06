@@ -3,17 +3,22 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        c-electric-semi&comma
         end-of-buffer
         js2-mode-show-node
+        org-beginning-of-line
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        comment-dwim
         handle-switch-frame
         ido-find-file
         ido-switch-buffer
+        iedit-switch-to-mc-mode
         indent-for-tab-command
         mouse-drag-secondary
+        mouse-save-then-kill
         mouse-set-region
         org-agenda
         org-find-file-at-mouse
