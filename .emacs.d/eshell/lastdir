@@ -1,4 +1,3 @@
-/Users/kev
 /
 /ssh:root@107.170.230.187:/root
 /ssh:root@107.170.230.187:/root/.znc/configs
@@ -14,12 +13,15 @@
 /scp:kevdev:/home/ec2-user
 /scp:kevdev:/home/ec2-user/msm_api
 /scp:kevdev:/home/ec2-user
-/Users/kev/Dropbox (Personal)/org
-/Users/kev/Dropbox (Personal)/org
-/Users/kev/Dropbox (Personal)/org
 /ssh:kevdev:/home/ec2-user
-/Users/kev
 /Users/kev/Dropbox (Personal)/org/journal
 /Users/kev/org/atlassian
 /Users/kev/Dropbox (Personal)/org/brain
 /Users/kev/Dropbox (Personal)/org/brain
+/Users/kev/code/lizgrossman/gatsby-site/src/styles
+/ssh:robotbones:/root
+/ssh:robotbones:/bin
+/Users/kev/Dropbox (Personal)/org
+/Users/kev/code/lizgrossman/gatsby-site
+/Users/kev
+/Users/kev

@@ -7,6 +7,7 @@
    (quote
     ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
  '(epg-gpg-program "/usr/local/opt/gnupg@2.1/bin/gpg2")
+ '(flycheck-javascript-flow-args nil)
  '(js-indent-level 2)
  '(package-selected-packages
    (quote

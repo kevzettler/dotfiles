@@ -1,3 +1,66 @@
+;; Counsel
+(use-package counsel
+    :diminish (counsel-mode))
+
+;; Ivy
+(use-package ivy
+  :diminish (ivy-mode)
+  :bind
+  (("C-x b" . ivy-switch-buffer)
+   ("C-x C-f" . counsel-find-file))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
+  (setq ivy-count-format "%d/%d ")
+  (setq ivy-display-style 'fancy))
+
+;; Swiper
+(use-package swiper
+  :bind
+  (("C-s" . swiper)
+   ("C-c C-r" . ivy-resume)
+   ("M-x" . counsel-M-x))
+  :config
+  (progn
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+    ))
+
+;; Avy
+(use-package avy
+  :bind ("M-s" . avy-goto-char-timer))
+
+;; projectile
+(use-package projectile
+  :diminish (projectile-mode)
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy))
+
+(use-package counsel-projectile
+  :config
+  (counsel-projectile-on))
+
+;; dumb-jump
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config
+  (setq dumb-jump-selector 'ivy)
+  :init
+  (dumb-jump-mode)
+  :ensure
+)
+
+
+
+
+
 ;; Web mode
 (use-package web-mode
   :mode (("\\.js[x]?\\'" . web-mode)
@@ -77,19 +140,17 @@
 
 
 ;; flycheck
+(use-package flycheck-flow)
 (use-package flycheck
   :diminish flycheck-mode
   :config
   (global-flycheck-mode)
   (setq-default flycheck-disabled-checkers '(javascript-jshint))
   (setq-default flycheck-disabled-checkers '(javascript-standard))
-  (with-eval-after-load 'flycheck
-    ;; (flycheck-add-mode 'javascript-standard 'js2-mode)
-    ;; (flycheck-add-mode 'javascript-standard 'web-mode)
-    (flycheck-add-mode 'javascript-eslint 'js2-mode))
-    (flycheck-add-mode 'javascript-eslint 'web-mode)
-    ;; (flycheck-add-mode 'html-tidy 'web-mode)
-    ;; (flycheck-add-mode 'css-csslint 'web-mode))
+  (flycheck-add-next-checker 'javascript-flow 'javascript-eslint 'typescript-tslint)
+  (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+  (flycheck-add-mode 'javascript-flow 'rjsx-mode)
+  (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
   (defun my/use-eslint-from-node-modules ()
     (let* ((root (locate-dominating-file
                   (or (buffer-file-name) default-directory)
@@ -99,7 +160,17 @@
                                           root))))
       (when (and eslint (file-executable-p eslint))
         (setq-local flycheck-javascript-eslint-executable eslint))))
-  (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules))
+  (defun my/use-flow-from-node-modules ()
+    (let* ((root (locate-dominating-file
+                  (or (buffer-file-name) default-directory)
+                  "node_modules"))
+           (flow (and root
+                      (expand-file-name "node_modules/flow-bin/vendor/flow"
+                                        root))))
+      (when (and flow (file-executable-p flow))
+        (setq-local flycheck-javascript-flow-executable flow))))
+  (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+  (add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules))
 
 
 ;; multiple-cursors-mode
