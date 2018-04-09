@@ -122,8 +122,8 @@
   (journal))
 
 (global-set-key "\C-j" 'journal)
-(global-set-key "\C-x j" 'journal)
-(global-set-key "\C-c j" 'journal)
+(global-set-key "\C-xj" 'journal)
+(global-set-key "\C-cj" 'journal)
 (journal)
 
 
