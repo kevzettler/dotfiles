@@ -241,7 +241,6 @@
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
                              "~/Dropbox (Personal)/org/journal"
                              "~/Dropbox (Personal)/org/brain"
-                             "~/Dropbox (Personal)/org/gcal.org"
                              "~/code/kevzettler.github.com/_posts/"))
 
 
@@ -255,10 +254,10 @@
   (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
   :config
   (require 'secrets)
-  (setq org-gcal-file-alist '(("kevzettler@gmail.com" .  "~/org/gcal.org")))
-  (defun new/org-gcal--notify (title mes)
-    (message "org-gcal::%s - %s" title mes))
-  (fset 'org-gcal--notify 'new/org-gcal-notify))
+  (setq org-gcal-file-alist '(("kevzettler@gmail.com" . "~/Dropbox (Personal)/org/gcal.org"))))
+  ;; (defun new/org-gcal--notify (title mes)
+  ;;   (message "org-gcal::%s - %s" title mes))
+  ;; (fset 'org-gcal--notify 'new/org-gcal-notify))
 
 
 
