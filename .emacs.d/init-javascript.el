@@ -58,13 +58,39 @@
 )
 
 
-
+;; rjsx-mode
+(use-package rjsx-mode
+  :mode (("\\.js[x]?\\'" . rjsx-mode)
+         ("\\.tsx" . rjsx-mode))
+  :config
+  (add-hook 'rjsx-mode-hook 'emmet-mode)
+  (add-hook 'rjsx-mode-hook 'eslintd-fix-mode)
+  (add-hook 'rjsx-mode-hook
+            (lambda ()
+              (when (string-equal "tsx" (file-name-extension buffer-file-name))
+                (setup-tide-mode))))
+  (setq
+   standard-indent 2
+   tab-width 1
+   indent-tabs-mode nil
+   js-indent-level 2
+   js-switch-indent-offset t
+   js2-basic-offset 2
+   sgml-basic-offset 2
+   js2-jsx-mode 2
+   js2-highlight-level 3
+   js2-indent-level 2
+   js2-indent-switch-body t
+   js2-strict-semi-warning nil
+   js2-missing-semi-one-line-override nil
+   js2-mode-show-parse-errors nil
+   js2-mode-show-strict-warnings nil
+   js2-strict-trailing-comma-warning nil))
 
 
 ;; Web mode
 (use-package web-mode
-  :mode (("\\.js[x]?\\'" . web-mode)
-         ("\\.html\\'" . web-mode)
+  :mode (("\\.html\\'" . web-mode)
          ("\\.erb\\'" . web-mode)
          ("\\.yaml\\'" . web-mode)
          ("\\.todo\\'" . web-mode)
@@ -128,6 +154,7 @@
   :config
   (add-hook 'js2-mode-hook 'tern-mode)
   (add-hook 'web-mode-hook 'tern-mode)
+  (add-hook 'rjsx-mode-hook 'tern-mode)
   (setq tern-command (append tern-command '("--no-port-file"))))
 
 ;; Company integration for tern (js)
@@ -148,6 +175,8 @@
   (setq-default flycheck-disabled-checkers '(javascript-jshint))
   (setq-default flycheck-disabled-checkers '(javascript-standard))
   (flycheck-add-next-checker 'javascript-flow 'javascript-eslint 'typescript-tslint)
+  (flycheck-add-mode 'javascript-eslint 'js2-mode)
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
   (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
   (flycheck-add-mode 'javascript-flow 'rjsx-mode)
   (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
