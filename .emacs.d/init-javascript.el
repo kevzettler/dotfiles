@@ -6,8 +6,10 @@
 (use-package ivy
   :diminish (ivy-mode)
   :bind
-  (("C-x b" . ivy-switch-buffer)
-   ("C-x C-f" . counsel-find-file))
+  (
+   ("C-x b" . ivy-switch-buffer)
+   ;;("C-x C-f" . counsel-find-file)
+  )
   :config
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers t)
@@ -18,9 +20,11 @@
 ;; Swiper
 (use-package swiper
   :bind
-  (("C-s" . swiper)
+  (
+;;   ("C-s" . swiper)
    ("C-c C-r" . ivy-resume)
-   ("M-x" . counsel-M-x))
+   ("M-x" . counsel-M-x)
+   )
   :config
   (progn
     (ivy-mode 1)
