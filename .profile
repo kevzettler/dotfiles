@@ -1,5 +1,5 @@
-source ~/perl5/perlbrew/etc/bashrc
-export PATH='/usr/local/bin:$PATH'
+[ -r ~/.bashrc ] && source ~/.bashrc;
+# export PATH='$PATH:/usr/local/bin'
 export PATH="$PATH:./node_modules/.bin"
 export NVM_DIR=~/.nvm
 
