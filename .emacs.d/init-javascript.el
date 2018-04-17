@@ -65,6 +65,7 @@
 ;; rjsx-mode
 (use-package rjsx-mode
   :mode (("\\.js[x]?\\'" . rjsx-mode)
+         ("\\.flow?\\'" . rjsx-mode)
          ("\\.tsx" . rjsx-mode))
   :config
   (add-hook 'rjsx-mode-hook 'emmet-mode)
