@@ -1,3 +1,5 @@
+(load-file "~/.emacs.d/flow-for-emacs/flow.el")
+
 ;; Counsel
 (use-package counsel
     :diminish (counsel-mode))
@@ -172,6 +174,7 @@
 
 
 ;; flycheck
+
 (use-package flycheck-flow)
 (use-package flycheck
   :diminish flycheck-mode
