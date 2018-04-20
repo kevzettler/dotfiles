@@ -44,9 +44,9 @@
   (projectile-global-mode)
   (setq projectile-completion-system 'ivy))
 
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-on))
+(use-package counsel-projectile)
+;;  :config
+;;  (counsel-projectile-on))
 
 ;; dumb-jump
 (use-package dumb-jump
@@ -70,7 +70,7 @@
          ("\\.tsx" . rjsx-mode))
   :config
 ;;  (add-hook 'rjsx-mode-hook 'emmet-mode)
-;;  (add-hook 'rjsx-mode-hook 'eslintd-fix-mode)
+  (add-hook 'rjsx-mode-hook 'eslintd-fix-mode)
   (add-hook 'rjsx-mode-hook
             (lambda ()
               (when (string-equal "tsx" (file-name-extension buffer-file-name))
@@ -137,13 +137,14 @@
   :diminish company-mode
   :init (global-company-mode 1)
   :config
-  (defvar company-mode/enable-yas t
-    "Enable yasnippet for all backends.")
-  (defun company-mode/backend-with-yas (backend)
-    (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
-        backend
-      (append (if (consp backend) backend (list backend))
-              '(:with company-yasnippet))))
+  ;; (defvar company-mode/enable-yas t
+  ;;   "Enable yasnippet for all backends.")
+
+  ;; (defun company-mode/backend-with-yas (backend)
+  ;;   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+  ;;       backend
+  ;;     (append (if (consp backend) backend (list backend))
+  ;;             '(:with company-yasnippet))))
   (add-to-list 'company-backends 'company-css)
 ;;  (add-to-list 'company-backends 'company-yasnippet)
   (setq
@@ -153,7 +154,7 @@
    company-tooltip-align-annotations t
    company-tooltip-limit 10
    company-tooltip-flip-when-above t
-   company-dabbrev-downcase nil
+;;   company-dabbrev-downcase nil
    company-require-match nil
    company-begin-commands '(self-insert-command)
 ;;   company-backends (mapcar #'company-mode/backend-with-yas company-backends)
@@ -164,10 +165,6 @@
   (define-key company-active-map (kbd "C-p") 'company-select-previous))
 
 ;; Company-web
-(use-package company-web
-  :init (add-to-list 'company-backends 'company-web-html))
-
-
 (use-package company-flow
   :ensure t
   :defer t
@@ -176,6 +173,11 @@
     (add-to-list 'company-backends 'company-flow))
   :config
   (add-to-list 'company-flow-modes 'rjsx-mode))
+
+
+(use-package company-web
+  :init (add-to-list 'company-backends 'company-web-html))
+
 
 ;; tern (js)
 (use-package tern
@@ -196,38 +198,41 @@
 
 
 ;; flycheck
-;; (use-package flycheck-flow)
-;; (use-package flycheck
-;;   :diminish flycheck-mode
-;;   :config
-;;   (global-flycheck-mode)
-;;   (setq-default flycheck-disabled-checkers '(javascript-jshint))
-;;   (setq-default flycheck-disabled-checkers '(javascript-standard))
-;;   (flycheck-add-next-checker 'javascript-flow 'javascript-eslint)
-;;   (flycheck-add-mode 'javascript-eslint 'js2-mode)
-;;   (flycheck-add-mode 'javascript-eslint 'web-mode)
-;;   (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
-;;   (flycheck-add-mode 'javascript-flow 'rjsx-mode)
-;;   (defun my/use-eslint-from-node-modules ()
-;;     (let* ((root (locate-dominating-file
-;;                   (or (buffer-file-name) default-directory)
-;;                   "node_modules"))
-;;            (eslint (and root
-;;                         (expand-file-name "node_modules/eslint/bin/eslint.js"
-;;                                           root))))
-;;       (when (and eslint (file-executable-p eslint))
-;;         (setq-local flycheck-javascript-eslint-executable eslint))))
-;;   (defun my/use-flow-from-node-modules ()
-;;     (let* ((root (locate-dominating-file
-;;                   (or (buffer-file-name) default-directory)
-;;                   "node_modules"))
-;;            (flow (and root
-;;                       (expand-file-name "node_modules/flow-bin/vendor/flow"
-;;                                         root))))
-;;       (when (and flow (file-executable-p flow))
-;;         (setq-local flycheck-javascript-flow-executable flow))))
-;;   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-;;   (add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules))
+(use-package flycheck-flow)
+(use-package flycheck
+  :diminish flycheck-mode
+  :config
+  (global-flycheck-mode)
+  (setq-default flycheck-disabled-checkers '(javascript-jshint))
+  (setq-default flycheck-disabled-checkers '(javascript-standard))
+  (flycheck-add-next-checker 'javascript-flow 'javascript-eslint)
+  (flycheck-add-mode 'javascript-eslint 'js2-mode)
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+  (flycheck-add-mode 'javascript-flow 'rjsx-mode)
+
+  ;; (defun my/use-eslint-from-node-modules ()
+  ;;   (let* ((root (locate-dominating-file
+  ;;                 (or (buffer-file-name) default-directory)
+  ;;                 "node_modules"))
+  ;;          (eslint (and root
+  ;;                       (expand-file-name "node_modules/eslint/bin/eslint.js"
+  ;;                                         root))))
+  ;;     (when (and eslint (file-executable-p eslint))
+  ;;       (setq-local flycheck-javascript-eslint-executable eslint))))
+
+  ;; (defun my/use-flow-from-node-modules ()
+  ;;   (let* ((root (locate-dominating-file
+  ;;                 (or (buffer-file-name) default-directory)
+  ;;                 "node_modules"))
+  ;;          (flow (and root
+  ;;                     (expand-file-name "node_modules/flow-bin/vendor/flow"
+  ;;                                       root))))
+  ;;     (when (and flow (file-executable-p flow))
+  ;;       (setq-local flycheck-javascript-flow-executable flow))))
+  ;;(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+  ;;(add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules)
+  )
 
 
 ;; multiple-cursors-mode

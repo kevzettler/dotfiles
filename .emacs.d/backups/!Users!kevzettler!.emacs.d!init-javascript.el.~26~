@@ -44,9 +44,9 @@
   (projectile-global-mode)
   (setq projectile-completion-system 'ivy))
 
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-on))
+(use-package counsel-projectile)
+;;  :config
+;;  (counsel-projectile-on))
 
 ;; dumb-jump
 (use-package dumb-jump
@@ -137,13 +137,14 @@
   :diminish company-mode
   :init (global-company-mode 1)
   :config
-  (defvar company-mode/enable-yas t
-    "Enable yasnippet for all backends.")
-  (defun company-mode/backend-with-yas (backend)
-    (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
-        backend
-      (append (if (consp backend) backend (list backend))
-              '(:with company-yasnippet))))
+  ;; (defvar company-mode/enable-yas t
+  ;;   "Enable yasnippet for all backends.")
+
+  ;; (defun company-mode/backend-with-yas (backend)
+  ;;   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+  ;;       backend
+  ;;     (append (if (consp backend) backend (list backend))
+  ;;             '(:with company-yasnippet))))
   (add-to-list 'company-backends 'company-css)
 ;;  (add-to-list 'company-backends 'company-yasnippet)
   (setq
@@ -153,7 +154,7 @@
    company-tooltip-align-annotations t
    company-tooltip-limit 10
    company-tooltip-flip-when-above t
-   company-dabbrev-downcase nil
+;;   company-dabbrev-downcase nil
    company-require-match nil
    company-begin-commands '(self-insert-command)
 ;;   company-backends (mapcar #'company-mode/backend-with-yas company-backends)
@@ -164,10 +165,6 @@
   (define-key company-active-map (kbd "C-p") 'company-select-previous))
 
 ;; Company-web
-(use-package company-web
-  :init (add-to-list 'company-backends 'company-web-html))
-
-
 (use-package company-flow
   :ensure t
   :defer t
@@ -177,14 +174,19 @@
   :config
   (add-to-list 'company-flow-modes 'rjsx-mode))
 
+
+(use-package company-web
+  :init (add-to-list 'company-backends 'company-web-html))
+
+
 ;; tern (js)
-(use-package tern
-  :diminish tern-mode
-  :config
-  (add-hook 'js2-mode-hook 'tern-mode)
-  (add-hook 'web-mode-hook 'tern-mode)
-  (add-hook 'rjsx-mode-hook 'tern-mode)
-  (setq tern-command (append tern-command '("--no-port-file"))))
+;; (use-package tern
+;;   :diminish tern-mode
+;;   :config
+;;   (add-hook 'js2-mode-hook 'tern-mode)
+;;   (add-hook 'web-mode-hook 'tern-mode)
+;;   (add-hook 'rjsx-mode-hook 'tern-mode)
+;;   (setq tern-command (append tern-command '("--no-port-file"))))
 
 ;; Company integration for tern (js)
 ;; (use-package company-tern
