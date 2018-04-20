@@ -1,0 +1,23 @@
+pick 3267786f feat(admin): new user methods adminAddLinkedAccount and adminGetLinkedAccounts
+pick b022d21c style(user): missing ;
+pick b5c54b93 add 404 checks on missing resources
+pick 7f7be9bf add adminLinkedAccount tests to adminSpec.js
+
+# Rebase 24f72210..7f7be9bf onto 24f72210 (4 commands)
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out

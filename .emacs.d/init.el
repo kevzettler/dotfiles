@@ -15,9 +15,20 @@
 ;; Ensure environment variables inside Emacs look the same as in the user's shell.
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other vars better
+(defun set-exec-path-from-shell-PATH ()
+  "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
+
+This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
+  (interactive)
+  (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+
 (use-package exec-path-from-shell)
 (when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (set-exec-path-from-shell-PATH))
 
 
 ;;
@@ -40,7 +51,7 @@
 ;;;
 (load-init-file "init-javascript")
 (load-init-file "init-org")
-(load-init-file "init-reason")
+;;(load-init-file "init-reason")
 
 
 ;; make sure the display is clean to start with
@@ -121,10 +132,21 @@
 (column-number-mode 1)
 
 ; backup
-(setq make-backup-files t)
-(setq version-control t)
-(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
-(setq auto-save-file-name-transforms`((".*" ,"~/.emacs_backups/" t)))
+;; Configure backup file creation in it's own directory
+(defvar bry/backup-directory (concat user-emacs-directory "backups"))
+(unless (file-exists-p bry/backup-directory)
+  (make-directory bry/backup-directory t))
+(setq backup-directory-alist `(("." . ,bry/backup-directory))
+      make-backup-files t
+      version-control t
+      backup-by-copying-when-linked t
+      delete-old-versions t
+      delete-by-moving-to-trash t)
+
+;(setq make-backup-files t)
+;(setq version-control t)
+;(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
+;(setq auto-save-file-name-transforms`((".*" ,"~/.emacs_backups/" t)))
 ; ----------------------------------------
 
 ;scrolling

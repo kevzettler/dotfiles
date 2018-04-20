@@ -1,0 +1,20 @@
+feat(admin): new user methods adminAddLinkedAccount and adminGetLinkedAccounts
+
+adds new user methods adminAddLinkedAccount and adminGetLinkedAccounts
+adds specs for new methods to adminSpec.js
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    Shawn Stedman <shawn.stedman@bitmex.com>
+# Date:      Mon Apr 9 14:41:03 2018 -0700
+#
+# On branch feature/add-linked-account
+# Your branch is up to date with 'origin/feature/add-linked-account'.
+#
+# Changes to be committed:
+#	modified:   models.json
+#	modified:   models/_extensions/userAdmin.js
+#	modified:   models/_model.js.flow
+#	modified:   test/spec/adminSpec.js
+#

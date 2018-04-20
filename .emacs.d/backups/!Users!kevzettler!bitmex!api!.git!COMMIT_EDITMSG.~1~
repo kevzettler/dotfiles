@@ -1,0 +1,36 @@
+# This is a combination of 4 commits.
+# This is the 1st commit message:
+
+feat(admin): new user methods adminAddLinkedAccount and adminGetLinkedAccounts
+
+# This is the commit message #2:
+
+style(user): missing ;
+
+# This is the commit message #3:
+
+add 404 checks on missing resources
+
+# This is the commit message #4:
+
+add adminLinkedAccount tests to adminSpec.js
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    Shawn Stedman <shawn.stedman@bitmex.com>
+# Date:      Mon Apr 9 14:41:03 2018 -0700
+#
+# interactive rebase in progress; onto 24f72210
+# Last commands done (4 commands done):
+#    s b5c54b93 add 404 checks on missing resources
+#    s 7f7be9bf add adminLinkedAccount tests to adminSpec.js
+# No commands remaining.
+# You are currently rebasing branch 'feature/add-linked-account' on '24f72210'.
+#
+# Changes to be committed:
+#	modified:   models.json
+#	modified:   models/_extensions/userAdmin.js
+#	modified:   models/_model.js.flow
+#	modified:   test/spec/adminSpec.js
+#

@@ -1,0 +1,26 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/kevzettler/Dropbox/org/bitmex.org
+
+
+* Interview questions
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2018-04-17 Tue 10:48
+  :ARCHIVE_FILE: ~/Dropbox/org/bitmex.org
+  :ARCHIVE_CATEGORY: bitmex
+  :END:
+
+** a non technical team member  comes to you and says "the site is slow"
+Have the candidate walk through how the would trouble shoot the question
+
+See if they first question the human aspect of the scenario. What's slow
+
+Guide them through each layer of the stack if they skip over frontend or backend
+redirect them and say "what if the problem is narrowed down to a backend issue"
+
+look for how to debug sql with Describe and indexing
+
+look for caching ideas and infrastructure
+
+** how would you build a web based chat application and infrastructure
