@@ -1,3 +1,0 @@
-// @flow
-const foo: Array<number> = [3]
-foo.
