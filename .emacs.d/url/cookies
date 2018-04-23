@@ -1,0 +1,44 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".4chan.org"
+  [url-cookie "HttpOnly" nil "09 Dec 18 06:18:24 [GMT]" "/" ".4chan.org" nil]
+  [url-cookie "__cfduid" "db3f0e6c9b440844b43bba754c1c448441512800304" "09 Dec 18 06:18:24 [GMT]" "/" ".4chan.org" nil])
+ (".stackoverflow.com"
+  [url-cookie "HttpOnly" nil "01-Jan-2055 00:00:00.00 GMT" "/" ".stackoverflow.com" nil]
+  [url-cookie "prov" "4396acab-f129-a7a3-aef7-2b147b41a124" "01-Jan-2055 00:00:00.00 GMT" "/" ".stackoverflow.com" nil])
+ (".google.com"
+  [url-cookie "HttpOnly" nil "18-Jun-2018 06:05:00.00 GMT" "/" ".google.com" nil]
+  [url-cookie "NID" "119=u-1vXqtQPw8YuO8KlHGMg2EHmmicJbbidzQKfNKXNqLmdnAbwSgEDH537Vof4nucRiYzSqBq50QIZmufgB07_7u8wkI75JsQ9d4I808uLouLPfTX5BGLNQFo0mvlUBIc" "18-Jun-2018 06:05:00.00 GMT" "/" ".google.com" nil])
+ (".ycombinator.com"
+  [url-cookie "__cfduid" "da572e62bab8a998c4b2f8c87288da9831512843930" "09 Dec 18 18:25:30 [GMT]" "/" ".ycombinator.com" nil]
+  [url-cookie "HttpOnly" nil "09 Dec 18 18:25:30 [GMT]" "/" ".ycombinator.com" nil])
+ (".theguardian.com"
+  [url-cookie "GU_mvt_id" "311300" "Sat, 17 Mar 2018 06:03:49 GMT" "/" ".theguardian.com" nil])
+ (".coursera.org"
+  [url-cookie "CSRF3-Token" "1521088360.wNVWdNIWGXNQEPt1" "Thu, 15 Mar 2018 04:32:41 GMT" "/" ".coursera.org" nil]
+  [url-cookie "Max-Age" "31536000" "Tue, 05 Mar 2019 04:32:41 GMT" "/" ".coursera.org" nil]
+  [url-cookie "__204u" "5671978449-1520224360719" "Tue, 05 Mar 2019 04:32:41 GMT" "/" ".coursera.org" nil])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A151280137791339963" "Mon, 09 Dec 2019 06:36:17 UTC" "/" ".twitter.com" nil]
+  [url-cookie "personalization_id" "v1_AGHdkNj6L4bjoVBcUVr30w==" "Mon, 09 Dec 2019 06:36:17 UTC" "/" ".twitter.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("reddit.com"
+  [url-cookie "loid" "00000000000icseq56.2.1508763410294.Z0FBQUFBQlo3ZWNTNVl2WEw2MTJEM3BndVV5SjhBZzZ3UGtIYWh1MC1hbXZ1RS1JT1dSc0VWT1VOX0QwYjdaY0ktdTlwT0VxNUcyYXBpeW93MTc4ajdvNzhkbFE5U3FEaGc0SkFxRU1PMWFHekFnTE5JWWgxTkFEakJQRDJOeUQxQ2RSS3M2cGU3eUc" "23-Oct-2019 12:56:50.00 GMT" "/" "reddit.com" t])
+ (".github.com"
+  [url-cookie "logged_in" "no" "Wed, 09 Dec 2037 18:20:43 -0000" "/" ".github.com" t]
+  [url-cookie "HttpOnly" nil "Wed, 09 Dec 2037 18:20:43 -0000" "/" ".github.com" t])
+ (".pi-top.com"
+  [url-cookie "__cfduid" "d3c2488b1e048c8ed23ffd5fa6d962e631513490745" "17 Dec 18 06:05:45 [GMT]" "/" ".pi-top.com" t]
+  [url-cookie "HttpOnly" nil "17 Dec 18 06:05:45 [GMT]" "/" ".pi-top.com" t])
+ (".twitter.com"
+  [url-cookie "mobile_metrics_token" "151280137998011862" "Mon, 09 Dec 2019 06:36:19 UTC" "/" ".twitter.com" t]
+  [url-cookie "d" "32" "Sun, 09 Dec 2018 06:36:19 UTC" "/" ".twitter.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

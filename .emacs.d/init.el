@@ -64,8 +64,12 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;
 ;; Theme
 ;;
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
-(load-theme `solarized-light t)
+(use-package solarized-theme
+  :config
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
+  (load-theme `solarized-light t))
+
+
 ;;(load-theme `solarized-dark t)
 
 ;; Don't change size of org-mode headlines (but keep other size-changes)
