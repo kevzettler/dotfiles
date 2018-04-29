@@ -65,6 +65,11 @@
 ;; eslintd-fix
 (use-package eslintd-fix)
 
+;; glsl files
+(use-package glsl-mode
+  :mode (("\\.vert\\'" . glsl-mode)
+         ("\\.frag\\'" . glsl-mode)))
+
 ;; rjsx-mode
 (use-package rjsx-mode
   :mode (("\\.js[x]?\\'" . rjsx-mode)
