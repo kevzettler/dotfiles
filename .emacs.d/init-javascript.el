@@ -61,6 +61,8 @@
   :ensure
 )
 
+
+;; eslintd-fix
 (use-package eslintd-fix)
 
 ;; rjsx-mode
@@ -69,12 +71,7 @@
          ("\\.flow?\\'" . rjsx-mode)
          ("\\.tsx" . rjsx-mode))
   :config
-;;  (add-hook 'rjsx-mode-hook 'emmet-mode)
   (add-hook 'rjsx-mode-hook 'eslintd-fix-mode)
-  (add-hook 'rjsx-mode-hook
-            (lambda ()
-              (when (string-equal "tsx" (file-name-extension buffer-file-name))
-                (setup-tide-mode))))
   (setq
    standard-indent 2
    tab-width 1
@@ -92,6 +89,15 @@
    js2-mode-show-parse-errors nil
    js2-mode-show-strict-warnings nil
    js2-strict-trailing-comma-warning nil))
+
+
+;; Pug mode
+(use-package pug-mode
+  :mode "\\.pug\\'")
+
+;; Sass mode
+(use-package sass-mode
+  :mode "\\.scss\\'")
 
 
 ;; Web mode
