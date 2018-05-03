@@ -1,1 +1,0 @@
-("~/code/robotbones/" "~/code/kevzettler.github.com/" "~/code/lizgrossman/" "~/bitmex/api/" "~/code/org-stream/" "~/bitmex/frontend/" "~/bitmex/loopback-getting-started/" "~/bitmex/docker-builds/")
