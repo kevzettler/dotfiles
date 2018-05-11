@@ -33,6 +33,9 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
 
+(use-package yaml-mode
+  :mode ("\\.yaml" . yaml-mode))
+
 ;; Avy
 (use-package avy
   :bind ("M-s" . avy-goto-char-timer))
