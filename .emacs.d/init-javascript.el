@@ -37,6 +37,9 @@
 (use-package avy
   :bind ("M-s" . avy-goto-char-timer))
 
+(use-package groovy-mode
+  :mode ("Jenkinsfile?" . groovy-mode))
+
 ;; projectile
 (use-package projectile
   :diminish (projectile-mode)
@@ -93,7 +96,9 @@
 
 ;; Pug mode
 (use-package pug-mode
-  :mode "\\.pug\\'")
+  :mode "\\.pug\\'"
+  :config (setq pug-tab-width 2))
+
 
 ;; Sass mode
 (use-package sass-mode
