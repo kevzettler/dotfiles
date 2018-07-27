@@ -71,7 +71,7 @@
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE" "WONTDO")
              (sequence "UNREAD" "READ")
-             (sequence "UNKNOWN" "ANSWERED")))
+             (sequence "???" "OK")))
 
 
 (require 'cl)

@@ -33,6 +33,9 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
 
+(use-package yaml-mode
+  :mode ("\\.yaml" . yaml-mode))
+
 ;; Avy
 (use-package avy
   :bind ("M-s" . avy-goto-char-timer))
@@ -67,6 +70,11 @@
 
 ;; eslintd-fix
 (use-package eslintd-fix)
+
+;; glsl files
+(use-package glsl-mode
+  :mode (("\\.vert\\'" . glsl-mode)
+         ("\\.frag\\'" . glsl-mode)))
 
 ;; rjsx-mode
 (use-package rjsx-mode
