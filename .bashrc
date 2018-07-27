@@ -27,7 +27,10 @@ export PATH=/Users/kev/code/go/bin:$PATH
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.cask/bin:$PATH
+export PATH=$PATH:/usr/local/Cellar/python@2/2.7.14_3/bin
+export PATH=$PATH:/Users/kevzettler/Library/Python/2.7/bin
 export PATH=$PATH:./node_modules/.bin
+export PATH=/usr/local/opt/icu4c/sbin:$PATH
 
 export EDITOR=/usr/local/bin/emacs
 

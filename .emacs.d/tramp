@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <18/04/09 10:41:37 /Users/kev/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/05/15 17:00:12 /Users/kevzettler/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -122,23 +122,20 @@
   ("git" "\\git")
   ("env-u-option" t))
  (["sudo" "root" "localhost" nil nil]
-  ("uname" "Darwin 16.6.0")
+  ("uname" "Darwin 17.5.0")
   ("locale" "LC_ALL=en_US.UTF-8")
   ("test" "test")
   ("remote-path"
    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("~root" "/var/root")
-  ("ls" "/bin/ls")
-  ("ls-dired" nil)
   ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
   ("id" "/usr/bin/id")
-  ("gid-integer" 0)
   ("gid-string" "wheel")
   ("readlink" nil)
+  ("gid-integer" 0)
   ("file-exists" "test -e")
   ("uid-integer" 0)
   ("git" "\\git"))
@@ -207,49 +204,5 @@
   ("readlink" "\\readlink")
   ("git" "\\git")
   ("uid-integer" 0))
- (["scp" nil "ftp" nil nil]
-  nil)
- (["scp" nil "10.0.50." nil nil]
-  nil)
- (["scp" nil "167.99.102.108" nil nil]
-  nil)
- (["scp" nil "104.131.151.44" nil nil]
-  nil)
- (["scp" nil "0161e81.netsolhost.com" nil nil]
-  nil)
- (["scp" nil "ec2-35-161-96-251.us-west-2.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "ec2-34-223-212-103.us-west-2.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "ec2-54-187-28-203.us-west-2.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "ec2-35-167-173-226.us-west-2.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "104.192.143.1" nil nil]
-  nil)
- (["scp" nil "ec2-52-35-212-50.us-west-2.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "104.192.143.2" nil nil]
-  nil)
- (["scp" nil "104.192.143.3" nil nil]
-  nil)
- (["scp" nil "192.30.255.113" nil nil]
-  nil)
- (["scp" nil "192.30.255.112" nil nil]
-  nil)
- (["scp" nil "2401" nil nil]
-  nil)
- (["scp" nil "bitbucket.org" nil nil]
-  nil)
- (["scp" nil "107.170.230.187" nil nil]
-  nil)
- (["scp" nil "104.236.185.123" nil nil]
-  nil)
- (["scp" nil "192.30.253.112" nil nil]
-  nil)
- (["scp" nil "github.com" nil nil]
-  nil)
- (["ftp" nil "kevzettler" nil nil]
-  nil)
  (["scp" nil "sudo" nil nil]
   nil))
