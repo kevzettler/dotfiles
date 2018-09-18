@@ -1,16 +1,17 @@
 # helper function for working with bare repo home directory
 # see: for setup
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+
 function git ()
 {
     ARGS=("$@");
 
-    if [ "$1" == "status" ];
-    then ARGS+=("-uno");
-    fi;
-
     if [ "$PWD" == "$HOME" ];
-    then /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "${ARGS[@]}"
+    then
+       if [ "$1" == "status" ];
+       then ARGS+=("-uno");
+       fi;
+       /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "${ARGS[@]}";
     else /usr/bin/git "${ARGS[@]}"
     fi;
 }
