@@ -115,7 +115,7 @@
          (journal-path (concat dropbox-path "org/journal/"))
          (journal-file (concat journal-path daily-name ".org")))
      (unless (file-exists-p journal-file)
-       (shell-command "cd ~/code/org-stream && node createDaily.js"))
+       (shell-command "cd ~/code/personal-projs/org-stream && node createDaily.js"))
      (find-file journal-file)))
 
 (defun today ()
