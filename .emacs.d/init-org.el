@@ -26,6 +26,10 @@
 (setq org-export-backends '(ascii html latex md))
 
 
+(use-package org-journal
+  :config
+  (setq org-journal-dir "~/Dropbox (Personal)/org/test-journal"))
+
 
 (eval-after-load "flyspell"
   '(progn
@@ -143,3 +147,25 @@
       '(("C" "TODO code comment" entry (file+headline "~/org/brain/code.org" "Tasks")
         "* %(capture-comment-line \"%i\")\n  %a"
         )))
+
+
+(setq org-agenda-files (list "~/Dropbox (Personal)/org"
+                             "~/Dropbox (Personal)/org/journal"
+                             "~/Dropbox (Personal)/org/brain"
+                             "~/code/kevzettler.github.com/_posts/"))
+
+
+
+;; GCAL INTEGRATION
+(setq package-check-signature nil)
+
+(use-package org-gcal
+  :ensure t
+  :init
+  (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
+  :config
+  (require 'secrets)
+  (setq org-gcal-file-alist '(("kevzettler@gmail.com" . "~/Dropbox (Personal)/org/gcal.org"))))
+  ;; (defun new/org-gcal--notify (title mes)
+  ;;   (message "org-gcal::%s - %s" title mes))
+  ;; (fset 'org-gcal--notify 'new/org-gcal-notify))

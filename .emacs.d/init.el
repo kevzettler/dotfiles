@@ -17,8 +17,7 @@
 ;; this hopefully sets up path and other vars better
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
-
-This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
+   This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
   (interactive)
   (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
     (setenv "PATH" path-from-shell)
@@ -68,9 +67,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :config
   (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/color-theme-solarized-20140408.1309")
   (load-theme `solarized-light t))
-
-
-;;(load-theme `solarized-dark t)
 
 ;; Don't change size of org-mode headlines (but keep other size-changes)
 (setq solarized-scale-org-headlines nil)
@@ -232,6 +228,14 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (use-package expand-region
   :bind ("C-'" . er/expand-region))
 
+;;
+;;; Shell
+;;
+(defun my-eshell-remove-pcomplete ()
+  (remove-hook 'completion-at-point-functions #'pcomplete-completions-at-point t))
+
+(add-hook 'eshell-mode-hook #'my-eshell-remove-pcomplete)
+
 
 ;; Shell key bindings
 (progn(require 'comint)
@@ -264,27 +268,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
            (replace-regexp-in-string "\033\\[[0-9]+[GK]" "" output)))
 
 
-(setq org-agenda-files (list "~/Dropbox (Personal)/org"
-                             "~/Dropbox (Personal)/org/journal"
-                             "~/Dropbox (Personal)/org/brain"
-                             "~/code/kevzettler.github.com/_posts/"))
-
-
-
-;; GCAL INTEGRATION
-(setq package-check-signature nil)
-
-(use-package org-gcal
-  :ensure t
-  :init
-  (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
-  :config
-  (require 'secrets)
-  (setq org-gcal-file-alist '(("kevzettler@gmail.com" . "~/Dropbox (Personal)/org/gcal.org"))))
-  ;; (defun new/org-gcal--notify (title mes)
-  ;;   (message "org-gcal::%s - %s" title mes))
-  ;; (fset 'org-gcal--notify 'new/org-gcal-notify))
-
 
 
 (defun insert-date (prefix)
@@ -297,6 +280,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
                    ((equal prefix '(16)) "%A, %d. %B %Y")))
           (system-time-locale "de_DE"))
       (insert (format-time-string format))))
+
 
 
 
