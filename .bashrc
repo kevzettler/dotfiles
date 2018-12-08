@@ -17,6 +17,7 @@ function git ()
 }
 
 
+export GIT_EDITOR=/usr/local/bin/emacsclient
 
 #Don't record duplicate commands to history
 export HISTCONTROL=ignoreboth:erasedups
