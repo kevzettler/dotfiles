@@ -1,0 +1,7 @@
+* Install on new machine
+
+#+BEGIN_SRC
+cd ~/
+git clone --bare git@github.com:kevzettler/dotfiles.git $HOME/.dotfiles
+git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
+#+END_SRC
