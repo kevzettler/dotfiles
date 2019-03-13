@@ -36,7 +36,7 @@
 ;; Configure and load secrets
 ;;
 (setf epa-pinentry-mode 'loopback)
-(custom-set-variables '(epg-gpg-program  "/usr/local/opt/gnupg\@2.1/bin/gpg2"))
+(custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg"))
 (load (expand-file-name "secrets.el" user-emacs-directory))
 
 
