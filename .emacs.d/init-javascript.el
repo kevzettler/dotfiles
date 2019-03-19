@@ -1,6 +1,7 @@
 ;; Counsel
 (use-package counsel
-    :diminish (counsel-mode))
+  :ensure t
+  :diminish (counsel-mode))
 
 ;; Ivy
 (use-package ivy
@@ -51,6 +52,9 @@
   (setq projectile-completion-system 'ivy))
 
 (use-package counsel-projectile
+  :ensure t
+  :bind (:map projectile-mode-map
+              ("C-c p" . projectile-command-map))
   :config
   (counsel-projectile-mode))
 
