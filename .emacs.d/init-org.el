@@ -9,7 +9,6 @@
 (global-set-key (kbd "C-c C-g") 'grammarly-save-region-and-run)
 
 (setq org-archive-location "~/Dropbox (Personal)/org/archive/%s_archive::")
-
 (setq org-log-done 'time)
 
 (define-key global-map "\C-cl" 'org-store-link)
@@ -156,7 +155,12 @@
 
 
 
+
+
+
+;;
 ;; GCAL INTEGRATION
+;;
 (setq package-check-signature nil)
 
 (use-package org-gcal
