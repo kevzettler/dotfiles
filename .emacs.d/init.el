@@ -219,10 +219,16 @@
 (global-set-key (kbd "s-[") 'hs-hide-block)
 (global-set-key (kbd "s-]") 'hs-show-block)
 
+(global-set-key (kbd "s-=") 'text-scale-increase)
+(global-set-key (kbd "s--") 'text-scale-decrease)
+
 ;; NO alt meta
 (global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-x\m" 'execute-extended-command)
 (global-set-key "\C-c\m"   'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
+
+
 
 (global-set-key (kbd "C-;") 'goto-line)
 
@@ -291,3 +297,4 @@
 ;;;
 (setq custom-file (locate-user-emacs-file "init-custom.el"))
 (load custom-file)
+(put 'narrow-to-region 'disabled nil)

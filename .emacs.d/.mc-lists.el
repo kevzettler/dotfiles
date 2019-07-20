@@ -11,12 +11,16 @@
 
 (setq mc/cmds-to-run-once
       '(
+        beginning-of-buffer
         comment-dwim
         handle-switch-frame
         ido-find-file
         ido-switch-buffer
         iedit-switch-to-mc-mode
         indent-for-tab-command
+        journal
+        js2-down-mouse-3
+        make-frame
         mouse-drag-secondary
         mouse-save-then-kill
         mouse-set-region
