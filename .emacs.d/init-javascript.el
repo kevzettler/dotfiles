@@ -3,6 +3,11 @@
   :ensure t
   :diminish (counsel-mode))
 
+;; Magit
+(use-package magit
+  :ensure t
+  :bind (("C-x g" . magit-status)))
+
 ;; Ivy
 (use-package ivy
   :diminish (ivy-mode)
