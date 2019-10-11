@@ -236,6 +236,11 @@
 (use-package expand-region
   :bind ("C-'" . er/expand-region))
 
+(use-package terraform-mode
+  :mode (("\\.tf" . terraform-mode))
+  :config
+  (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode))
+
 ;;
 ;;; Shell
 ;;
