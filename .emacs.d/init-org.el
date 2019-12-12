@@ -150,8 +150,7 @@
 
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
                              "~/Dropbox (Personal)/org/journal"
-                             "~/Dropbox (Personal)/org/brain"
-                             "~/code/kevzettler.github.com/_posts/"))
+                             "~/Dropbox (Personal)/org/brain"))
 
 
 
