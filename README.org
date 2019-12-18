@@ -7,7 +7,8 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 #+END_SRC
 
 
-# Background
+* Background
+
 This uses some bare repo git trickery see:
 https://github.com/kevzettler/dotfiles/blob/master/.bashrc#L1-L17
 
