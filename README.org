@@ -5,3 +5,11 @@ cd ~/
 git clone --bare git@github.com:kevzettler/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 #+END_SRC
+
+
+# Background
+This uses some bare repo git trickery see:
+https://github.com/kevzettler/dotfiles/blob/master/.bashrc#L1-L17
+
+original idea from:
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
