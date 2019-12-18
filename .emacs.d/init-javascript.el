@@ -117,9 +117,6 @@
   (add-hook 'js2-mode-hook #'setup-tide-mode)
   (add-to-list 'company-backends 'company-tide))
 
-(use-package eslintd-fix
-  :diminish eslintd-fix-mode)
-
 ;; ======== FLYCHECK ========
 (use-package flycheck-flow)
 (use-package flycheck
@@ -127,28 +124,31 @@
   :init
   (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint))
   :config
+  (global-flycheck-mode)
   (flycheck-add-mode 'javascript-eslint 'web-mode)
-  (flycheck-add-mode 'javascript-flow 'web-mode)
-  (defun my/use-eslint-from-node-modules ()
-    (let* ((root (locate-dominating-file
-                  (or (buffer-file-name) default-directory)
-                  "node_modules"))
-           (eslint (and root
-                        (expand-file-name "node_modules/eslint/bin/eslint.js"
-                                          root))))
-      (when (and eslint (file-executable-p eslint))
-        (setq-local flycheck-javascript-eslint-executable eslint))))
-  (defun my/use-flow-from-node-modules ()
-    (let* ((root (locate-dominating-file
-                  (or (buffer-file-name) default-directory)
-                  "node_modules"))
-           (flow (and root
-                      (expand-file-name "node_modules/flow-bin/vendor/flow"
-                                        root))))
-      (when (and flow (file-executable-p flow))
-        (setq-local flycheck-javascript-flow-executable flow))))
-  (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  (add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules))
+  (flycheck-add-mode 'javascript-flow 'web-mode))
+
+  ;; (defun my/use-eslint-from-node-modules ()
+  ;;   (let* ((root (locate-dominating-file
+  ;;                 (or (buffer-file-name) default-directory)
+  ;;                 "node_modules"))
+  ;;          (eslint (and root
+  ;;                       (expand-file-name "node_modules/eslint/bin/eslint.js"
+  ;;                                         root))))
+  ;;     (when (and eslint (file-executable-p eslint))
+  ;;       (setq-local flycheck-javascript-eslint-executable eslint))))
+
+  ;; (defun my/use-flow-from-node-modules ()
+  ;;   (let* ((root (locate-dominating-file
+  ;;                 (or (buffer-file-name) default-directory)
+  ;;                 "node_modules"))
+  ;;          (flow (and root
+  ;;                     (expand-file-name "node_modules/flow-bin/vendor/flow"
+  ;;                                       root))))
+  ;;     (when (and flow (file-executable-p flow))
+  ;;      (setq-local flycheck-javascript-flow-executable flow))))
+  ;; (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+  ;;(add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules))
 
 (defun tslint-fix-file ()
   (interactive)
@@ -165,7 +165,7 @@
 (use-package add-node-modules-path)
 (use-package web-mode
   :mode (("\\.js[x]?\\'" . web-mode)
-         ("\\.tsx?\\'" . web-mode))
+         ("\\.ts[x]?\\'" . web-mode))
   :bind (:map web-mode-map
               ("C-x C-e" . nodejs-repl-send-last-expression)
               ("C-c C-j" . nodejs-repl-send-line)
@@ -214,6 +214,7 @@
                 (setup-tide-mode)
                 (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint javascript-eslint javascript-flow jsx-tide tsx-tide handlebars))
                 (flycheck-add-mode 'typescript-tslint 'web-mode)
+                (flycheck-add-mode 'javascript-eslint 'web-mode)
                 (flycheck-add-mode 'typescript-tide 'web-mode))))
                 ;; (flycheck-add-next-checker 'typescript-tide '(t . typescript-tslint) 'appdend)
                 ;; (flycheck-add-next-checker 'tsx-tide '(t . typescript-tslint) 'append))))
@@ -226,4 +227,5 @@
             (lambda ()
               (when (string-equal "js" (file-name-extension buffer-file-name))
                 (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint tsx-tide typescript-tslint jsx-tide))
+                (flycheck-add-mode 'javascript-eslint 'web-mode)
                 (flycheck-add-next-checker 'javascript-eslint 'javascript-flow 'append)))))
