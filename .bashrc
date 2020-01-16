@@ -75,6 +75,7 @@ fi
 # https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
+export GO111MODULE=on
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 

@@ -2,7 +2,10 @@
 
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -50,10 +53,13 @@
 ;;;
 ;;; External inits
 ;;;
-(load-init-file "init-javascript")
 (load-init-file "init-org")
+(load-init-file "init-company") ;; tern is in here too
+(load-init-file "init-javascript")
+(load-init-file "init-go")
 ;;(load-init-file "init-reason")
 
+(use-package php-mode :ensure t)
 
 ;; make sure the display is clean to start with
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -178,6 +184,12 @@
   :mode (("\\.md\\'" . markdown-mode))
   :config
   (add-hook 'markdown-mode-hook 'visual-line-mode))
+
+;; multiple-cursors-mode
+(use-package multiple-cursors
+  :bind (("s-d" . mc/mark-next-like-this)
+         ("M-d" . mc/mark-all-like-this)
+         ("s-<mouse-1>" . mc/add-cursor-on-click)))
 
 ; paren hilite
 ; http://www.emacsblog.org/2007/08/07/quick-tip-show-paren-mode/
