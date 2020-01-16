@@ -30,7 +30,7 @@
     (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
     ;; Godef jump key binding
     ;; code.google.com/p/rog-go/exp/cmd/godef
-    (local-set-key (kbd "M-\"") 'godef-jump)
+    (local-set-key (kbd "M-.") 'godef-jump)
     ;; use company-go in go-mode
     (set (make-local-variable 'company-backends) '(company-go))
     (company-mode)
