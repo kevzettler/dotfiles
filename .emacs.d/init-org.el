@@ -1,5 +1,12 @@
 ;; Org mode
 (message "loading org init")
+
+;; package for controling silver surfer
+;; enables projectile-ag
+(use-package ag
+  :ensure t
+  :commands (ag ag-regexp ag-project))
+
 (require 'org-install)
 (message "require org-install")
 (setq org-directory "~/Dropbox (Personal)/org")
@@ -175,3 +182,16 @@
   ;; (defun new/org-gcal--notify (title mes)
   ;;   (message "org-gcal::%s - %s" title mes))
   ;; (fset 'org-gcal--notify 'new/org-gcal-notify))
+
+
+;;
+;; Org to blog
+;;
+(use-package org2blog
+  :ensure t
+  :config
+  (setq org2blog/wp-blog-alist
+      '(("radcade"
+         :url "https://radcade.com/xmlrpc.php"
+         :username "kevzettler")))
+  )
