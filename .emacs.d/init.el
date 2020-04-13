@@ -17,6 +17,9 @@
 ;; Save adding :ensure t on every use package
 (setq use-package-always-ensure t)
 
+;; Preserve highlights in panes when switching
+(setq highlight-nonselected-windows t)
+
 ;; Ensure environment variables inside Emacs look the same as in the user's shell.
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other vars better
