@@ -41,14 +41,22 @@ source ~/git-completion.bash
 
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.cask/bin:$PATH
-export PATH=$PATH:/usr/local/Cellar/python@2/2.7.14_3/bin
-export PATH=$PATH:/Users/kevzettler/Library/Python/2.7/bin
 export PATH=$PATH:./node_modules/.bin
 export PATH=/usr/local/opt/icu4c/sbin:$PATH
 
-export EDITOR=/usr/local/bin/emacs
+# fucking python
+#alias python=/usr/local/bin/python3
+export PATH=$PATH:/usr/local/Cellar/python@2/2.7.14_3/bin
+export PATH=$PATH:/Users/kevzettler/Library/Python/2.7/bin
 
+
+# Rust
+export PATH=$PATH:/Users/kevzettler/.cargo/env
+export PATH=$PATH:/Users/kevzettler/.cargo/bin
+
+export EDITOR=/usr/local/bin/emacs
 
 # prevents iterm from overriding set tab names?
 # https://superuser.com/questions/343747/how-do-i-stop-automatic-changing-of-iterm-tab-titles
