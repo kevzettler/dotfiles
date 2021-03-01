@@ -75,10 +75,10 @@
 
 ;; dumb-jump
 (use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :bind (("C-d o" . dumb-jump-go-other-window)
+         ("C-d j" . dumb-jump-go)
+         ("C-d x" . dumb-jump-go-prefer-external)
+         ("C-d z" . dumb-jump-go-prefer-external-other-window))
   :config
   (setq dumb-jump-selector 'ivy)
   :init
@@ -101,12 +101,16 @@
   (interactive)
   (tide-setup)
   (flycheck-mode +1)
-  (eldoc-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;  (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1))
 
 (use-package tide
+  :ensure t
+  :after (web-mode typescript-mode company flycheck)
   :config
+  (message "tide setup!!!!!")
   (setq tide-format-options '(:indentSize 2 :tabSize 2))
   (setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t))
   (setq company-tooltip-align-annotations t)
@@ -114,19 +118,13 @@
   ;; (add-hook 'before-save-hook 'tide-format-before-save)
   (add-hook 'typescript-mode-hook #'setup-tide-mode)
   (add-hook 'rjsx-mode-hook #'setup-tide-mode)
-  (add-hook 'js2-mode-hook #'setup-tide-mode)
   (add-to-list 'company-backends 'company-tide))
 
 ;; ======== FLYCHECK ========
-(use-package flycheck-flow)
 (use-package flycheck
-  :diminish flycheck-mode
-  :init
-  (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint))
-  :config
-  (global-flycheck-mode)
-  (flycheck-add-mode 'javascript-eslint 'web-mode)
-  (flycheck-add-mode 'javascript-flow 'web-mode))
+  :ensure t
+  :diminish (flycheck-mode)
+  :init (global-flycheck-mode))
 
   ;; (defun my/use-eslint-from-node-modules ()
   ;;   (let* ((root (locate-dominating-file
@@ -202,7 +200,8 @@
   (add-hook 'web-mode-hook 'emmet-mode)
   (add-hook 'web-mode-hook 'flycheck-mode)
   (add-hook 'web-mode-hook 'eslintd-fix-mode)
-  (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'web-mode-hook #'setup-tide-mode)
+  ;;(add-hook 'web-mode-hook 'prettier-js-mode)
   (add-hook 'web-mode-hook
             (lambda ()
               (when (string-equal "tsx" (file-name-extension buffer-file-name))
@@ -230,6 +229,13 @@
   (add-hook 'web-mode-hook
             (lambda ()
               (when (string-equal "js" (file-name-extension buffer-file-name))
-                (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint tsx-tide typescript-tslint jsx-tide))
-                (flycheck-add-mode 'javascript-eslint 'web-mode)
-                (flycheck-add-next-checker 'javascript-eslint 'javascript-flow 'append)))))
+                (setup-tide-mode)
+                (message "web-mode javascript action")
+                (flycheck-add-mode 'typescript-tide 'web-mode)
+                (flycheck-add-next-checker 'javascript-tide 'append)))))
+;;                (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint tsx-tide typescript-tslint jsx-tide))
+;;                (flycheck-add-mode 'javascript-eslint 'web-mode)
+;;                (flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)))))
+
+(provide 'init-javascript.el)
+;;; init-javascript.el ends here

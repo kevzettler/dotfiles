@@ -84,7 +84,7 @@
              (sequence "???" "OK")))
 
 
-(require 'cl)
+(require 'cl-lib)
 
 ;;
 ;; org-babel
@@ -190,6 +190,7 @@
 ;;
 (use-package org2blog
   :ensure t
+  :defer t
   :config
   (setq org2blog/wp-blog-alist
       '(("radcade"
