@@ -70,10 +70,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+setTabTitle() {
+  echo -ne "\033]0;${PWD##*/}\007"
+}
 # Update the ITerm Tab name to match the current directory name
 if [ $ITERM_SESSION_ID ]; then
-    PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'n'}echo -ne \"\033];${PWD##*/}\007\""
+  export PROMPT_COMMAND="setTabTitle;$PROMPT_COMMAND"
 fi
+
+
 
 # Piece-by-Piece Explanation:
 # the if condition makes sure we only screw with $PROMPT_COMMAND if we're in an iTerm environment
