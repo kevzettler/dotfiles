@@ -1,0 +1,10 @@
+name: javascript
+parent: default
+
+matches:
+  - trigger: "conl"
+    replace: "console.log($|$)"
+  - trigger: "cndbg"
+    replace: 'console.log("****************")'
+  - trigger: "dbg"
+    replace: "debugger"
