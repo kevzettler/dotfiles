@@ -26,13 +26,13 @@ HISTFILESIZE=50000
 # Ignore duplicate lines
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file
-shopt -s histappend
+#shopt -s histappend
 #  and reread it
 # Save and reload the history after each command finishes
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'n'}history -a; history -c; history -r"
 
 #Git completion
-source ~/git-completion.bash
+# source ~/git-completion.bash
 
 
 export PATH=/usr/local/bin:$PATH

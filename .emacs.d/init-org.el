@@ -34,11 +34,6 @@
 (setq org-export-backends '(ascii html latex md))
 
 
-(use-package org-journal
-  :config
-  (setq org-journal-dir "~/Dropbox (Personal)/org/test-journal"))
-
-
 (eval-after-load "flyspell"
   '(progn
      (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
@@ -104,6 +99,15 @@
  '((js . t)))
 
 
+(use-package org-journal
+  :ensure t
+  :defer t
+  :init
+  ;; Change default prefix key; needs to be set before loading org-journal
+  (setq org-journal-prefix-key "C-c j ")
+  :config
+  (setq org-journal-dir "~/Dropbox (Personal)/org/journal"
+        org-journal-date-format "%A, %d %B %Y"))
 ;;
 ;; Custom journal commands
 ;;

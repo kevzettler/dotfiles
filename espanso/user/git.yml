@@ -16,3 +16,9 @@ matches:
 
   - trigger: "gpom"
     replace: "git push origin master"
+
+  - trigger: "gpob"
+    replace: "git push origin HEAD"
+
+  - trigger: "gpof"
+    replace: "git push -f origin HEAD"

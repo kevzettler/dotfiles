@@ -75,10 +75,10 @@
 
 ;; dumb-jump
 (use-package dumb-jump
-  :bind (("C-d o" . dumb-jump-go-other-window)
-         ("C-d j" . dumb-jump-go)
-         ("C-d x" . dumb-jump-go-prefer-external)
-         ("C-d z" . dumb-jump-go-prefer-external-other-window))
+  :bind (("C-c d o" . dumb-jump-go-other-window)
+         ("C-c d j" . dumb-jump-go)
+         ("C-c d x" . dumb-jump-go-prefer-external)
+         ("C-c d z" . dumb-jump-go-prefer-external-other-window))
   :config
   (setq dumb-jump-selector 'ivy)
   :init
