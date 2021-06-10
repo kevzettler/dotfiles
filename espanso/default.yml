@@ -7,9 +7,17 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
+  - trigger: "jck"
+    replace: "ack --ignore-dir={build,dist,logs,coverage} ./"
+
+  - trigger: "grpi"
+    replace: "grep -rni $|$ ."
   # Simple text replacement
   - trigger: ":espanso"
     replace: "Hi there!"
+
+  - trigger: "npmi"
+    replace: "npm install"
 
   # Dates
   - trigger: ":date"

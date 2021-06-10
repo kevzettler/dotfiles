@@ -5,6 +5,9 @@ matches:
   - trigger: "gitb"
     replace: "git branch"
 
+  - trigger: "gito"
+    replace: "git checkout"
+
   - trigger: "gitc"
     replace: 'git commit -am "$|$"'
 
