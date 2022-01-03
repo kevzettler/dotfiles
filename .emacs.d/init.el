@@ -153,10 +153,11 @@
       delete-old-versions t
       delete-by-moving-to-trash t)
 
+(setq create-lockfiles nil)
 ;(setq make-backup-files t)
-;(setq version-control t)
-;(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
-;(setq auto-save-file-name-transforms`((".*" ,"~/.emacs_backups/" t)))
+;;(setq version-control t)
+;; backup in one place. flat, no tree structure
+(setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
 ; ----------------------------------------
 
 ;scrolling
@@ -179,6 +180,10 @@
 
 (setq auto-mode-alist
       (append '(("\.yaml$"  . yaml-mode))
+              auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\.mini$"  . rust-mode))
                 auto-mode-alist))
 
 ;; Markdown
@@ -317,3 +322,89 @@
 (setq custom-file (locate-user-emacs-file "init-custom.el"))
 (load custom-file)
 (put 'narrow-to-region 'disabled nil)
+
+
+;;; Rust stuff
+;;;
+;;;
+(use-package rustic
+  :ensure
+  :bind (:map rustic-mode-map
+              ("M-j" . lsp-ui-imenu)
+              ("M-?" . lsp-find-references)
+              ("C-c C-c l" . flycheck-list-errors)
+              ("C-c C-c a" . lsp-execute-code-action)
+              ("C-c C-c r" . lsp-rename)
+              ("C-c C-c q" . lsp-workspace-restart)
+              ("C-c C-c Q" . lsp-workspace-shutdown)
+              ("C-c C-c s" . lsp-rust-analyzer-status))
+  :config
+  ;; uncomment for less flashiness
+  ;; (setq lsp-eldoc-hook nil)
+  ;; (setq lsp-enable-symbol-highlighting nil)
+  ;; (setq lsp-signature-auto-activate nil)
+
+  ;; comment to disable rustfmt on save
+  (setq rustic-format-on-save t)
+  (add-hook 'rustic-mode-hook 'rk/rustic-mode-hook))
+
+(defun rk/rustic-mode-hook ()
+  ;; so that run C-c C-c C-r works without having to confirm, but don't try to
+  ;; save rust buffers that are not file visiting. Once
+  ;; https://github.com/brotzeit/rustic/issues/253 has been resolved this should
+  ;; no longer be necessary.
+  (when buffer-file-name
+    (setq-local buffer-save-without-query t)))
+
+
+
+;;;
+;;; LSP MODE
+;;;
+(use-package lsp-mode
+  :ensure
+  :commands lsp
+  :custom
+  ;; what to use when checking on-save. "check" is default, I prefer clippy
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-eldoc-render-all t)
+  (lsp-idle-delay 0.6)
+  (lsp-rust-analyzer-server-display-inlay-hints t)
+  :config
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+
+(use-package lsp-ui
+  :ensure
+  :commands lsp-ui-mode
+  :custom
+  (lsp-ui-peek-always-show t)
+  (lsp-ui-sideline-show-hover t)
+  (lsp-ui-doc-enable nil))
+
+
+(with-eval-after-load "lsp-rust"
+ (lsp-register-client
+  (make-lsp-client
+   :new-connection (lsp-stdio-connection
+                    (lambda ()
+                      `(,(or (executable-find
+                              (cl-first lsp-rust-analyzer-server-command))
+                             (lsp-package-path 'rust-analyzer)
+                             "rust-analyzer")
+                        ,@(cl-rest lsp-rust-analyzer-server-args))))
+   :remote? t
+   :major-modes '(rust-mode rustic-mode)
+   :initialization-options 'lsp-rust-analyzer--make-init-options
+   :notification-handlers (ht<-alist lsp-rust-notification-handlers)
+   :action-handlers (ht ("rust-analyzer.runSingle" #'lsp-rust--analyzer-run-single))
+   :library-folders-fn (lambda (_workspace) lsp-rust-library-directories)
+   :after-open-fn (lambda ()
+                    (when lsp-rust-analyzer-server-display-inlay-hints
+                      (lsp-rust-analyzer-inlay-hints-mode)))
+   :ignore-messages nil
+   :server-id 'rust-analyzer-remote)))
+
+;; Set explicit shell this is to keep shell consistent when using Tramp
+(with-eval-after-load "tramp" (add-to-list 'tramp-remote-path "/root/.cargo/bin"))
+
+;;; init.el ends here
