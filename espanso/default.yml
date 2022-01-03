@@ -8,7 +8,7 @@
 # it gets replaced by the "replace" string.
 matches:
   - trigger: "jck"
-    replace: "ack --ignore-dir={build,dist,logs,coverage} ./"
+    replace: "ack $|$ --ignore-dir={build,dist,logs,coverage} ./"
 
   - trigger: "grpi"
     replace: "grep -rni $|$ ."
