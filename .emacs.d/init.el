@@ -30,18 +30,26 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
+(use-package exec-path-from-shell
+	     :ensure t
+	     :config
+	     (when (memq window-system '(mac ns))
+	       (exec-path-from-shell-initialize)
+	       (set-exec-path-from-shell-PATH))
+	     ;; ensure shell variables match environment
+	     ;; https://github.com/purcell/exec-path-from-shell
+	     ;; used for running eshell from Mac Osx Emacs
+	     (when (memq window-system '(mac ns x))
+	       (exec-path-from-shell-initialize))	     
+	     )
 
-(use-package exec-path-from-shell)
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)
-  (set-exec-path-from-shell-PATH))
 
 
 ;;
 ;; Configure and load secrets
 ;;
 (setf epa-pinentry-mode 'loopback)
-(custom-set-variables '(epg-gpg-program  "/opt/homebrew/bin/gpg"))
+(custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg"))
 (load (expand-file-name "secrets.el" user-emacs-directory))
 
 
@@ -60,6 +68,7 @@
 (load-init-file "init-javascript")
 (load-init-file "init-go")
 ;;(load-init-file "init-reason")
+(load-init-file "init-unity")
 
 (use-package php-mode :ensure t)
 

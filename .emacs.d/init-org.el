@@ -163,7 +163,6 @@
 
 (setq org-agenda-files (list "~/Dropbox (Personal)/org"
                              "~/Dropbox (Personal)/org/journal"
-                             "~/Google Drive/Landord Party Closet"
                              ))
 
 
