@@ -69,6 +69,10 @@
 (load-init-file "init-go")
 (load-init-file "init-unity")
 
+(load-init-file "circom-mode")
+(add-to-list 'auto-mode-alist '("\\.circom\\'" . circom-mode))
+
+
 (use-package php-mode :ensure t)
 
 ;; make sure the display is clean to start with
