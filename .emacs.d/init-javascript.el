@@ -3,12 +3,6 @@
   :ensure t
   :diminish (counsel-mode))
 
-;; Pug mode
-(use-package pug-mode
-  :mode "\\.pug\\'"
-  :config (setq pug-tab-width 2))
-
-
 ;; Sass mode
 (use-package sass-mode
   :mode "\\.scss\\'")
