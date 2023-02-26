@@ -67,7 +67,6 @@
 (load-init-file "init-company") ;; tern is in here too
 (load-init-file "init-javascript")
 (load-init-file "init-go")
-;;(load-init-file "init-reason")
 (load-init-file "init-unity")
 
 (use-package php-mode :ensure t)
