@@ -40,7 +40,7 @@
 	     ;; https://github.com/purcell/exec-path-from-shell
 	     ;; used for running eshell from Mac Osx Emacs
 	     (when (memq window-system '(mac ns x))
-	       (exec-path-from-shell-initialize))	     
+	       (exec-path-from-shell-initialize))
 	     )
 
 
