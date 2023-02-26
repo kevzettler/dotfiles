@@ -90,57 +90,11 @@
          ("\\.frag\\'" . glsl-mode)))
 
 
-;; ======== TYPESCRIPT ========
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-;;  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
-
-(use-package tide
-  :ensure t
-  :after (web-mode typescript-mode company flycheck)
-  :config
-  (message "tide setup!!!!!")
-  (setq tide-format-options '(:indentSize 2 :tabSize 2))
-  (setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t))
-  (setq company-tooltip-align-annotations t)
-  (setq tide-completion-detailed t)
-  ;; (add-hook 'before-save-hook 'tide-format-before-save)
-  (add-hook 'typescript-mode-hook #'setup-tide-mode)
-  (add-hook 'rjsx-mode-hook #'setup-tide-mode)
-  (add-to-list 'company-backends 'company-tide))
-
 ;; ======== FLYCHECK ========
 (use-package flycheck
   :ensure t
   :diminish (flycheck-mode)
   :init (global-flycheck-mode))
-
-  ;; (defun my/use-eslint-from-node-modules ()
-  ;;   (let* ((root (locate-dominating-file
-  ;;                 (or (buffer-file-name) default-directory)
-  ;;                 "node_modules"))
-  ;;          (eslint (and root
-  ;;                       (expand-file-name "node_modules/eslint/bin/eslint.js"
-  ;;                                         root))))
-  ;;     (when (and eslint (file-executable-p eslint))
-  ;;       (setq-local flycheck-javascript-eslint-executable eslint))))
-
-  ;; (defun my/use-flow-from-node-modules ()
-  ;;   (let* ((root (locate-dominating-file
-  ;;                 (or (buffer-file-name) default-directory)
-  ;;                 "node_modules"))
-  ;;          (flow (and root
-  ;;                     (expand-file-name "node_modules/flow-bin/vendor/flow"
-  ;;                                       root))))
-  ;;     (when (and flow (file-executable-p flow))
-  ;;      (setq-local flycheck-javascript-flow-executable flow))))
-  ;; (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  ;;(add-hook 'flycheck-mode-hook #'my/use-flow-from-node-modules))
 
 (defun tslint-fix-file ()
   (interactive)
@@ -155,9 +109,12 @@
 ;; Nodejs Repl
 (use-package nodejs-repl)
 (use-package add-node-modules-path)
+
+
 (use-package web-mode
   :mode (("\\.js[x]?\\'" . web-mode)
-         ("\\.ts[x]?\\'" . web-mode))
+         ("\\.ts[x]?\\'" . web-mode)
+         )
   :bind (:map web-mode-map
               ("C-x C-e" . nodejs-repl-send-last-expression)
               ("C-c C-j" . nodejs-repl-send-line)
@@ -165,9 +122,6 @@
               ("C-c C-l" . nodejs-repl-load-file)
               ("C-c C-z" . nodejs-repl-switch-to-repl))
   :config
-  (setq web-mode-content-types-alist
-        '(("jsx" . "\\.js[x]?\\'")
-          ("jsx" . "\\.tsx?\\'")))
   (setq
    web-mode-code-indent-offset 2
    web-mode-markup-indent-offset 2
@@ -191,30 +145,9 @@
    js2-mode-show-strict-warnings nil
    js2-strict-trailing-comma-warning nil)
   (add-hook 'web-mode-hook 'add-node-modules-path)
-  (add-hook 'web-mode-hook 'emmet-mode)
   (add-hook 'web-mode-hook 'flycheck-mode)
   (add-hook 'web-mode-hook 'eslintd-fix-mode)
   (add-hook 'web-mode-hook #'setup-tide-mode)
-  ;;(add-hook 'web-mode-hook 'prettier-js-mode)
-  (add-hook 'web-mode-hook
-            (lambda ()
-              (when (string-equal "tsx" (file-name-extension buffer-file-name))
-                (setup-tide-mode))))
-                ;; (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint javascript-eslint javascript-flow))
-                ;; (flycheck-add-mode 'typescript-tslint 'web-mode)
-                ;; (flycheck-add-mode 'tsx-tide 'web-mode)
-                ;; (flycheck-add-next-checker 'typescript-tide '(t . typescript-tslint) 'append)
-                ;; (flycheck-add-next-checker 'tsx-tide '(t . typescript-tslint) 'append))))
-  (add-hook 'web-mode-hook
-            (lambda ()
-              (when (string-equal "ts" (file-name-extension buffer-file-name))
-                (setup-tide-mode)
-                (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint javascript-eslint javascript-flow jsx-tide tsx-tide handlebars))
-                (flycheck-add-mode 'typescript-tslint 'web-mode)
-                (flycheck-add-mode 'javascript-eslint 'web-mode)
-                (flycheck-add-mode 'typescript-tide 'web-mode))))
-                ;; (flycheck-add-next-checker 'typescript-tide '(t . typescript-tslint) 'appdend)
-                ;; (flycheck-add-next-checker 'tsx-tide '(t . typescript-tslint) 'append))))
   (add-hook 'web-mode-hook
           (lambda ()
             (when (string-equal "jsx" (file-name-extension buffer-file-name))
@@ -227,9 +160,6 @@
                 (message "web-mode javascript action")
                 (flycheck-add-mode 'typescript-tide 'web-mode)
                 (flycheck-add-next-checker 'javascript-tide 'append)))))
-;;                (setq-default flycheck-disabled-checkers '(javascript-jscs html-tidy javascript-standard javascript-jshint tsx-tide typescript-tslint jsx-tide))
-;;                (flycheck-add-mode 'javascript-eslint 'web-mode)
-;;                (flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)))))
 
 (provide 'init-javascript.el)
 ;;; init-javascript.el ends here
