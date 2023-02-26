@@ -54,20 +54,6 @@
   :init (add-to-list 'company-backends 'company-web-html))
 
 
-;; tern (js)
-(use-package tern
-  :diminish tern-mode
-  :config
-  (add-hook 'js2-mode-hook 'tern-mode)
-  (add-hook 'web-mode-hook 'tern-mode)
-  (add-hook 'rjsx-mode-hook 'tern-mode)
-  (setq tern-command (append tern-command '("--no-port-file"))))
-
-;; Company integration for tern (js)
-;; (use-package company-tern
-;;   :init (add-to-list 'company-backends '(company-tern company-web-html :with company-yasnippet))
-;;   :config (setq company-tern-property-marker nil))
-
 ;; pos-tips show tooltip at point
 (use-package pos-tip)
 
