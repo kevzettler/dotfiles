@@ -66,6 +66,7 @@
 (load-init-file "init-org")
 (load-init-file "init-company") ;; tern is in here too
 (load-init-file "init-javascript")
+(load-init-file "init-typescript")
 (load-init-file "init-go")
 (load-init-file "init-unity")
 
