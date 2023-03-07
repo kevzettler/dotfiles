@@ -37,9 +37,15 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'n'}history -a; history -c; hi
 export PATH=/Applications/Racket\ v8.4/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=$HOME/.cask/bin:$PATH
 export PATH=$PATH:./node_modules/.bin
 export PATH=/usr/local/opt/icu4c/sbin:$PATH
+
+# Put blender in path
+export PATH="$PATH:/Applications/blender.app/Contents/MacOS"
+
+# homebrew Apple m1 ?
+# https://medium.com/geekculture/error-cannot-install-in-homebrew-on-arm-processor-in-intel-default-prefix-fd2e5f5fee88
+export PATH="/opt/homebrew/bin:$PATH"
 
 # fucking python
 #alias python=/usr/local/bin/python3
@@ -55,7 +61,7 @@ export EDITOR=/usr/local/bin/emacs
 
 # prevents iterm from overriding set tab names?
 # https://superuser.com/questions/343747/how-do-i-stop-automatic-changing-of-iterm-tab-titles
-export TERM=vt100
+
 
 #Git aware bash prompt
 #export GITAWAREPROMPT=~/.bash/git-aware-promp
@@ -135,49 +141,7 @@ elif [[ $NVM_DIRTY = true ]]; then
 fi
 }
 
-# export PROMPT_COMMAND=enter_directory
+export PROMPT_COMMAND=enter_directory;
 
-# cdnvm(){
-#     cd "$@";
-#     nvm_path=$(find-up .nvmrc | tr -d '[:space:]')
 
-#     # If there are no .nvmrc file, use the default nvm version
-#     if [[ ! $nvm_path = *[^[:space:]]* ]]; then
-
-#         declare default_version;
-#         default_version=$(nvm version default);
-
-#         # If there is no default version, set it to `node`
-#         # This will use the latest version on your machine
-#         if [[ $default_version == "N/A" ]]; then
-#             nvm alias default node;
-#             default_version=$(nvm version default);
-#         fi
-
-#         # If the current version is not the default version, set it to use the default version
-#         if [[ $(nvm current) != "$default_version" ]]; then
-#             nvm use default;
-#         fi
-
-#         elif [[ -s $nvm_path/.nvmrc && -r $nvm_path/.nvmrc ]]; then
-#         declare nvm_version
-#         nvm_version=$(<"$nvm_path"/.nvmrc)
-
-#         declare locally_resolved_nvm_version
-#         # `nvm ls` will check all locally-available versions
-#         # If there are multiple matching versions, take the latest one
-#         # Remove the `->` and `*` characters and spaces
-#         # `locally_resolved_nvm_version` will be `N/A` if no local versions are found
-#         locally_resolved_nvm_version=$(nvm ls --no-colors $(<"./.nvmrc") | tail -1 | tr -d '\->*' | tr -d '[:space:]')
-
-#         # If it is not already installed, install it
-#         # `nvm install` will implicitly use the newly-installed version
-#         if [[ "$locally_resolved_nvm_version" == "N/A" ]]; then
-#             nvm install "$nvm_version";
-#         elif [[ $(nvm current) != "$locally_resolved_nvm_version" ]]; then
-#             nvm use "$nvm_version";
-#         fi
-#     fi
-# }
-# alias cd='cdnvm'
 . "$HOME/.cargo/env"
