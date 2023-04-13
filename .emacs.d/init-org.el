@@ -1,5 +1,6 @@
 ;; Org mode
 (message "loading org init")
+(require 'time-stamp)
 
 ;; package for controling silver surfer
 ;; enables projectile-ag
@@ -10,6 +11,7 @@
 (require 'org-install)
 (message "require org-install")
 (setq org-directory "~/Dropbox (Personal)/org")
+(setq org-journal-directory (concat org-directory "/journal"))
 (message "org directory")
 
 (require 'org-tempo)
@@ -111,6 +113,13 @@
 ;;
 ;; Custom journal commands
 ;;
+(defun kill-buffer-ask (buffer)
+  "Kill BUFFER if confirmed and modified, or kill without confirmation if unmodified."
+  (if (buffer-modified-p buffer)
+      (when (yes-or-no-p (format "Buffer %s HAS BEEN EDITED. Kill? " (buffer-name buffer)))
+        (kill-buffer buffer))
+    (kill-buffer buffer)))
+
 (defun bk-kill-buffers (regexp)
   "Kill buffers matching REGEXP without asking for confirmation."
   (interactive "sKill buffers matching this regular expression: ")
@@ -118,24 +127,38 @@
         (kill-matching-buffers regexp)))
 
 (defun kill-journals ()
-  "Kill open org journal buffers"
+  "Kill open org journal buffers."
   (interactive)
   (bk-kill-buffers "\.org$"))
 
-(defun journal ()
-  "Create or opens a daily journal entry."
-  (interactive)
-  (let* ((daily-name (format-time-string "%Y-%m-%d"))
-         (dropbox-path "~/Dropbox (Personal)/")
-         (code-path (concat dropbox-path "code/org-stream"))
-         (journal-path (concat dropbox-path "org/journal/"))
-         (journal-file (concat journal-path daily-name ".org")))
-     (unless (file-exists-p journal-file)
-       (shell-command "cd ~/code/personal-projs/org-stream && node createDaily.js"))
-     (find-file journal-file)))
 
-(defun today ()
-  (journal))
+(defun journal-create-or-open-daily-file (&optional days-offset)
+  "Create a daily journal org file with the current date as the prefix.
+if DAYS-OFFSET is provided, the date will be adjusted accordingly."
+  (interactive)
+  (let* ((adjusted-date (time-add (current-time) (days-to-time (or days-offset 0))))
+         (date-string (format-time-string "%Y-%m-%d" adjusted-date))
+         (file-name (concat date-string ".org"))
+         (file-path (expand-file-name file-name org-directory))
+         (initial-content-template
+          (concat "#+TITLE: " date-string "\n\n* Positives\n\n\n* Intentions for tomorrow\n\n\n* Checkin\n\n\n* Learnings\n\n\n* Time sucks\n\n")))
+    (unless (file-exists-p file-path)
+      (with-temp-buffer
+        (insert initial-content-template)
+        (write-file file-path)))
+    (find-file file-path)))
+
+(defun journal ()
+  "Alias for journal-create-or-open-daily-file."
+  (journal-create-or-open-daily-file))
+
+(defun yesterday ()
+  "Open up the journal for yesterday."
+  (journal-create-or-open-daily-file -1))
+
+(defun tomorrow ()
+  "Open up the journal for tomorrow."
+(journal-create-or-open-daily-file 1))
 
 (global-set-key "\C-j" 'journal)
 (global-set-key "\C-xj" 'journal)
@@ -161,8 +184,8 @@
         )))
 
 
-(setq org-agenda-files (list "~/Dropbox (Personal)/org"
-                             "~/Dropbox (Personal)/org/journal"
+(setq org-agenda-files (list org-directory
+                             org-journal-directory
                              ))
 
 
@@ -190,15 +213,8 @@
   ;; (fset 'org-gcal--notify 'new/org-gcal-notify))
 
 
-;;
-;; Org to blog
-;;
-(use-package org2blog
+(use-package org-download
   :ensure t
   :defer t
   :config
-  (setq org2blog/wp-blog-alist
-      '(("radcade"
-         :url "https://radcade.com/xmlrpc.php"
-         :username "kevzettler")))
-  )
+  (setq-default org-download-image-dir "~/Dropbox/org/images"))
