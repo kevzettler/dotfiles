@@ -14,6 +14,7 @@
 
 ;; Ivy
 (use-package ivy
+  :ensure t
   :diminish (ivy-mode)
   :bind
   (
@@ -28,12 +29,13 @@
   (setq ivy-display-style 'fancy))
 
 ;; Swiper
+;; https://github.com/abo-abo/swiper
 (use-package swiper
+  :ensure t
   :bind
   (
 ;;   ("C-s" . swiper)
    ("C-c C-r" . ivy-resume)
-   ("M-x" . counsel-M-x)
    )
   :config
   (progn
@@ -42,6 +44,12 @@
     (setq ivy-display-style 'fancy)
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
+
+(use-package amx
+  :ensure t
+  :bind (("M-x" . amx))
+  :config
+  (setq amx-backend 'ivy))
 
 (use-package yaml-mode
   :mode ("\\.yaml" . yaml-mode))
