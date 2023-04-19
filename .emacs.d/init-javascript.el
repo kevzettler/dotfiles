@@ -88,14 +88,18 @@
   :ensure
 )
 
-
 ;; eslintd-fix
 (use-package eslintd-fix)
 
+
+;; Shaders
 ;; glsl files
 (use-package glsl-mode
   :mode (("\\.vert\\'" . glsl-mode)
          ("\\.frag\\'" . glsl-mode)))
+
+(use-package wgsl-mode
+  :mode (("\\.wgsl\\'" . wgsl-mode)))
 
 
 ;; ======== FLYCHECK ========
