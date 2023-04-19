@@ -42,6 +42,22 @@
      (define-key flyspell-mouse-map [mouse-3] #'undefined)))
 (add-hook 'org-mode-hook 'turn-on-flyspell)
 
+;; Configure Hunspell
+(setq ispell-program-name "hunspell")
+(setq ispell-really-hunspell t)
+(setq ispell-dictionary "en_US") ; Replace "en_US" with your desired dictionary
+
+;; Set paths for Hunspell dictionaries
+(setq ispell-local-dictionary-alist
+      '((nil ; default dictionary
+         "[[:alpha:]]" "[^[:alpha:]]" "[']" t
+         ("-d" "en_US") ; Dictionary file name, replace "en_US" if needed
+         nil utf-8)))
+(setq ispell-dictionary "en_US") ; Set the default dictionary
+(setq ispell-hunspell-dict-paths-alist
+      '(("en_US" "/Library/Spelling/en_US.aff" "/Library/Spelling/en_US.dic")))
+
+
 (defun my/org-mode-hook ()
   "Stop the org-level headers from increasing in height relative to the other text."
   (dolist (face '(org-level-1
@@ -148,22 +164,20 @@ if DAYS-OFFSET is provided, the date will be adjusted accordingly."
         (write-file file-path)))
     (find-file file-path)))
 
-(defun journal ()
-  "Alias for journal-create-or-open-daily-file."
-  (journal-create-or-open-daily-file))
-
 (defun yesterday ()
   "Open up the journal for yesterday."
+  (interactive)
   (journal-create-or-open-daily-file -1))
 
 (defun tomorrow ()
   "Open up the journal for tomorrow."
-(journal-create-or-open-daily-file 1))
+  (interactive)
+  (journal-create-or-open-daily-file 1))
 
-(global-set-key "\C-j" 'journal)
-(global-set-key "\C-xj" 'journal)
-(global-set-key "\C-cj" 'journal)
-(journal)
+(global-set-key "\C-j" 'journal-create-or-open-daily-file)
+(global-set-key "\C-xj" 'journal-create-or-open-daily-file)
+(global-set-key "\C-cj" 'journal-create-or-open-daily-file)
+(journal-create-or-open-daily-file)
 
 
 (defun capture-comment-line (&optional line)
