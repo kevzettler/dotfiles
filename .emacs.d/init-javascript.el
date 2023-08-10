@@ -171,7 +171,15 @@
                 (setup-tide-mode)
                 (message "web-mode javascript action")
                 (flycheck-add-mode 'typescript-tide 'web-mode)
-                (flycheck-add-next-checker 'javascript-tide 'append)))))
+                (flycheck-add-next-checker 'javascript-tide 'append))))
+  (add-hook 'web-mode-hook
+            (lambda ()
+              (when (or (string-equal "tsx" (file-name-extension buffer-file-name))
+                        (string-equal "ts" (file-name-extension buffer-file-name)))
+                (setup-tide-mode)
+                (message "web-mode typescript action")
+                (flycheck-add-mode 'typescript-tide 'web-mode)
+                (flycheck-add-next-checker 'javascript-eslint 'typescript-tide 'append)))))
 
 (provide 'init-javascript.el)
 ;;; init-javascript.el ends here

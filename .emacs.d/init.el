@@ -2,16 +2,25 @@
 
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")))
 ;; (add-to-list 'package-archives
 ;;              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 (package-initialize)
 
-;; Bootstrap `use-package'
-(unless (package-installed-p 'use-package)
- (package-refresh-contents)
- (package-install 'use-package))
+(unless (package-installed-p 'quelpa)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+    (eval-buffer)
+    (quelpa-self-upgrade)))
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+
+(require 'quelpa-use-package)
 
 ;; Save adding :ensure t on every use package
 (setq use-package-always-ensure t)
@@ -338,6 +347,7 @@
 
 
 ;;; Rust stuff
+;;; https://robert.kra.hn/posts/rust-emacs-setup/#prerequisites
 ;;;
 ;;;
 (use-package rustic
@@ -358,7 +368,7 @@
   ;; (setq lsp-signature-auto-activate nil)
 
   ;; comment to disable rustfmt on save
-  (setq rustic-format-on-save t)
+  ;; (setq rustic-format-on-save t)
   (add-hook 'rustic-mode-hook 'rk/rustic-mode-hook))
 
 (defun rk/rustic-mode-hook ()
@@ -367,8 +377,8 @@
   ;; https://github.com/brotzeit/rustic/issues/253 has been resolved this should
   ;; no longer be necessary.
   (when buffer-file-name
-    (setq-local buffer-save-without-query t)))
-
+    (setq-local buffer-save-without-query t))
+  (add-hook 'before-save-hook 'lsp-format-buffer nil t))
 
 
 ;;;
@@ -381,10 +391,24 @@
   ;; what to use when checking on-save. "check" is default, I prefer clippy
   (lsp-rust-analyzer-cargo-watch-command "clippy")
   (lsp-eldoc-render-all t)
+  (lsp-enable-snippet nil)
   (lsp-idle-delay 0.6)
+  ;; enable / disable the hints as you prefer:
   (lsp-rust-analyzer-server-display-inlay-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
+  (lsp-rust-analyzer-display-chaining-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
+  (lsp-rust-analyzer-display-closure-return-type-hints t)
+  (lsp-rust-analyzer-display-parameter-hints nil)
+  (lsp-rust-analyzer-display-reborrow-hints nil))
   :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  ;; ambient needs this
+  ;; https://github.com/emacs-lsp/lsp-mode/issues/3375
+  ;; https://github.com/AmbientRun/Ambient/issues/375
+  ;; (setq lsp-rust-analyzer-cargo-target "wasm32-wasi"
+  ;;       lsp-rust-analyzer-cargo-watch-args ["--features" "client server"]
+  ;;       lsp-rust-features ["client" "server"])
 
 (use-package lsp-ui
   :ensure
@@ -395,27 +419,33 @@
   (lsp-ui-doc-enable nil))
 
 
-(with-eval-after-load "lsp-rust"
- (lsp-register-client
-  (make-lsp-client
-   :new-connection (lsp-stdio-connection
-                    (lambda ()
-                      `(,(or (executable-find
-                              (cl-first lsp-rust-analyzer-server-command))
-                             (lsp-package-path 'rust-analyzer)
-                             "rust-analyzer")
-                        ,@(cl-rest lsp-rust-analyzer-server-args))))
-   :remote? t
-   :major-modes '(rust-mode rustic-mode)
-   :initialization-options 'lsp-rust-analyzer--make-init-options
-   :notification-handlers (ht<-alist lsp-rust-notification-handlers)
-   :action-handlers (ht ("rust-analyzer.runSingle" #'lsp-rust--analyzer-run-single))
-   :library-folders-fn (lambda (_workspace) lsp-rust-library-directories)
-   :after-open-fn (lambda ()
-                    (when lsp-rust-analyzer-server-display-inlay-hints
-                      (lsp-rust-analyzer-inlay-hints-mode)))
-   :ignore-messages nil
-   :server-id 'rust-analyzer-remote)))
+;; (with-eval-after-load "lsp-rust"
+;;  (lsp-register-client
+;;   (make-lsp-client
+;;    :new-connection (lsp-stdio-connection
+;;                     (lambda ()
+;;                       `(,(or (executable-find
+;;                               (cl-first lsp-rust-analyzer-server-command))
+;;                              (lsp-package-path 'rust-analyzer)
+;;                              "rust-analyzer")
+;;                         ,@(cl-rest lsp-rust-analyzer-server-args))))
+;;    :remote? t
+;;    :major-modes '(rust-mode rustic-mode)
+;;    :initialization-options 'lsp-rust-analyzer--make-init-options
+;;    :notification-handlers (ht<-alist lsp-rust-notification-handlers)
+;;    :action-handlers (ht ("rust-analyzer.runSingle" #'lsp-rust--analyzer-run-single))
+;;    :library-folders-fn (lambda (_workspace) lsp-rust-library-directories)
+;;    :after-open-fn (lambda ()
+;;                     (when lsp-rust-analyzer-server-display-inlay-hints
+;;                       (lsp-rust-analyzer-inlay-hints-mode)))
+;;    :ignore-messages nil
+;;    :server-id 'rust-analyzer-remote)))
+
+
+;; Prisma ORM .prisma mode
+(use-package prisma-mode
+  :quelpa (prisma-mode :fetcher github :repo "pimeys/emacs-prisma-mode" :branch "main"))
+
 
 ;; Set explicit shell this is to keep shell consistent when using Tramp
 (with-eval-after-load "tramp" (add-to-list 'tramp-remote-path "/root/.cargo/bin"))
