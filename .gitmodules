@@ -1,0 +1,3 @@
+[submodule "/Users/kevzettler/.emacs.d/unity.el"]
+	path = /Users/kevzettler/.emacs.d/unity.el
+	url = https://github.com/elizagamedev/unity.el.git
