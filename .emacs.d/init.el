@@ -67,18 +67,15 @@
 ;;;
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
 (defun load-init-file (file)
+  "Imports a init file from Emacs directory, FILE is path to init file."
   (load (locate-user-emacs-file file)))
 
 ;;;
 ;;; External inits
 ;;;
 (load-init-file "init-org")
-(load-init-file "init-company") ;; tern is in here too
-(load-init-file "init-javascript")
-(load-init-file "init-typescript")
 (load-init-file "init-go")
 (load-init-file "init-unity")
-
 (load-init-file "circom-mode")
 (add-to-list 'auto-mode-alist '("\\.circom\\'" . circom-mode))
 
@@ -114,12 +111,14 @@
 ;;; Automatically reload files that were changed on disk, if they have
 ;;; not been modified in Emacs since the last time they were saved.
 (setq auto-revert-verbose nil)
-
 (global-auto-revert-mode 1)
 
 ;;; Turn the delay on auto-reloading from 5 seconds down to 1 second.
 (setq auto-revert-interval 1)
+
 ;; IDO mode
+;; auto complete mini buffer completion
+;; https://www.masteringemacs.org/article/introduction-to-ido-mode
 (use-package ido
   :config
   (ido-mode 'both)
@@ -162,6 +161,7 @@
 (setq scroll-step 1)
 (line-number-mode 1)
 (column-number-mode 1)
+(global-display-line-numbers-mode)
 
 ; backup
 ;; Configure backup file creation in it's own directory
@@ -208,11 +208,6 @@
       (append '(("\.mini$"  . rust-mode))
                 auto-mode-alist))
 
-;; Markdown
-(use-package markdown-mode
-  :mode (("\\.md\\'" . markdown-mode))
-  :config
-  (add-hook 'markdown-mode-hook 'visual-line-mode))
 
 ;; multiple-cursors-mode
 (use-package multiple-cursors
@@ -242,13 +237,13 @@
 (setq resize-minibuffer-mode t)
 
 (defun pbcopy-region (start end)
-  "Copies text into the system clipboard on OS X"
+  "Copies text into the system clipboard on OS X. START is first character, END is last character."
   (interactive "r")
   (shell-command-on-region start end "pbcopy"))
 
 ;; What's my email?
 (set-variable 'user-mail-address "kevzettler@gmail.com")
-(global-linum-mode 1)
+;;(global-linum-mode 1)
 (setq-default truncate-lines "f")
 
 
@@ -306,6 +301,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; Set explicit shell this is to keep shell consistent when using Tramp
+(with-eval-after-load "tramp" (add-to-list 'tramp-remote-path "/root/.cargo/bin"))
+
 
 (defun do-nvm-use (version)
   (interactive "sVersion: ")
@@ -325,7 +323,7 @@
 
 
 (defun insert-date (prefix)
-    "Insert the current date. With prefix-argument, use ISO format. With
+    "Insert the current date. With PREFIX argument, use ISO format. With
    two prefix arguments, write out the day and month name."
     (interactive "P")
     (let ((format (cond
@@ -346,7 +344,157 @@
 (put 'narrow-to-region 'disabled nil)
 
 
-;;; Rust stuff
+;; ======== FLYCHECK ========
+(use-package flycheck
+  :ensure t
+  :diminish (flycheck-mode)
+  :init (global-flycheck-mode))
+
+
+;;;
+;;; company mode
+;;;
+;; Helper fn that selects the company auto-complete
+;; then we just try to expand it.
+(defun complete-selection-and-expand-snippet ()
+  (interactive)
+  (company-complete-selection)
+;;  (yas/expand)
+  )
+
+;; Autocomplete Popups
+(use-package company
+  :defer t
+  :diminish company-mode
+  :init (global-company-mode 1)
+  :config
+  (add-to-list 'company-backends 'company-css)
+  (setq
+   company-echo-delay 0
+   company-idle-delay 0.2
+   company-minimum-prefix-length 1
+   company-tooltip-align-annotations t
+   company-tooltip-limit 10
+   company-tooltip-flip-when-above t
+   company-require-match nil
+   company-begin-commands '(self-insert-command)
+   )
+  (define-key company-active-map [tab] 'company-complete-selection)
+  (define-key company-active-map (kbd "TAB") 'complete-selection-and-expand-snippet)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  :hook (lsp-mode .company-mode)
+  )
+
+;; pos-tips show tooltip at point
+(use-package pos-tip)
+
+;;
+;; Web mode
+;;
+(use-package web-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  ;; JSX
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+  ;; TSX
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+  (setq
+   web-mode-code-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-enable-auto-quoting nil ;; disable auto quoting
+   standard-indent 2
+   tab-width 1
+   indent-tabs-mode nil
+   js-indent-level 2
+   js-switch-indent-offset t
+   js2-basic-offset 2
+   sgml-basic-offset 2
+   js2-jsx-mode 2
+   js2-highlight-level 3
+   js2-indent-level 2
+   js2-indent-switch-body t
+   js2-strict-semi-warning nil
+   js2-missing-semi-one-line-override nil
+   js2-mode-show-parse-errors nil
+   js2-mode-show-strict-warnings nil
+   js2-strict-trailing-comma-warning nil)
+  (add-hook 'web-mode-hook 'add-node-modules-path)
+  (add-hook 'web-mode-hook 'flycheck-mode)
+  ;;(add-hook 'web-mode-hook 'eslintd-fix-mode)
+  (add-hook 'web-mode-hook 'lsp-mode))
+
+
+
+
+;;;
+;;; LSP MODE
+;;;
+
+;; helper function from
+;; https://news.ycombinator.com/item?id=37387985
+;; check if webmode content is jsx
+(defun gernoti/lsp-deferred-maybe-jsx ()
+  (if (string= web-mode-content-type "jsx")
+      (lsp-deferred)))
+
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook (
+         (lsp-mode . lsp-ui-mode)
+         (js2-mode . lsp-deferred)
+         (typescript-mode . lsp-deferred)
+         (web-mode . gernoti/lsp-deferred-maybe-jsx)
+         )
+  ;; :init ((setq lsp-keymap-prefix "C-c l")
+  ;;        (setq lsp-restart 'auto-restart))
+  :custom
+  ;; You want this if you want to discover all lsp mode's goodies.
+  ;; Though I found I actually don't use many features, really.
+  (lsp-enable-which-key-integration t)
+  (lsp-log-io nil) ;; Don't log everything = speed
+  (lsp-eldoc-render-all t)
+  (lsp-enable-snippet nil)
+  (lsp-idle-delay 0.6)
+
+  ;; Rust analyzer configs primarily for use with Ambient
+  ;; what to use when checking on-save. "check" is default, I prefer clippy
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-rust-analyzer-server-display-inlay-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
+  (lsp-rust-analyzer-display-chaining-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
+  (lsp-rust-analyzer-display-closure-return-type-hints t)
+  (lsp-rust-analyzer-display-parameter-hints nil)
+  (lsp-rust-analyzer-display-reborrow-hints nil))
+
+(use-package lsp-ui
+  :after lsp-mode
+  :hook (lsp-mode . lsp-ui-mode)
+  :commands lsp-ui-mode
+  :custom
+   (lsp-ui-doc-position 'bottom)
+   (lsp-ui-peek-always-show t)
+   (lsp-ui-sideline-show-hover t)
+   (lsp-ui-sideline-show-diagnostics t)
+   (lsp-ui-sideline-show-hover t)
+   (lsp-ui-sideline-show-code-actions t)
+   (lsp-ui-doc-enable nil)
+  :config
+  (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
+
+
+(use-package js2-mode
+  :ensure t)
+
+(use-package typescript-mode
+  :ensure t)
+
+;;; Rust
 ;;; https://robert.kra.hn/posts/rust-emacs-setup/#prerequisites
 ;;;
 ;;;
@@ -381,73 +529,140 @@
   (add-hook 'before-save-hook 'lsp-format-buffer nil t))
 
 
-;;;
-;;; LSP MODE
-;;;
-(use-package lsp-mode
-  :ensure
-  :commands lsp
-  :custom
-  ;; what to use when checking on-save. "check" is default, I prefer clippy
-  (lsp-rust-analyzer-cargo-watch-command "clippy")
-  (lsp-eldoc-render-all t)
-  (lsp-enable-snippet nil)
-  (lsp-idle-delay 0.6)
-  ;; enable / disable the hints as you prefer:
-  (lsp-rust-analyzer-server-display-inlay-hints t)
-  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
-  (lsp-rust-analyzer-display-chaining-hints t)
-  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
-  (lsp-rust-analyzer-display-closure-return-type-hints t)
-  (lsp-rust-analyzer-display-parameter-hints nil)
-  (lsp-rust-analyzer-display-reborrow-hints nil))
-  :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  ;; ambient needs this
-  ;; https://github.com/emacs-lsp/lsp-mode/issues/3375
-  ;; https://github.com/AmbientRun/Ambient/issues/375
-  ;; (setq lsp-rust-analyzer-cargo-target "wasm32-wasi"
-  ;;       lsp-rust-analyzer-cargo-watch-args ["--features" "client server"]
-  ;;       lsp-rust-features ["client" "server"])
-
-(use-package lsp-ui
-  :ensure
-  :commands lsp-ui-mode
-  :custom
-  (lsp-ui-peek-always-show t)
-  (lsp-ui-sideline-show-hover t)
-  (lsp-ui-doc-enable nil))
-
-
-;; (with-eval-after-load "lsp-rust"
-;;  (lsp-register-client
-;;   (make-lsp-client
-;;    :new-connection (lsp-stdio-connection
-;;                     (lambda ()
-;;                       `(,(or (executable-find
-;;                               (cl-first lsp-rust-analyzer-server-command))
-;;                              (lsp-package-path 'rust-analyzer)
-;;                              "rust-analyzer")
-;;                         ,@(cl-rest lsp-rust-analyzer-server-args))))
-;;    :remote? t
-;;    :major-modes '(rust-mode rustic-mode)
-;;    :initialization-options 'lsp-rust-analyzer--make-init-options
-;;    :notification-handlers (ht<-alist lsp-rust-notification-handlers)
-;;    :action-handlers (ht ("rust-analyzer.runSingle" #'lsp-rust--analyzer-run-single))
-;;    :library-folders-fn (lambda (_workspace) lsp-rust-library-directories)
-;;    :after-open-fn (lambda ()
-;;                     (when lsp-rust-analyzer-server-display-inlay-hints
-;;                       (lsp-rust-analyzer-inlay-hints-mode)))
-;;    :ignore-messages nil
-;;    :server-id 'rust-analyzer-remote)))
-
 
 ;; Prisma ORM .prisma mode
 (use-package prisma-mode
   :quelpa (prisma-mode :fetcher github :repo "pimeys/emacs-prisma-mode" :branch "main"))
 
 
-;; Set explicit shell this is to keep shell consistent when using Tramp
-(with-eval-after-load "tramp" (add-to-list 'tramp-remote-path "/root/.cargo/bin"))
+;; Markdown
+(use-package markdown-mode
+  :mode (("\\.md\\'" . markdown-mode))
+  :config
+  (add-hook 'markdown-mode-hook 'visual-line-mode))
+
+;; Sass mode
+(use-package sass-mode
+  :mode "\\.scss\\'")
+
+;; Magit
+(use-package magit
+  :ensure t
+  :bind (("C-x g" . magit-status)))
+
+;; Ivy
+(use-package ivy
+  :ensure t
+  :diminish (ivy-mode)
+  :bind
+  (
+   ("C-x b" . ivy-switch-buffer)
+   ;;("C-x C-f" . counsel-find-file)
+  )
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
+  (setq ivy-count-format "%d/%d ")
+  (setq ivy-display-style 'fancy))
+
+;; Swiper
+;; https://github.com/abo-abo/swiper
+(use-package swiper
+  :ensure t
+  :bind
+  (
+;;   ("C-s" . swiper)
+   ("C-c C-r" . ivy-resume)
+   )
+  :config
+  (progn
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+    ))
+
+;; Counsel
+;; not suer what this does it integrates with ify and swiper and amx???
+;;  https://writequit.org/denver-emacs/presentations/2017-04-11-ivy.html
+(use-package counsel
+  :ensure t
+  :diminish (counsel-mode))
+
+;; Amx, an alternative interface for M-x in Emacs
+;; https://github.com/DarwinAwardWinner/amx
+(use-package amx
+  :ensure t
+  :bind (("M-x" . amx))
+  :config
+  (setq amx-backend 'ivy))
+
+(use-package yaml-mode
+  :mode ("\\.yaml" . yaml-mode))
+
+;; Avy
+;; Jump to things in Emacs tree-style
+(use-package avy
+  :bind ("M-s" . avy-goto-char-timer))
+
+(use-package groovy-mode
+  :mode ("Jenkinsfile?" . groovy-mode))
+
+;; projectile
+(use-package projectile
+  :diminish (projectile-mode)
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy))
+
+(use-package counsel-projectile
+  :ensure t
+  :bind (:map projectile-mode-map
+              ("C-c p" . projectile-command-map))
+  :config
+  (counsel-projectile-mode))
+
+;; dumb-jump
+(use-package dumb-jump
+  :bind (("C-c d o" . dumb-jump-go-other-window)
+         ("C-c d j" . dumb-jump-go)
+         ("C-c d x" . dumb-jump-go-prefer-external)
+         ("C-c d z" . dumb-jump-go-prefer-external-other-window))
+  :config
+  (setq dumb-jump-selector 'ivy)
+  :init
+  (dumb-jump-mode)
+  :ensure
+)
+
+;; eslintd-fix
+;; (use-package eslintd-fix)
+
+
+;; Shaders
+;; glsl files
+(use-package glsl-mode
+  :mode (("\\.vert\\'" . glsl-mode)
+         ("\\.frag\\'" . glsl-mode)))
+
+(use-package wgsl-mode
+  :mode (("\\.wgsl\\'" . wgsl-mode)))
+
+
+(defun copy-file-link-with-line-numbers ()
+  "Copy a link to the current file and the line numbers of the selected region."
+  (interactive)
+  (if (use-region-p)
+      (let* ((file (buffer-file-name))
+             (start (line-number-at-pos (region-beginning)))
+             (end (line-number-at-pos (region-end)))
+             (link (format "file://%s:%d-%d" file start end)))
+        (kill-new link)
+        (message "Copied link: %s" link))
+    (message "No region selected")))
+
+
+
 
 ;;; init.el ends here

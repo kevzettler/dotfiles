@@ -8,8 +8,8 @@
   :ensure t
   :commands (ag ag-regexp ag-project))
 
-(require 'org-install)
-(message "require org-install")
+;;(require 'org-install)
+;;(message "require org-install")
 (setq org-directory "~/Dropbox (Personal)/org")
 (setq org-journal-directory (concat org-directory "/journal"))
 (message "org directory")
@@ -98,7 +98,7 @@
              (sequence "UNREAD" "READ")
              (sequence "???" "OK")))
 
-
+;; common lisp emulation for babel? not sure
 (require 'cl-lib)
 
 ;;
