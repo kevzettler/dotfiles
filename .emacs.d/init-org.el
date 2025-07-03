@@ -2,6 +2,13 @@
 (message "loading org init")
 (require 'time-stamp)
 
+
+;; org-mode image drag and drop
+(require 'org-download)
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+
+
 ;; package for controling silver surfer
 ;; enables projectile-ag
 (use-package ag
