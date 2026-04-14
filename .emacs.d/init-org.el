@@ -18,7 +18,6 @@
 ;;(require 'org-install)
 ;;(message "require org-install")
 (setq org-directory "~/Dropbox (Personal)/org")
-(setq org-journal-directory (concat org-directory "/journal"))
 (message "org directory")
 
 (require 'org-tempo)
@@ -124,17 +123,8 @@
  '((js . t)))
 
 
-(use-package org-journal
-  :ensure t
-  :defer t
-  :init
-  ;; Change default prefix key; needs to be set before loading org-journal
-  (setq org-journal-prefix-key "C-c j ")
-  :config
-  (setq org-journal-dir "~/Dropbox (Personal)/org/journal"
-        org-journal-date-format "%A, %d %B %Y"))
 ;;
-;; Custom journal commands
+;; Custom journal commands (combined journal.org; no org-journal package)
 ;;
 (defun kill-buffer-ask (buffer)
   "Kill BUFFER if confirmed and modified, or kill without confirmation if unmodified."
@@ -154,22 +144,77 @@
   (interactive)
   (bk-kill-buffers "\.org$"))
 
+(defun journal--combined-file ()
+  "Path to the single journal file (top-level headings = YYYY-MM-DD)."
+  (expand-file-name "journal.org" org-directory))
+
+(defun journal--daily-file-name-p (path)
+  "Non-nil if PATH is a per-day ISO journal file at org root (YYYY-MM-DD.org)."
+  (string-match-p "/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\\.org\\'" path))
+
+(defconst journal--iso-date-level-1-re
+  "^\\* \\([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\\)\\(?:[ \t]\\|$\\)"
+  "First-level Org headline whose title is an ISO date (YYYY-MM-DD).")
+
+(defun journal--chronological-insert-point (date-string)
+  "Buffer position where a new `* DATE-STRING' tree belongs.
+Keeps all such ISO date subtrees in ascending chronological order.
+DATE-STRING must be YYYY-MM-DD (lexicographic order matches time order)."
+  (save-excursion
+    (widen)
+    (goto-char (point-min))
+    (catch 'journal-insert-pos
+      (let (after-last)
+        (while (re-search-forward journal--iso-date-level-1-re nil t)
+          (let ((here-date (match-string 1))
+                (here-beg (match-beginning 0)))
+            (if (string-lessp date-string here-date)
+                (throw 'journal-insert-pos here-beg)
+              (goto-char here-beg)
+              (org-end-of-subtree nil t)
+              (setq after-last (point)))))
+        (throw 'journal-insert-pos
+               (or after-last (progn (goto-char (point-max)) (point))))))))
+
+(defun journal--insert-new-date-tree (date-string heading)
+  "Insert HEADING (a `* YYYY-MM-DD' line) plus the usual template at the right place."
+  (let ((pos (journal--chronological-insert-point date-string)))
+    (goto-char pos)
+    (unless (bolp) (insert "\n"))
+    (insert heading "\n\n"
+            "** Positives\n\n\n"
+            "** Intentions for tomorrow\n\n\n"
+            "** Checkin\n\n\n"
+            "** Learnings\n\n\n"
+            "** Time sucks\n\n")
+    (goto-char pos)
+    (org-back-to-heading t)
+    (org-show-context 'agenda)))
 
 (defun journal-create-or-open-daily-file (&optional days-offset)
-  "Create a daily journal org file with the current date as the prefix.
-if DAYS-OFFSET is provided, the date will be adjusted accordingly."
+  "Open today's section inside `journal.org' under heading * YYYY-MM-DD.
+Creates that subtree with the usual template if missing.  New trees are
+inserted so ISO date headings stay in chronological order (so yesterday /
+tomorrow work next to today).  Per-day YYYY-MM-DD.org files on disk are
+left unchanged (use the merge script for history).
+
+If DAYS-OFFSET is non-nil, use that many days from today (negative = past)."
   (interactive)
   (let* ((adjusted-date (time-add (current-time) (days-to-time (or days-offset 0))))
          (date-string (format-time-string "%Y-%m-%d" adjusted-date))
-         (file-name (concat date-string ".org"))
-         (file-path (expand-file-name file-name org-directory))
-         (initial-content-template
-          (concat "#+TITLE: " date-string "\n\n* Positives\n\n\n* Intentions for tomorrow\n\n\n* Checkin\n\n\n* Learnings\n\n\n* Time sucks\n\n")))
-    (unless (file-exists-p file-path)
-      (with-temp-buffer
-        (insert initial-content-template)
-        (write-file file-path)))
-    (find-file file-path)))
+         (jpath (journal--combined-file))
+         (heading (concat "* " date-string))
+         (heading-re (concat "^\\* " (regexp-quote date-string) "\\($\\|[ \t]\\)")))
+    (find-file jpath)
+    (unless (file-exists-p jpath)
+      (insert "#+TITLE: Journal\n\n"))
+    (widen)
+    (goto-char (point-min))
+    (if (re-search-forward heading-re nil t)
+        (progn
+          (org-back-to-heading t)
+          (org-show-context 'agenda))
+      (journal--insert-new-date-tree date-string heading))))
 
 (defun yesterday ()
   "Open up the journal for yesterday."
@@ -184,6 +229,9 @@ if DAYS-OFFSET is provided, the date will be adjusted accordingly."
 (global-set-key "\C-j" 'journal-create-or-open-daily-file)
 (global-set-key "\C-xj" 'journal-create-or-open-daily-file)
 (global-set-key "\C-cj" 'journal-create-or-open-daily-file)
+;; Org binds C-j to newline-and-indent on `org-mode-map', shadowing the global binding.
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-j") 'journal-create-or-open-daily-file))
 (journal-create-or-open-daily-file)
 
 
@@ -205,9 +253,16 @@ if DAYS-OFFSET is provided, the date will be adjusted accordingly."
         )))
 
 
-(setq org-agenda-files (list org-directory
-                             org-journal-directory
-                             ))
+;; Omit per-day YYYY-MM-DD.org at org root so agenda does not scan thousands of files.
+;; Combined journal lives in journal.org; see merge_daily_journals_to_journal_org.py
+(defun journal--rebuild-org-agenda-files ()
+  "Set `org-agenda-files' to org files under `org-directory', excluding ISO-dated dailies."
+  (setq org-agenda-files
+        (cl-remove-if #'journal--daily-file-name-p
+                      (directory-files org-directory 'full "^[^#].*\\.org\\'" t))))
+
+(add-hook 'org-agenda-prepare-hook #'journal--rebuild-org-agenda-files)
+(journal--rebuild-org-agenda-files)
 
 
 
